@@ -1,0 +1,325 @@
+---
+detect_relations: true
+options:
+  collate: utf8_general_ci
+  charset: utf8
+  type: InnoDB
+
+playList:
+  actAs:
+    Timestampable:
+  tableName: play_list
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    user_id:
+      type: integer(4)
+      notnull: true
+    play_owner_id:
+      type: integer(4)
+    object_type:
+      type: string(45)
+    title:
+      type: string(100)
+    description:
+      type: clob(65535)
+  relations:
+    user:
+      class: user
+      local: user_id
+      foreign: id
+      foreignAlias: play_lists
+    playOwner:
+      class: playOwner
+      local: play_owner_id
+      foreign: id
+      foreignAlias: play_lists
+  indexes:
+    fk_play_list_user1:
+      fields: [user_id]
+
+playIt:
+  actAs:
+    Timestampable:
+  tableName: play_it
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    user_id:
+      type: integer(4)
+      notnull: true
+    play_list_id:
+      type: integer(4)
+    name:
+      type: string(100)
+    description:
+      type: clob(65535)
+  relations:
+    user:
+      class: user
+      local: user_id
+      foreign: id
+      foreignAlias: play_its
+    playList:
+      class: playList
+      local: play_list_id
+      foreign: id
+      foreignAlias: play_its
+  indexes:
+    fk_play_it_user1:
+      fields: [user_id]
+
+playOwner:
+  actAs:
+    Timestampable:
+  tableName: play_owner
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    user_id:
+      type: integer(4)
+      notnull: true
+    name:
+      type: string(100)
+    picture:
+      type: string(45)
+    site_web:
+      type: string(45)
+    description:
+      type: clob(65535)
+  relations:
+    user:
+      class: user
+      local: user_id
+      foreign: id
+      foreignAlias: play_owners
+  indexes:
+    fk_play_owner_user1:
+      fields: [user_id]
+
+user:
+  actAs:
+    Timestampable:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+
+report:
+  actAs:
+    Timestampable:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    user_id:
+      type: integer(4)
+      notnull: true
+    comment_id:
+      type: integer(4)
+    play_it_id:
+      type: integer(4)
+    play_list_id:
+      type: integer(4)
+    play_owner_id:
+      type: integer(4)
+    article_id:
+      type: integer(4)
+    video_id:
+      type: integer(4)
+    report_user_id:
+      type: integer(4)
+    category_id:
+      type: integer(4)
+    title:
+      type: string(200)
+    message:
+      type: clob(65535)
+  relations:
+    user:
+      class: user
+      local: user_id
+      foreign: id
+      foreignAlias: reports
+    comment:
+      class: comment
+      local: comment_id
+      foreign: id
+      foreignAlias: reports
+    playIt:
+      class: playIt
+      local: play_it_id
+      foreign: id
+      foreignAlias: reports
+    playList:
+      class: playList
+      local: play_list_id
+      foreign: id
+      foreignAlias: reports
+    playOwner:
+      class: playOwner
+      local: play_owner_id
+      foreign: id
+      foreignAlias: reports
+    article:
+      class: article
+      local: article_id
+      foreign: id
+      foreignAlias: reports
+    video:
+      class: video
+      local: video_id
+      foreign: id
+      foreignAlias: reports
+    reportUser:
+      class: user
+      local: report_user_id
+      foreign: id
+      foreignAlias: reports
+    category:
+      class: category
+      local: category_id
+      foreign: id
+      foreignAlias: reports
+  indexes:
+    fk_report_user1:
+      fields: [user_id]
+    fk_report_comment1:
+      fields: [comment_id]
+    fk_report_play_it1:
+      fields: [play_it_id]
+    fk_report_play_list1:
+      fields: [play_list_id]
+    fk_report_play_owner1:
+      fields: [play_owner_id]
+    fk_report_article1:
+      fields: [article_id]
+    fk_report_video1:
+      fields: [video_id]
+    fk_report_user2:
+      fields: [report_user_id]
+    fk_report_category1:
+      fields: [category_id]
+
+category:
+  actAs:
+    Timestampable:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    user_id:
+      type: integer(4)
+    category_name:
+      type: string(45)
+  relations:
+    user:
+      class: user
+      local: user_id
+      foreign: id
+      foreignAlias: categories
+  indexes:
+    fk_category_user1:
+      fields: [user_id]
+
+article:
+  actAs:
+    Timestampable:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    user_id:
+      type: integer(4)
+      notnull: true
+    category_id:
+      type: integer(4)
+      notnull: true
+    title:
+      type: string(200)
+    article_text:
+      type: clob(65535)
+  relations:
+    user:
+      class: user
+      local: user_id
+      foreign: id
+      foreignAlias: articles
+    category:
+      class: category
+      local: category_id
+      foreign: id
+      foreignAlias: articles
+  indexes:
+    fk_article_user1:
+      fields: [user_id]
+    fk_article_category1:
+      fields: [category_id]
+
+comment:
+  actAs:
+    Timestampable:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    user_id:
+      type: integer(4)
+      notnull: true
+    comment:
+      type: clob(65535)
+  relations:
+    user:
+      class: user
+      local: user_id
+      foreign: id
+      foreignAlias: comments
+  indexes:
+    fk_comment_user:
+      fields: [user_id]
+
+video:
+  actAs:
+    Timestampable:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    user_id:
+      type: integer(4)
+      notnull: true
+    url:
+      type: string(255)
+    video_type:
+      type: string(45)
+  relations:
+    user:
+      class: user
+      local: user_id
+      foreign: id
+      foreignAlias: videoes
+  indexes:
+    fk_video_user1:
+      fields: [user_id]
+

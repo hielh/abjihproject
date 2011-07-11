@@ -1,0 +1,60 @@
+User:
+  abjih:
+  hielh:
+  tester:
+   
+PlayOwner:
+  afasy:
+    user: abjih
+    name: Afasy
+    picture: al-kouchi.55066865.2223240899.2.jpg
+    site_web: www.google.com
+    description: |
+      الآن أرى أن أجمع البيض الاستئصالي في سلة واحدة حيث نفس اللون ونفس الحجم ونفس الوزن... فكلهم ذوو مشرب استئصالي، ويفكرون بنفس الطريقة، وهدفهم واحد... فلماذا علي أن أكسر بيضة بيضة، ما دام الكسر ميسورا 
+    
+PlayList:
+  afasyQuran:
+    user: abjih
+    playOwner: afasy
+    object_type: quran
+    title: afasy quran title
+    description: quran description
+  afasyAnashid:
+    user: abjih
+    playOwner: afasy
+    object_type: anachid
+    title: afasy anashid title
+    description: anashid description
+    
+PlayIt:
+  afasyQuranPlay01:
+    user: abjih
+    playList: afasyQuran
+    name: al-fatiha
+    description: description for play it
+  afasyQuranPlay02:
+    user: abjih
+    playList: afasyQuran
+    name: al-bakara
+    description: description for play it
+  afasyQuranPlay03:
+    user: abjih
+    playList: afasyQuran
+    name: al-imrane
+    description: description for play it
+  afasyAnashidPlay01:
+    user: abjih
+    playList: afasyAnashid
+    name: Ramadan
+    description: description for play it
+  afasyAnashidPlay02:
+    user: abjih
+    playList: afasyAnashid
+    name: illa salati
+    description: description for play it
+  afasyAnashidPlay03:
+    user: abjih
+    playList: afasyAnashid
+    name: ya rassoula llah
+    description: description for play it
+  

@@ -1,0 +1,17 @@
+.iconeImage
+{
+	padding-right: 25px;
+	margin: 0 10px;
+}
+.download
+{
+	background: url(/images/download.png) right no-repeat;
+}
+.addToPlaylist
+{
+	background: url(/images/add.png) right no-repeat;
+}
+.favorite
+{
+	background: url(/images/favorite.png) right no-repeat;
+}
