@@ -12,9 +12,9 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [FO/reset_rtl.css, FO/960.css, FO/style.css, FO/style2.css]
+  stylesheets:    [FO/style.css, FO/960.css, FO/niceforms-default.css, FO/init_style.css]
 
-  javascripts:    [jquery.js]
+  javascripts:    [mylibs/niceforms.js, plugins.js, script.js]
 
   has_layout:     true
   layout:         layout
