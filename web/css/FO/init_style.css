@@ -18,9 +18,7 @@ header{
   -webkit-box-shadow: -0px 0px 10px 0px #888;
   box-shadow: -0px 0px 10px 0px #888;
 }
-header div{
-  border: 1px solid white;
-}
+
 #slider{
   height: 250px;
   margin-bottom: 5px;
@@ -95,4 +93,46 @@ footer{
   -moz-box-shadow: 0px 0px 10px 0px #888;
   -webkit-box-shadow: 0px 0px 10px 0px #888;
   box-shadow: 0px 0px 10px 0px #888;
+}
+
+
+/*****************************/
+.playlist dl{
+  clear: both;
+}
+.playlist dd{
+  margin: 0;
+}
+.playlist .toPlayNumber{
+  width: 27px;
+}
+.playlist .toPlayName{
+  width: 200px;
+}
+.urlImage{
+  text-indent: -999px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+}
+.download
+{
+  background: url(../images/download.png) no-repeat;
+}
+.share
+{
+  background: url(../images/share.png) no-repeat;
+}
+.send
+{
+  background: url(../images/send.png) no-repeat;
+}
+.play
+{
+  background: url(../images/play.png) no-repeat;
+}
+.add
+{
+  background: url(../images/add.png) no-repeat;
 }

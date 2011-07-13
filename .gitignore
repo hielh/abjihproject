@@ -36,3 +36,4 @@ Thumbs.db
 log/*
 cache/*
 uploads/*
+/nbproject/private/
