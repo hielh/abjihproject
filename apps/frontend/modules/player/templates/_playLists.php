@@ -1,20 +1,19 @@
-<div class="playList">
+<div class="playlist">
     <?php foreach ($playLists as $playList): ?>
-	<h2><?php echo $playList->getTitle(); ?></h2>
-	
-	    <?php foreach($playList->getPlayIts() as $playIt): ?>
-	    <dl>
-		<dd><img align="baseline" src="/images/play.png" /></dd>
-		<dd>01 - </dd>
-		<dd><a href="#" rel="name"><?php echo $playIt->getName(); ?></a></dd>
-		<dd><a href="#" class="favorite iconeImage">download</a></dd>
-		<dd><a href="#" class="download iconeImage">download</a></dd>
-		<dd><a href="#" class="addToPlaylist iconeImage">download</a></dd>
+        <h2><?php echo $playList->getTitle(); ?></h2>
 
-		<div class="clear"></div>
+	<?php foreach ($playList->getPlayIts() as $playIt): ?>
+	    <dl>
+		<dd class="toPlayNumber">01</dd>
+		<dd class="toPlayName"><?php echo $playIt->getName(); ?></dd>
+		<dd><a href="#" class="download urlImage" title="download">Download</a></dd>
+		<dd ><a href="#" class="share urlImage" title="download">Download</a></dd>
+		<dd ><a href="#" class="send urlImage" title="download">Download</a></dd>
+		<dd ><a href="#" class="add urlImage" title="download">Download</a></dd>
 	    </dl>
-	<?php endforeach;   ?>
-    <?php endforeach;   ?>
+	<?php endforeach; ?>
+	<div class="clear"></div>
+    <?php endforeach; ?>
 
 
 </div>

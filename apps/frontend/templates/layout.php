@@ -14,7 +14,7 @@
 	<?php include_title() ?>
 	<?php include_metas() ?>
 	<link rel="shortcut icon" href="/favicon.ico" />
-	
+
 
 	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,85 +37,17 @@
 	<div id="container">
 	    <header>
 		<div class="container_12">
-          <div id="player" class="player">
-          </div>
+		    <?php include_partial('player/htmlPlayer'); ?>
 
-          <div class="qu-player grid_5">
+		    <div id="search_form" class="grid_4 alpha">
 
-            <div class="player-controls">
-
-              <div style="float: right">
-                  <div class="jp-mute unmute playerIcone"></div>
-                  <div class="jp-unmute mute playerIcone" style="display:none"></div>
-                </div>
-              <div class="main">
-
-                <div class="qu-time">
-                  <span class="jp-duration">00:00</span> /
-                  <span class="jp-current-time">00:00</span>
-
-                </div>
-
-                <div class="previous jp-previous"></div>
-                <div class="play jp-play"></div>
-                <div class="pause jp-pause" style="display: none;"></div>
-                <div class="next jp-next"></div>
-                <div class="jp-stop stop playerIcone"></div>
-
-                <span class="">
-                  <span class="jp-video-play" style="display: none;"></span>
-                  
-                  
-                  <span class="jp-volume-bar"></span>
-                  <span class="jp-volume-bar-value" style="width: 80%;"></span>
-                  <span class="jp-full-screen"></span>
-                  <span class="jp-restore-screen"></span>
-                </span>
-              </div>
-              <div class="progress-wrapper">
-                <div class="progress jp-seek-bar" style="width: 100%;">
-                  <div class="elapsed jp-play-bar" style="width: 0%;"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div id="search_form" class="grid_4 alpha">
-
-          </div>
-        </div>
+		    </div>
+		</div>
 		<div class="clear"></div>
 	    </header>
 	    <div id="main" role="main" class="container_12">
 		<div class="grid_8">
-		    <div class="grid_5">
-			<form action="vars.php" method="post" class="niceform">
-			    <fieldset>
-				<legend>Comments</legend>
-				<dl>
-
-				    <dt><label for="comments">Message:</label></dt>
-				    <dd><textarea name="comments" id="comments" rows="5" cols="60"></textarea></dd>
-				</dl>
-				<dl>
-				    <dt><label for="upload">Upload a File:</label></dt>
-				    <dd><input type="file" name="upload" id="upload" /></dd>
-				</dl>
-
-				<dl>
-				    <dt><label for="test">Sample Button:</label></dt>
-				    <dd><button type="button" name="test" id="test">I Do Nothing</button></dd>
-				</dl>
-			    </fieldset>
-			    <fieldset class="action">
-				<input type="submit" name="submit" id="submit" value="Submit" />
-			    </fieldset>
-
-			</form>
-
-		    </div>
+		    <?php echo $sf_content; ?>
 		</div>
 		<div class="grid_4">
 		    right bar

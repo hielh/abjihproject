@@ -74,14 +74,6 @@ header{
 .infoPlayer p.text{
 
 }
-.playList dl{
-  display: block;
-  border: 1px solid silver;
-  padding: 5px;
-}
-.playlist dl dd{
-  float: right;
-}
 footer{
   background: none repeat scroll 0 0 #5B6150;
   bottom: 0;
@@ -98,9 +90,15 @@ footer{
 
 /*****************************/
 .playlist dl{
+  display: block;
+  padding: 5px;
   clear: both;
 }
-.playlist dd{
+
+
+.playlist dl dd{
+  margin: 0;
+  float: right;
   margin: 0;
 }
 .playlist .toPlayNumber{
@@ -110,7 +108,7 @@ footer{
   width: 200px;
 }
 .urlImage{
-  text-indent: -999px;
+  text-indent: -99999px;
   display: block;
   width: 16px;
   height: 16px;
@@ -118,21 +116,21 @@ footer{
 }
 .download
 {
-  background: url(../images/download.png) no-repeat;
+  background: url(/images/download.png) no-repeat;
 }
 .share
 {
-  background: url(../images/share.png) no-repeat;
+  background: url(/images/share.png) no-repeat;
 }
 .send
 {
-  background: url(../images/send.png) no-repeat;
+  background: url(/images/send.png) no-repeat;
 }
 .play
 {
-  background: url(../images/play.png) no-repeat;
+  background: url(/images/play.png) no-repeat;
 }
 .add
 {
-  background: url(../images/add.png) no-repeat;
+  background: url(/images/add.png) no-repeat;
 }
