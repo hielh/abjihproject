@@ -110,7 +110,7 @@
 
 /** Player **/
 .qu-player .player-controls {
-  width: 300px;
+  width: 345px;
   height: 30px;
   border-radius: 6px;
   -moz-border-radius: 6px;
@@ -118,6 +118,7 @@
   background: transparent url(/images/player/player-bg.png) repeat 0 0 scroll;
   float: left;
   margin: 12px 0 0 30px;
+  position: relative;
 }
 
 .qu-player .player-controls .main {
@@ -204,9 +205,12 @@
   cursor: pointer;
 }
 .qu-player .progress-wrapper-volume, .qu-player .progress-volume {
-  width: 95px;
+  width: 75px;
+  margin: 5px 0px 10px 5px;
 }
-
+.qu-player .progress-volume{
+  margin: 0;
+}
 .qu-player .elapsed {
   height: 6px;
   border-radius: 3px;
@@ -372,17 +376,6 @@
 }
 
 
-/** Transitions **/
-.qu-player .more,
-.qu-player .album-cover .highlight,
-.qu-player .tracklist li,
-.qu-player .buy {
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
 /* http://perishablepress.com/press/2009/12/06/new-clearfix-hack */
 .qu-player .player:after {
   clear: both;
@@ -412,4 +405,31 @@
   width: 16px;
   height: 16px;
   margin: 1px 0;
+}
+.qu-player .qu-player-right{
+  float: right !important;
+  padding-top: 5px;
+  width: 110px;
+}
+.qu-player .jp-playlist{
+  position: absolute;
+  right: 0px;
+  top: 19px;
+  width: 100%;
+}
+
+.qu-player .jp-playlist ul{
+  background: url("/images/player/player-bg.png") repeat scroll 0 0 transparent;
+  padding: 0 !important;
+  z-index: 999;
+}
+.qu-player .jp-playlist li{
+  list-style: none;
+}
+.qu-player .jp-playlist li a{
+  display: block;
+  border-bottom: 1px solid yellow;
+}
+.qu-player .jp-playlist li a:hover{
+  background: #ccc;
 }

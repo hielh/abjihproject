@@ -3,9 +3,9 @@
 */
 
 $(function(){
-    $("a, .bull, .bull_help, .help").tipTip({
-	defaultPosition: 'top'
-    });
+  $(".bull, .bull_help, .help").tipTip({
+    defaultPosition: 'top'
+  });
 
 //find all form with class jqtransform and apply the plugin
 //$("form.jqtransform").jqTransform();
@@ -38,11 +38,11 @@ jQuery(document).ready(function(){
     }
   });
 
-    jQuery('.toPlayNumber').hover(function(){
-	val = jQuery(this).html();
-	jQuery(this).html('<a href="#" class="add urlImage" title="download">Download</a>').fadeIn(slow);
-    }, function(){
-	jQuery(this).html(val);
-    }
-    );
+  jQuery('.toPlayNumber').hover(function(){
+    val = jQuery(this).html();
+    jQuery(this).html('<a href="#" class="add urlImage" title="download">Download</a>').fadeIn(slow);
+  }, function(){
+    jQuery(this).html(val);
+  }
+  );
 });

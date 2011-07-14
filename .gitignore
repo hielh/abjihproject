@@ -35,7 +35,8 @@ Thumbs.db
 
 log/*
 cache/*
-uploads/*
+/web/uploads/*
 /nbproject/private/
 /plugins/.channels/
 /plugins/.registry/
+

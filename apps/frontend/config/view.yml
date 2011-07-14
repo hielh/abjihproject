@@ -12,9 +12,9 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [FO/style.css, FO/960.css, FO/niceforms-default.css, FO/player.css, FO/init_style.css, FO/tipTip.css]
+  stylesheets:    [FO/style.css, FO/960.css, FO/niceforms-default.css, FO/player.css, FO/init_style.css, FO/tipTip.css, FO/jquery.gritter.css]
 
-  javascripts:    [libs/jquery.jplayer.min.js, libs/niceforms.js, libs/jquery.tipTip.minified.js, plugins.js, script.js]
+  javascripts:    [libs/jquery.jplayer.min.js, libs/niceforms.js, libs/jquery.tipTip.minified.js, libs/jquery.gritter.min.js, plugins.js, script.js]
 
   has_layout:     true
   layout:         layout
