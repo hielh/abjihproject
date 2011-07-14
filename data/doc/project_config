@@ -1,0 +1,21 @@
+installation et configuration git,
+git clone git@github.com:abjih/abjihproject.git
+
+configuration virtualhost
+
+<VirtualHost *:80>
+  ServerName is.local
+  DocumentRoot "/var/www/islam/web/"
+  DirectoryIndex index.php
+  <Directory "/var/www/islam/web">
+    AllowOverride All
+    Allow from All
+  </Directory>
+
+  Alias /sf /var/www/islam/lib/vendor/symfony/data/web/sf
+  <Directory "/var/www/islam/lib/vendor/symfony/data/web/sf">
+    AllowOverride All
+    Allow from All
+  </Directory>
+</VirtualHost>
+

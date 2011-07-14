@@ -37,7 +37,7 @@
 	<div id="container">
 	    <header>
 		<div class="container_12">
-		    <?php include_partial('player/htmlPlayer'); ?>
+		    <?php include_partial('home/htmlPlayer'); ?>
 
 		    <div id="search_form" class="grid_4 alpha">
 
@@ -50,12 +50,17 @@
 		    <?php echo $sf_content; ?>
 		</div>
 		<div class="grid_4">
-		    right bar
+                    <?php if (has_component_slot('right_menu')): ?>
+                        <?php include_component_slot('right_menu')?>
+                    <?php endif; ?>
 		</div>
 		<div class="clear"></div>
 	    </div>
 
-
+            <div class="clear"></div>
+            <footer>
+                footer
+            </footer>
 	</div> <!--! end of #container -->
 
 

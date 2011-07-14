@@ -197,10 +197,14 @@
   -webkit-border-radius: 4px;
 }
 
+
 .qu-player .progress {
   height: 9px;
   width: 135px;
   cursor: pointer;
+}
+.qu-player .progress-wrapper-volume, .qu-player .progress-volume {
+  width: 95px;
 }
 
 .qu-player .elapsed {

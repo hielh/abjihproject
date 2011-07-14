@@ -18,3 +18,7 @@ default:
 
   has_layout:     true
   layout:         layout
+  
+all:
+  components:
+    right_menu: [home, rightMenu]

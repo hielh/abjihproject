@@ -37,3 +37,5 @@ log/*
 cache/*
 uploads/*
 /nbproject/private/
+/plugins/.channels/
+/plugins/.registry/
