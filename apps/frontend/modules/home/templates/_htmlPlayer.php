@@ -3,7 +3,7 @@
 
 <div class="qu-player grid_5">
 
-  <div class="player-controls">
+  <div class="player-controls" id="player-controls">
 
     <div class="qu-player-right">
       <div class="jp-mute unmute playerIcone"></div>
@@ -37,20 +37,9 @@
         <div class="elapsed jp-play-bar" style="width: 0%;"></div>
       </div>
     </div>
-    <div class="jp-playlist" id="jp_playlist_2">
+    <div class="jp-playlist" id="jp_playlist">
       <ul>
-        <li class="jp-playlist-current"><a tabindex="1" id="jp_playlist_2_item_0" href="#" class="jp-playlist-current">Tempered Song</a></li>
-        <li><a tabindex="1" id="jp_playlist_2_item_1" href="#">Hidden</a></li>
-        <li><a tabindex="1" id="jp_playlist_2_item_2" href="#">Lentement</a></li>
-        <li><a tabindex="1" id="jp_playlist_2_item_8" href="#">Partir</a></li>
-        <li class="jp-playlist-current"><a tabindex="1" id="jp_playlist_2_item_0" href="#" class="jp-playlist-current">Tempered Song</a></li>
-        <li><a tabindex="1" id="jp_playlist_2_item_1" href="#">Hidden</a></li>
-        <li><a tabindex="1" id="jp_playlist_2_item_2" href="#">Lentement</a></li>
-        <li><a tabindex="1" id="jp_playlist_2_item_8" href="#">Partir</a></li>
-        <li class="jp-playlist-current"><a tabindex="1" id="jp_playlist_2_item_0" href="#" class="jp-playlist-current">Tempered Song</a></li>
-        <li><a tabindex="1" id="jp_playlist_2_item_1" href="#">Hidden</a></li>
-        <li><a tabindex="1" id="jp_playlist_2_item_2" href="#">Lentement</a></li>
-        <li><a tabindex="1" id="jp_playlist_2_item_8" href="#">Partir</a></li>
+        <li></li>
       </ul>
     </div>
   </div>
