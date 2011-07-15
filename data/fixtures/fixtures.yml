@@ -1,11 +1,14 @@
-User:
+sfGuardUser:
   abjih:
-  hielh:
-  tester:
+    email_address: miyyet1@gmail.com
+    password: 123456
+    username: abjih
+    is_active: 1
+    is_super_admin: 1
    
 PlayOwner:
   afasy:
-    user: abjih
+    sfGuardUser: abjih
     name: Afasy
     picture: al-kouchi.55066865.2223240899.2.jpg
     site_web: www.google.com
@@ -14,13 +17,13 @@ PlayOwner:
     
 PlayList:
   afasyQuran:
-    user: abjih
+    sfGuardUser: abjih
     playOwner: afasy
     object_type: quran
     title: afasy quran title
     description: quran description
   afasyAnashid:
-    user: abjih
+    sfGuardUser: abjih
     playOwner: afasy
     object_type: anachid
     title: afasy anashid title
@@ -28,33 +31,59 @@ PlayList:
     
 PlayIt:
   afasyQuranPlay01:
-    user: abjih
+    sfGuardUser: abjih
     playList: afasyQuran
-    name: al-fatiha
-    description: description for play it
+    name: الـفـاتـحـة
+    url: http://www.archive.org/download/TvQuran.com__Alafasi/001.mp3
   afasyQuranPlay02:
-    user: abjih
+    sfGuardUser: abjih
     playList: afasyQuran
-    name: al-bakara
-    description: description for play it
+    name: الـبـقـرة
+    url: http://www.archive.org/download/TvQuran.com__Alafasi/002.mp3
   afasyQuranPlay03:
-    user: abjih
+    sfGuardUser: abjih
     playList: afasyQuran
-    name: al-imrane
-    description: description for play it
-  afasyAnashidPlay01:
-    user: abjih
-    playList: afasyAnashid
-    name: Ramadan
-    description: description for play it
-  afasyAnashidPlay02:
-    user: abjih
-    playList: afasyAnashid
-    name: illa salati
-    description: description for play it
-  afasyAnashidPlay03:
-    user: abjih
-    playList: afasyAnashid
-    name: ya rassoula llah
-    description: description for play it
-  
+    name: عـمـران آل
+    url: http://www.archive.org/download/TvQuran.com__Alafasi/003.mp3
+  afasyQuranPlay04:
+    sfGuardUser: abjih
+    playList: afasyQuran
+    name: الـنـسـاء
+    url: http://www.archive.org/download/TvQuran.com__Alafasi/004.mp3
+  afasyQuranPlay05:
+    sfGuardUser: abjih
+    playList: afasyQuran
+    name: الـمـائـدة
+    url: http://www.archive.org/download/TvQuran.com__Alafasi/005.mp3
+  afasyQuranPlay06:
+    sfGuardUser: abjih
+    playList: afasyQuran
+    name: الأنـعـام
+    url: http://www.archive.org/download/TvQuran.com__Alafasi/006.mp3
+  afasyQuranPlay07:
+    sfGuardUser: abjih
+    playList: afasyQuran
+    name: الأعـراف
+    url: http://www.archive.org/download/TvQuran.com__Alafasi/007.mp3
+  afasyQuranPlay08:
+    sfGuardUser: abjih
+    playList: afasyQuran
+    name: الأنـفـال
+    url: http://www.archive.org/download/TvQuran.com__Alafasi/008.mp3
+    
+userPlaylist:
+  userplay01:
+    sfGuardUser: abjih
+    playIt: afasyQuranPlay08
+  userplay02:
+    sfGuardUser: abjih
+    playIt: afasyQuranPlay05
+  userplay03:
+    sfGuardUser: abjih
+    playIt: afasyQuranPlay04
+  userplay04:
+    sfGuardUser: abjih
+    playIt: afasyQuranPlay06
+  userplay05:
+    sfGuardUser: abjih
+    playIt: afasyQuranPlay02

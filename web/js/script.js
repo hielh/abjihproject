@@ -13,6 +13,11 @@ $(function(){
 
 jQuery(document).ready(function(){
 
+
+  //ajouter un track a la playlist
+  qu.player.addToPlaylist();
+  
+  
 //  $("#player").jPlayer( {
 //    ready: function () {
 //      $(this).jPlayer("setMedia", {
@@ -187,22 +192,7 @@ $(document).ready(function(){
 		}
 	};
 
-	var audioPlaylist = new Playlist("", [
-		{
-			name:"Tempered Song",
-//			mp3:"http://www.jplayer.org/audio/mp3/Miaow-01-Tempered-song.mp3",
-			oga:"http://www.jplayer.org/audio/ogg/Miaow-01-Tempered-song.ogg"
-		},
-		{
-			name:"miawo",
-			mp3:"/uploads/listen/Miaow-07-Bubble.mp3"
-		},
-		{
-			name:"laila",
-			oga:"/uploads/listen/laila07.ogg"
-		}
-		
-	], {
+	var audioPlaylist = new Playlist("", privateListener , {
 		ready: function() {
 			audioPlaylist.displayPlaylist();
 			audioPlaylist.playlistInit(false); // Parameter is a boolean for autoplay.

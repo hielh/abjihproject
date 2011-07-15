@@ -11,7 +11,7 @@
  * @property string $object_type
  * @property string $title
  * @property clob $description
- * @property user $user
+ * @property sfGuardUser $sfGuardUser
  * @property playOwner $playOwner
  * @property Doctrine_Collection $play_its
  * @property Doctrine_Collection $reports
@@ -22,7 +22,7 @@
  * @method string              getObjectType()    Returns the current record's "object_type" value
  * @method string              getTitle()         Returns the current record's "title" value
  * @method clob                getDescription()   Returns the current record's "description" value
- * @method user                getUser()          Returns the current record's "user" value
+ * @method sfGuardUser         getSfGuardUser()   Returns the current record's "sfGuardUser" value
  * @method playOwner           getPlayOwner()     Returns the current record's "playOwner" value
  * @method Doctrine_Collection getPlayIts()       Returns the current record's "play_its" collection
  * @method Doctrine_Collection getReports()       Returns the current record's "reports" collection
@@ -32,7 +32,7 @@
  * @method playList            setObjectType()    Sets the current record's "object_type" value
  * @method playList            setTitle()         Sets the current record's "title" value
  * @method playList            setDescription()   Sets the current record's "description" value
- * @method playList            setUser()          Sets the current record's "user" value
+ * @method playList            setSfGuardUser()   Sets the current record's "sfGuardUser" value
  * @method playList            setPlayOwner()     Sets the current record's "playOwner" value
  * @method playList            setPlayIts()       Sets the current record's "play_its" collection
  * @method playList            setReports()       Sets the current record's "reports" collection
@@ -53,10 +53,9 @@ abstract class BaseplayList extends sfDoctrineRecord
              'autoincrement' => true,
              'length' => 4,
              ));
-        $this->hasColumn('user_id', 'integer', 4, array(
+        $this->hasColumn('user_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => 4,
              ));
         $this->hasColumn('play_owner_id', 'integer', 4, array(
              'type' => 'integer',
@@ -90,7 +89,7 @@ abstract class BaseplayList extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('user', array(
+        $this->hasOne('sfGuardUser', array(
              'local' => 'user_id',
              'foreign' => 'id'));
 

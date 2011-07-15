@@ -319,6 +319,15 @@ video:
       foreign: id
       foreignAlias: videos
 
+sfGuardUser:
+  relations:
+    playIt:
+      class: playIt
+      foreignAlias: playIts
+      refClass: userPlaylist
+      local: id
+      foreign: playit_id
+      
 userPlaylist:
   actAs: 
     Timestampable:
@@ -332,9 +341,11 @@ userPlaylist:
       class: sfGuardUser
       local: user_id
       foreign: id
+      foreignAlias: userPlaylists
     playIt:
       class: playIt
       local: playit_id
       foreign: id
+      foreignAlias: userPlaylists
     
     

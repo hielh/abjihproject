@@ -27,6 +27,7 @@ default:
    - libs/jquery.tipTip.minified.js
    - libs/jquery.gritter.min.js
    - mylibs/fo/qu.common.js
+   - mylibs/fo/qu.playlist.js
    - plugins.js
    - script.js
 

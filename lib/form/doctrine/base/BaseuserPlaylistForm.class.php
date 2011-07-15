@@ -1,32 +1,36 @@
 <?php
 
 /**
- * user form base class.
+ * userPlaylist form base class.
  *
- * @method user getObject() Returns the current form's model object
+ * @method userPlaylist getObject() Returns the current form's model object
  *
  * @package    islam
  * @subpackage form
  * @author     Your name here
  * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
  */
-abstract class BaseuserForm extends BaseFormDoctrine
+abstract class BaseuserPlaylistForm extends BaseFormDoctrine
 {
   public function setup()
   {
     $this->setWidgets(array(
       'id'         => new sfWidgetFormInputHidden(),
+      'user_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => true)),
+      'playit_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('playIt'), 'add_empty' => true)),
       'created_at' => new sfWidgetFormDateTime(),
       'updated_at' => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
       'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'user_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'required' => false)),
+      'playit_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('playIt'), 'required' => false)),
       'created_at' => new sfValidatorDateTime(),
       'updated_at' => new sfValidatorDateTime(),
     ));
 
-    $this->widgetSchema->setNameFormat('user[%s]');
+    $this->widgetSchema->setNameFormat('user_playlist[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
 
@@ -37,7 +41,7 @@ abstract class BaseuserForm extends BaseFormDoctrine
 
   public function getModelName()
   {
-    return 'user';
+    return 'userPlaylist';
   }
 
 }

@@ -10,7 +10,7 @@
  * @property integer $category_id
  * @property string $title
  * @property clob $article_text
- * @property user $user
+ * @property sfGuardUser $sfGuardUser
  * @property category $category
  * @property Doctrine_Collection $reports
  * 
@@ -19,7 +19,7 @@
  * @method integer             getCategoryId()   Returns the current record's "category_id" value
  * @method string              getTitle()        Returns the current record's "title" value
  * @method clob                getArticleText()  Returns the current record's "article_text" value
- * @method user                getUser()         Returns the current record's "user" value
+ * @method sfGuardUser         getSfGuardUser()  Returns the current record's "sfGuardUser" value
  * @method category            getCategory()     Returns the current record's "category" value
  * @method Doctrine_Collection getReports()      Returns the current record's "reports" collection
  * @method article             setId()           Sets the current record's "id" value
@@ -27,7 +27,7 @@
  * @method article             setCategoryId()   Sets the current record's "category_id" value
  * @method article             setTitle()        Sets the current record's "title" value
  * @method article             setArticleText()  Sets the current record's "article_text" value
- * @method article             setUser()         Sets the current record's "user" value
+ * @method article             setSfGuardUser()  Sets the current record's "sfGuardUser" value
  * @method article             setCategory()     Sets the current record's "category" value
  * @method article             setReports()      Sets the current record's "reports" collection
  * 
@@ -47,10 +47,9 @@ abstract class Basearticle extends sfDoctrineRecord
              'autoincrement' => true,
              'length' => 4,
              ));
-        $this->hasColumn('user_id', 'integer', 4, array(
+        $this->hasColumn('user_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => 4,
              ));
         $this->hasColumn('category_id', 'integer', 4, array(
              'type' => 'integer',
@@ -87,7 +86,7 @@ abstract class Basearticle extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('user', array(
+        $this->hasOne('sfGuardUser', array(
              'local' => 'user_id',
              'foreign' => 'id'));
 

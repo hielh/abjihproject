@@ -16,7 +16,7 @@ abstract class BasearticleForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'           => new sfWidgetFormInputHidden(),
-      'user_id'      => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('user'), 'add_empty' => false)),
+      'user_id'      => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => false)),
       'category_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('category'), 'add_empty' => false)),
       'title'        => new sfWidgetFormInputText(),
       'article_text' => new sfWidgetFormTextarea(),
@@ -26,7 +26,7 @@ abstract class BasearticleForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'           => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'user_id'      => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('user'))),
+      'user_id'      => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'))),
       'category_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('category'))),
       'title'        => new sfValidatorString(array('max_length' => 200, 'required' => false)),
       'article_text' => new sfValidatorString(array('required' => false)),

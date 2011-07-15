@@ -8,20 +8,20 @@
  * @property integer $id
  * @property integer $user_id
  * @property string $category_name
- * @property user $user
+ * @property sfGuardUser $sfGuardUser
  * @property Doctrine_Collection $reports
  * @property Doctrine_Collection $articles
  * 
  * @method integer             getId()            Returns the current record's "id" value
  * @method integer             getUserId()        Returns the current record's "user_id" value
  * @method string              getCategoryName()  Returns the current record's "category_name" value
- * @method user                getUser()          Returns the current record's "user" value
+ * @method sfGuardUser         getSfGuardUser()   Returns the current record's "sfGuardUser" value
  * @method Doctrine_Collection getReports()       Returns the current record's "reports" collection
  * @method Doctrine_Collection getArticles()      Returns the current record's "articles" collection
  * @method category            setId()            Sets the current record's "id" value
  * @method category            setUserId()        Sets the current record's "user_id" value
  * @method category            setCategoryName()  Sets the current record's "category_name" value
- * @method category            setUser()          Sets the current record's "user" value
+ * @method category            setSfGuardUser()   Sets the current record's "sfGuardUser" value
  * @method category            setReports()       Sets the current record's "reports" collection
  * @method category            setArticles()      Sets the current record's "articles" collection
  * 
@@ -41,9 +41,8 @@ abstract class Basecategory extends sfDoctrineRecord
              'autoincrement' => true,
              'length' => 4,
              ));
-        $this->hasColumn('user_id', 'integer', 4, array(
+        $this->hasColumn('user_id', 'integer', null, array(
              'type' => 'integer',
-             'length' => 4,
              ));
         $this->hasColumn('category_name', 'string', 45, array(
              'type' => 'string',
@@ -65,7 +64,7 @@ abstract class Basecategory extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('user', array(
+        $this->hasOne('sfGuardUser', array(
              'local' => 'user_id',
              'foreign' => 'id'));
 

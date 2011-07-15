@@ -9,27 +9,33 @@
  * @property integer $user_id
  * @property integer $play_list_id
  * @property string $name
- * @property clob $description
- * @property user $user
+ * @property string $url
+ * @property sfGuardUser $sfGuardUser
  * @property playList $playList
+ * @property Doctrine_Collection $playIts
  * @property Doctrine_Collection $reports
+ * @property Doctrine_Collection $userPlaylists
  * 
- * @method integer             getId()           Returns the current record's "id" value
- * @method integer             getUserId()       Returns the current record's "user_id" value
- * @method integer             getPlayListId()   Returns the current record's "play_list_id" value
- * @method string              getName()         Returns the current record's "name" value
- * @method clob                getDescription()  Returns the current record's "description" value
- * @method user                getUser()         Returns the current record's "user" value
- * @method playList            getPlayList()     Returns the current record's "playList" value
- * @method Doctrine_Collection getReports()      Returns the current record's "reports" collection
- * @method playIt              setId()           Sets the current record's "id" value
- * @method playIt              setUserId()       Sets the current record's "user_id" value
- * @method playIt              setPlayListId()   Sets the current record's "play_list_id" value
- * @method playIt              setName()         Sets the current record's "name" value
- * @method playIt              setDescription()  Sets the current record's "description" value
- * @method playIt              setUser()         Sets the current record's "user" value
- * @method playIt              setPlayList()     Sets the current record's "playList" value
- * @method playIt              setReports()      Sets the current record's "reports" collection
+ * @method integer             getId()            Returns the current record's "id" value
+ * @method integer             getUserId()        Returns the current record's "user_id" value
+ * @method integer             getPlayListId()    Returns the current record's "play_list_id" value
+ * @method string              getName()          Returns the current record's "name" value
+ * @method string              getUrl()           Returns the current record's "url" value
+ * @method sfGuardUser         getSfGuardUser()   Returns the current record's "sfGuardUser" value
+ * @method playList            getPlayList()      Returns the current record's "playList" value
+ * @method Doctrine_Collection getPlayIts()       Returns the current record's "playIts" collection
+ * @method Doctrine_Collection getReports()       Returns the current record's "reports" collection
+ * @method Doctrine_Collection getUserPlaylists() Returns the current record's "userPlaylists" collection
+ * @method playIt              setId()            Sets the current record's "id" value
+ * @method playIt              setUserId()        Sets the current record's "user_id" value
+ * @method playIt              setPlayListId()    Sets the current record's "play_list_id" value
+ * @method playIt              setName()          Sets the current record's "name" value
+ * @method playIt              setUrl()           Sets the current record's "url" value
+ * @method playIt              setSfGuardUser()   Sets the current record's "sfGuardUser" value
+ * @method playIt              setPlayList()      Sets the current record's "playList" value
+ * @method playIt              setPlayIts()       Sets the current record's "playIts" collection
+ * @method playIt              setReports()       Sets the current record's "reports" collection
+ * @method playIt              setUserPlaylists() Sets the current record's "userPlaylists" collection
  * 
  * @package    islam
  * @subpackage model
@@ -47,10 +53,9 @@ abstract class BaseplayIt extends sfDoctrineRecord
              'autoincrement' => true,
              'length' => 4,
              ));
-        $this->hasColumn('user_id', 'integer', 4, array(
+        $this->hasColumn('user_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => 4,
              ));
         $this->hasColumn('play_list_id', 'integer', 4, array(
              'type' => 'integer',
@@ -60,9 +65,9 @@ abstract class BaseplayIt extends sfDoctrineRecord
              'type' => 'string',
              'length' => 100,
              ));
-        $this->hasColumn('description', 'clob', 65535, array(
-             'type' => 'clob',
-             'length' => 65535,
+        $this->hasColumn('url', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
              ));
 
 
@@ -80,7 +85,7 @@ abstract class BaseplayIt extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('user', array(
+        $this->hasOne('sfGuardUser', array(
              'local' => 'user_id',
              'foreign' => 'id'));
 
@@ -88,9 +93,18 @@ abstract class BaseplayIt extends sfDoctrineRecord
              'local' => 'play_list_id',
              'foreign' => 'id'));
 
+        $this->hasMany('sfGuardUser as playIts', array(
+             'refClass' => 'userPlaylist',
+             'local' => 'playit_id',
+             'foreign' => 'id'));
+
         $this->hasMany('report as reports', array(
              'local' => 'id',
              'foreign' => 'play_it_id'));
+
+        $this->hasMany('userPlaylist as userPlaylists', array(
+             'local' => 'id',
+             'foreign' => 'playit_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();
         $this->actAs($timestampable0);

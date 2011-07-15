@@ -8,19 +8,19 @@
  * @property integer $id
  * @property integer $user_id
  * @property clob $comment
- * @property user $user
+ * @property sfGuardUser $sfGuardUser
  * @property Doctrine_Collection $reports
  * 
- * @method integer             getId()      Returns the current record's "id" value
- * @method integer             getUserId()  Returns the current record's "user_id" value
- * @method clob                getComment() Returns the current record's "comment" value
- * @method user                getUser()    Returns the current record's "user" value
- * @method Doctrine_Collection getReports() Returns the current record's "reports" collection
- * @method comment             setId()      Sets the current record's "id" value
- * @method comment             setUserId()  Sets the current record's "user_id" value
- * @method comment             setComment() Sets the current record's "comment" value
- * @method comment             setUser()    Sets the current record's "user" value
- * @method comment             setReports() Sets the current record's "reports" collection
+ * @method integer             getId()          Returns the current record's "id" value
+ * @method integer             getUserId()      Returns the current record's "user_id" value
+ * @method clob                getComment()     Returns the current record's "comment" value
+ * @method sfGuardUser         getSfGuardUser() Returns the current record's "sfGuardUser" value
+ * @method Doctrine_Collection getReports()     Returns the current record's "reports" collection
+ * @method comment             setId()          Sets the current record's "id" value
+ * @method comment             setUserId()      Sets the current record's "user_id" value
+ * @method comment             setComment()     Sets the current record's "comment" value
+ * @method comment             setSfGuardUser() Sets the current record's "sfGuardUser" value
+ * @method comment             setReports()     Sets the current record's "reports" collection
  * 
  * @package    islam
  * @subpackage model
@@ -38,10 +38,9 @@ abstract class Basecomment extends sfDoctrineRecord
              'autoincrement' => true,
              'length' => 4,
              ));
-        $this->hasColumn('user_id', 'integer', 4, array(
+        $this->hasColumn('user_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => 4,
              ));
         $this->hasColumn('comment', 'clob', 65535, array(
              'type' => 'clob',
@@ -63,7 +62,7 @@ abstract class Basecomment extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('user', array(
+        $this->hasOne('sfGuardUser', array(
              'local' => 'user_id',
              'foreign' => 'id'));
 

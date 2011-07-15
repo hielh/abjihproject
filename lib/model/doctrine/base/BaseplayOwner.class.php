@@ -8,29 +8,32 @@
  * @property integer $id
  * @property integer $user_id
  * @property string $name
+ * @property string $name_fr
  * @property string $picture
  * @property string $site_web
  * @property clob $description
- * @property user $user
+ * @property sfGuardUser $sfGuardUser
  * @property Doctrine_Collection $play_lists
  * @property Doctrine_Collection $reports
  * 
  * @method integer             getId()          Returns the current record's "id" value
  * @method integer             getUserId()      Returns the current record's "user_id" value
  * @method string              getName()        Returns the current record's "name" value
+ * @method string              getNameFr()      Returns the current record's "name_fr" value
  * @method string              getPicture()     Returns the current record's "picture" value
  * @method string              getSiteWeb()     Returns the current record's "site_web" value
  * @method clob                getDescription() Returns the current record's "description" value
- * @method user                getUser()        Returns the current record's "user" value
+ * @method sfGuardUser         getSfGuardUser() Returns the current record's "sfGuardUser" value
  * @method Doctrine_Collection getPlayLists()   Returns the current record's "play_lists" collection
  * @method Doctrine_Collection getReports()     Returns the current record's "reports" collection
  * @method playOwner           setId()          Sets the current record's "id" value
  * @method playOwner           setUserId()      Sets the current record's "user_id" value
  * @method playOwner           setName()        Sets the current record's "name" value
+ * @method playOwner           setNameFr()      Sets the current record's "name_fr" value
  * @method playOwner           setPicture()     Sets the current record's "picture" value
  * @method playOwner           setSiteWeb()     Sets the current record's "site_web" value
  * @method playOwner           setDescription() Sets the current record's "description" value
- * @method playOwner           setUser()        Sets the current record's "user" value
+ * @method playOwner           setSfGuardUser() Sets the current record's "sfGuardUser" value
  * @method playOwner           setPlayLists()   Sets the current record's "play_lists" collection
  * @method playOwner           setReports()     Sets the current record's "reports" collection
  * 
@@ -50,12 +53,15 @@ abstract class BaseplayOwner extends sfDoctrineRecord
              'autoincrement' => true,
              'length' => 4,
              ));
-        $this->hasColumn('user_id', 'integer', 4, array(
+        $this->hasColumn('user_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => 4,
              ));
         $this->hasColumn('name', 'string', 100, array(
+             'type' => 'string',
+             'length' => 100,
+             ));
+        $this->hasColumn('name_fr', 'string', 100, array(
              'type' => 'string',
              'length' => 100,
              ));
@@ -87,7 +93,7 @@ abstract class BaseplayOwner extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('user', array(
+        $this->hasOne('sfGuardUser', array(
              'local' => 'user_id',
              'foreign' => 'id'));
 
@@ -100,6 +106,15 @@ abstract class BaseplayOwner extends sfDoctrineRecord
              'foreign' => 'play_owner_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();
+        $sluggable0 = new Doctrine_Template_Sluggable(array(
+             'unique' => true,
+             'fields' => 
+             array(
+              0 => 'name_fr',
+             ),
+             'canUpdate' => true,
+             ));
         $this->actAs($timestampable0);
+        $this->actAs($sluggable0);
     }
 }

@@ -17,58 +17,58 @@
  * @property integer $category_id
  * @property string $title
  * @property clob $message
- * @property user $user
+ * @property sfGuardUser $sfGuardUser
  * @property comment $comment
  * @property playIt $playIt
  * @property playList $playList
  * @property playOwner $playOwner
  * @property article $article
  * @property video $video
- * @property user $reportUser
+ * @property sfGuardUser $reportUser
  * @property category $category
  * 
- * @method integer   getId()             Returns the current record's "id" value
- * @method integer   getUserId()         Returns the current record's "user_id" value
- * @method integer   getCommentId()      Returns the current record's "comment_id" value
- * @method integer   getPlayItId()       Returns the current record's "play_it_id" value
- * @method integer   getPlayListId()     Returns the current record's "play_list_id" value
- * @method integer   getPlayOwnerId()    Returns the current record's "play_owner_id" value
- * @method integer   getArticleId()      Returns the current record's "article_id" value
- * @method integer   getVideoId()        Returns the current record's "video_id" value
- * @method integer   getReportUserId()   Returns the current record's "report_user_id" value
- * @method integer   getCategoryId()     Returns the current record's "category_id" value
- * @method string    getTitle()          Returns the current record's "title" value
- * @method clob      getMessage()        Returns the current record's "message" value
- * @method user      getUser()           Returns the current record's "user" value
- * @method comment   getComment()        Returns the current record's "comment" value
- * @method playIt    getPlayIt()         Returns the current record's "playIt" value
- * @method playList  getPlayList()       Returns the current record's "playList" value
- * @method playOwner getPlayOwner()      Returns the current record's "playOwner" value
- * @method article   getArticle()        Returns the current record's "article" value
- * @method video     getVideo()          Returns the current record's "video" value
- * @method user      getReportUser()     Returns the current record's "reportUser" value
- * @method category  getCategory()       Returns the current record's "category" value
- * @method report    setId()             Sets the current record's "id" value
- * @method report    setUserId()         Sets the current record's "user_id" value
- * @method report    setCommentId()      Sets the current record's "comment_id" value
- * @method report    setPlayItId()       Sets the current record's "play_it_id" value
- * @method report    setPlayListId()     Sets the current record's "play_list_id" value
- * @method report    setPlayOwnerId()    Sets the current record's "play_owner_id" value
- * @method report    setArticleId()      Sets the current record's "article_id" value
- * @method report    setVideoId()        Sets the current record's "video_id" value
- * @method report    setReportUserId()   Sets the current record's "report_user_id" value
- * @method report    setCategoryId()     Sets the current record's "category_id" value
- * @method report    setTitle()          Sets the current record's "title" value
- * @method report    setMessage()        Sets the current record's "message" value
- * @method report    setUser()           Sets the current record's "user" value
- * @method report    setComment()        Sets the current record's "comment" value
- * @method report    setPlayIt()         Sets the current record's "playIt" value
- * @method report    setPlayList()       Sets the current record's "playList" value
- * @method report    setPlayOwner()      Sets the current record's "playOwner" value
- * @method report    setArticle()        Sets the current record's "article" value
- * @method report    setVideo()          Sets the current record's "video" value
- * @method report    setReportUser()     Sets the current record's "reportUser" value
- * @method report    setCategory()       Sets the current record's "category" value
+ * @method integer     getId()             Returns the current record's "id" value
+ * @method integer     getUserId()         Returns the current record's "user_id" value
+ * @method integer     getCommentId()      Returns the current record's "comment_id" value
+ * @method integer     getPlayItId()       Returns the current record's "play_it_id" value
+ * @method integer     getPlayListId()     Returns the current record's "play_list_id" value
+ * @method integer     getPlayOwnerId()    Returns the current record's "play_owner_id" value
+ * @method integer     getArticleId()      Returns the current record's "article_id" value
+ * @method integer     getVideoId()        Returns the current record's "video_id" value
+ * @method integer     getReportUserId()   Returns the current record's "report_user_id" value
+ * @method integer     getCategoryId()     Returns the current record's "category_id" value
+ * @method string      getTitle()          Returns the current record's "title" value
+ * @method clob        getMessage()        Returns the current record's "message" value
+ * @method sfGuardUser getSfGuardUser()    Returns the current record's "sfGuardUser" value
+ * @method comment     getComment()        Returns the current record's "comment" value
+ * @method playIt      getPlayIt()         Returns the current record's "playIt" value
+ * @method playList    getPlayList()       Returns the current record's "playList" value
+ * @method playOwner   getPlayOwner()      Returns the current record's "playOwner" value
+ * @method article     getArticle()        Returns the current record's "article" value
+ * @method video       getVideo()          Returns the current record's "video" value
+ * @method sfGuardUser getReportUser()     Returns the current record's "reportUser" value
+ * @method category    getCategory()       Returns the current record's "category" value
+ * @method report      setId()             Sets the current record's "id" value
+ * @method report      setUserId()         Sets the current record's "user_id" value
+ * @method report      setCommentId()      Sets the current record's "comment_id" value
+ * @method report      setPlayItId()       Sets the current record's "play_it_id" value
+ * @method report      setPlayListId()     Sets the current record's "play_list_id" value
+ * @method report      setPlayOwnerId()    Sets the current record's "play_owner_id" value
+ * @method report      setArticleId()      Sets the current record's "article_id" value
+ * @method report      setVideoId()        Sets the current record's "video_id" value
+ * @method report      setReportUserId()   Sets the current record's "report_user_id" value
+ * @method report      setCategoryId()     Sets the current record's "category_id" value
+ * @method report      setTitle()          Sets the current record's "title" value
+ * @method report      setMessage()        Sets the current record's "message" value
+ * @method report      setSfGuardUser()    Sets the current record's "sfGuardUser" value
+ * @method report      setComment()        Sets the current record's "comment" value
+ * @method report      setPlayIt()         Sets the current record's "playIt" value
+ * @method report      setPlayList()       Sets the current record's "playList" value
+ * @method report      setPlayOwner()      Sets the current record's "playOwner" value
+ * @method report      setArticle()        Sets the current record's "article" value
+ * @method report      setVideo()          Sets the current record's "video" value
+ * @method report      setReportUser()     Sets the current record's "reportUser" value
+ * @method report      setCategory()       Sets the current record's "category" value
  * 
  * @package    islam
  * @subpackage model
@@ -86,10 +86,9 @@ abstract class Basereport extends sfDoctrineRecord
              'autoincrement' => true,
              'length' => 4,
              ));
-        $this->hasColumn('user_id', 'integer', 4, array(
+        $this->hasColumn('user_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => 4,
              ));
         $this->hasColumn('comment_id', 'integer', 4, array(
              'type' => 'integer',
@@ -115,9 +114,8 @@ abstract class Basereport extends sfDoctrineRecord
              'type' => 'integer',
              'length' => 4,
              ));
-        $this->hasColumn('report_user_id', 'integer', 4, array(
+        $this->hasColumn('report_user_id', 'integer', null, array(
              'type' => 'integer',
-             'length' => 4,
              ));
         $this->hasColumn('category_id', 'integer', 4, array(
              'type' => 'integer',
@@ -195,7 +193,7 @@ abstract class Basereport extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('user', array(
+        $this->hasOne('sfGuardUser', array(
              'local' => 'user_id',
              'foreign' => 'id'));
 
@@ -223,7 +221,7 @@ abstract class Basereport extends sfDoctrineRecord
              'local' => 'video_id',
              'foreign' => 'id'));
 
-        $this->hasOne('user as reportUser', array(
+        $this->hasOne('sfGuardUser as reportUser', array(
              'local' => 'report_user_id',
              'foreign' => 'id'));
 

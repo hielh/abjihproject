@@ -16,7 +16,7 @@ abstract class BasereportForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'             => new sfWidgetFormInputHidden(),
-      'user_id'        => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('user'), 'add_empty' => false)),
+      'user_id'        => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => false)),
       'comment_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('comment'), 'add_empty' => true)),
       'play_it_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('playIt'), 'add_empty' => true)),
       'play_list_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('playList'), 'add_empty' => true)),
@@ -33,7 +33,7 @@ abstract class BasereportForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'             => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'user_id'        => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('user'))),
+      'user_id'        => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'))),
       'comment_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('comment'), 'required' => false)),
       'play_it_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('playIt'), 'required' => false)),
       'play_list_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('playList'), 'required' => false)),

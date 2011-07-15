@@ -9,21 +9,21 @@
  * @property integer $user_id
  * @property string $url
  * @property string $video_type
- * @property user $user
+ * @property sfGuardUser $sfGuardUser
  * @property Doctrine_Collection $reports
  * 
- * @method integer             getId()         Returns the current record's "id" value
- * @method integer             getUserId()     Returns the current record's "user_id" value
- * @method string              getUrl()        Returns the current record's "url" value
- * @method string              getVideoType()  Returns the current record's "video_type" value
- * @method user                getUser()       Returns the current record's "user" value
- * @method Doctrine_Collection getReports()    Returns the current record's "reports" collection
- * @method video               setId()         Sets the current record's "id" value
- * @method video               setUserId()     Sets the current record's "user_id" value
- * @method video               setUrl()        Sets the current record's "url" value
- * @method video               setVideoType()  Sets the current record's "video_type" value
- * @method video               setUser()       Sets the current record's "user" value
- * @method video               setReports()    Sets the current record's "reports" collection
+ * @method integer             getId()          Returns the current record's "id" value
+ * @method integer             getUserId()      Returns the current record's "user_id" value
+ * @method string              getUrl()         Returns the current record's "url" value
+ * @method string              getVideoType()   Returns the current record's "video_type" value
+ * @method sfGuardUser         getSfGuardUser() Returns the current record's "sfGuardUser" value
+ * @method Doctrine_Collection getReports()     Returns the current record's "reports" collection
+ * @method video               setId()          Sets the current record's "id" value
+ * @method video               setUserId()      Sets the current record's "user_id" value
+ * @method video               setUrl()         Sets the current record's "url" value
+ * @method video               setVideoType()   Sets the current record's "video_type" value
+ * @method video               setSfGuardUser() Sets the current record's "sfGuardUser" value
+ * @method video               setReports()     Sets the current record's "reports" collection
  * 
  * @package    islam
  * @subpackage model
@@ -41,10 +41,9 @@ abstract class Basevideo extends sfDoctrineRecord
              'autoincrement' => true,
              'length' => 4,
              ));
-        $this->hasColumn('user_id', 'integer', 4, array(
+        $this->hasColumn('user_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => 4,
              ));
         $this->hasColumn('url', 'string', 255, array(
              'type' => 'string',
@@ -55,13 +54,6 @@ abstract class Basevideo extends sfDoctrineRecord
              'length' => 45,
              ));
 
-
-        $this->index('fk_video_user1', array(
-             'fields' => 
-             array(
-              0 => 'user_id',
-             ),
-             ));
         $this->option('collate', 'utf8_general_ci');
         $this->option('charset', 'utf8');
         $this->option('type', 'InnoDB');
@@ -70,7 +62,7 @@ abstract class Basevideo extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('user', array(
+        $this->hasOne('sfGuardUser', array(
              'local' => 'user_id',
              'foreign' => 'id'));
 
