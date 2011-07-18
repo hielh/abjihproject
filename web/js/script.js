@@ -1,7 +1,3 @@
-/* Author: 
-
-*/
-
 $(function(){
   $(".bull, .bull_help, .help").tipTip({
     defaultPosition: 'top'
@@ -19,7 +15,7 @@ jQuery(document).ready(function(){
 
   jQuery('.toPlayNumber').hover(function(){
     val = jQuery(this).html();
-    jQuery(this).html('<a href="#" class="add urlImage" title="download">Download</a>').fadeIn(slow);
+    jQuery(this).html('<a href="#" class="add urlImage" title="download">Download</a>').fadeIn('slow');
   }, function(){
     jQuery(this).html(val);
   }
