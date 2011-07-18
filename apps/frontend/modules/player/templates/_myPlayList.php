@@ -11,6 +11,17 @@
     },';
   ?>
 <?php endforeach; ?>
-<script>
+
+<?php if (isset($reloadPlaylist) && (!$reloadPlaylist)): ?>
+  <script>
+<?php endif; ?>
   privateListener = [<?php echo $jsPlaylist; ?>]; 
-</script>
+  
+  <?php if (isset($reloadPlaylist) && ($reloadPlaylist)): ?>
+    audioPlaylist.setPlaylist(privateListener);
+    audioPlaylist.displayPlaylist();
+  <?php endif; ?>
+
+<?php if (isset($reloadPlaylist) && (!$reloadPlaylist)): ?>
+  </script>
+<?php endif; ?>

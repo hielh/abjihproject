@@ -1,1 +1,1 @@
-<?php include_component('player', 'myPlayList');  ?>
+<?php include_component('player', 'myPlayList', array('reloadPlaylist' => false));  ?>

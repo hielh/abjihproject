@@ -434,3 +434,6 @@
 .qu-player .jp-playlist li a:hover{
   background: #ccc;
 }
+.jp-playlist-current{
+  background: lime;
+}

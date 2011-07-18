@@ -69,7 +69,7 @@
 	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="/js/jquery.js"><\/script>')</script>
-    <?php include_component('player', 'myPlayList'); ?>
+    <?php include_component('player', 'myPlayList', array('reloadPlaylist' => false)); ?>
 	<?php include_javascripts() ?>
 
 	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
