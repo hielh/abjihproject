@@ -6,17 +6,13 @@
   <?php
   $jsPlaylist .= '
     {
-      name:"' . $myPlayList->getPlayIt()->getName() . '",
+      name:"' . $myPlayList->getPlayIt()->getName() . ' - '.$myPlayList->getPlayIt()->getPlayList()->getPlayOwner()->getName().' ",
       mp3:"' . $myPlayList->getPlayIt()->getUrl() . '",
     },';
   ?>
 <?php endforeach; ?>
 
-<div class="show-notice error" style="display:none">
-    <div class="notice-title">notification title when adding new mp3</div>
-    <div class="notice-text">notification content when adding new mp3</div>
-</div>
-
+<?php include_partial('home/notice'); ?>
 <?php if (isset($reloadPlaylist) && (!$reloadPlaylist)): ?>
   <script>
 <?php endif; ?>

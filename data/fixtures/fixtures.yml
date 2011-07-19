@@ -18,13 +18,13 @@ PlayOwner:
 PlayList:
   afasyQuran:
     sfGuardUser: abjih
-    playOwner: afasy
+    playOwner: مشاري بن راشد العفاسي
     object_type: quran
     title: afasy quran title
     description: quran description
   afasyAnashid:
     sfGuardUser: abjih
-    playOwner: afasy
+    playOwner: مشاري بن راشد العفاسي
     object_type: anachid
     title: afasy anashid title
     description: anashid description

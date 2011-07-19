@@ -22,6 +22,8 @@ class userPlaylistTable extends Doctrine_Table {
             ->addWhere('upl.user_id = ?', $userId)
             ->leftJoin('upl.sfGuardUser u')
             ->leftJoin('upl.playIt pi')
+            ->leftJoin('pi.playList pl')
+            ->leftJoin('pl.playOwner po')
             ->execute();
 
     return $q;

@@ -18,6 +18,7 @@ class addToPlaylistAction extends sfAction {
 
     $playItId = $request->getParameter('id');
     $userId = 1; // a modifier
+    $sf_user = $this->getUser();
     
     $this->forward404If(!$request->isXmlHttpRequest());
     
@@ -33,6 +34,12 @@ class addToPlaylistAction extends sfAction {
       $oUserPlaylist->setUserId($userId);
       $oUserPlaylist->setPlayitId($playItId);
       $oUserPlaylist->save();
+      
+      $sf_user->setFlash('qu_notice_success', 'qu_add_item_to_playlist_success');
+    }
+    else
+    {
+      $sf_user->setFlash('qu_notice_error', 'qu_add_item_all_ready_existe_on_your_playlist');
     }
     
   }
