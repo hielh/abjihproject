@@ -1,5 +1,6 @@
 sfGuardUser:
   abjih:
+    id: 1
     email_address: miyyet1@gmail.com
     password: 123456
     username: abjih
@@ -9,24 +10,25 @@ sfGuardUser:
 PlayOwner:
   afasy:
     sfGuardUser: abjih
-    name: Afasy
+    name: مشاري بن راشد العفاسي
     picture: al-kouchi.55066865.2223240899.2.jpg
-    site_web: www.google.com
-    description: |
-      الآن أرى أن أجمع البيض الاستئصالي في سلة واحدة حيث نفس اللون ونفس الحجم ونفس الوزن... فكلهم ذوو مشرب استئصالي، ويفكرون بنفس الطريقة، وهدفهم واحد... فلماذا علي أن أكسر بيضة بيضة، ما دام الكسر ميسورا 
+  kamal:
+    sfGuardUser: abjih
+    name:  كمال اليونسي
+    picture: al-kouchi.55066865.2223240899.2.jpg
     
 PlayList:
   afasyQuran:
     sfGuardUser: abjih
-    playOwner: مشاري بن راشد العفاسي
+    playOwner: afasy
     object_type: quran
     title: afasy quran title
     description: quran description
-  afasyAnashid:
+  kamalQuran:
     sfGuardUser: abjih
-    playOwner: مشاري بن راشد العفاسي
-    object_type: anachid
-    title: afasy anashid title
+    playOwner: kamal 
+    object_type: quran
+    title: 	رمضان 1427
     description: anashid description
     
 PlayIt:
@@ -71,19 +73,65 @@ PlayIt:
     name: الأنـفـال
     url: http://www.archive.org/download/TvQuran.com__Alafasi/008.mp3
     
-userPlaylist:
-  userplay01:
+  kamalQuran01:
     sfGuardUser: abjih
-    playIt: afasyQuranPlay08
-  userplay02:
+    playList: kamalQuran
+    name: سورة لقمان 
+    url: http://www.archive.org/download/abjih/Kamal-elYounssi_Tarawi7/031_loqman.mp3
+  kamalQuran02:
     sfGuardUser: abjih
-    playIt: afasyQuranPlay05
-  userplay03:
+    playList: kamalQuran
+    name: سورة طه 
+    url: http://www.archive.org/download/abjih/Kamal-elYounssi_Tarawi7/020_taha.mp3
+  kamalQuran03:
     sfGuardUser: abjih
-    playIt: afasyQuranPlay04
-  userplay04:
+    playList: kamalQuran
+    name: الليلة السابعة 
+    url: http://www.archive.org/download/abjih/Kamal-elYounssi_Tarawi7/kamal_1427_laila07.mp3
+  kamalQuran04:
     sfGuardUser: abjih
-    playIt: afasyQuranPlay06
-  userplay05:
+    playList: kamalQuran
+    name: الليلة التاسعة 
+    url: http://www.archive.org/download/abjih/Kamal-elYounssi_Tarawi7/kamal_1427_laila09.mp3
+  kamalQuran05:
     sfGuardUser: abjih
-    playIt: afasyQuranPlay02
+    playList: kamalQuran
+    name: الليلة العاشرة 
+    url: http://www.archive.org/download/abjih/Kamal-elYounssi_Tarawi7/kamal_1427_laila10.mp3
+  kamalQuran06:
+    sfGuardUser: abjih
+    playList: kamalQuran
+    name: الليلة الحادية عشر 
+    url: http://www.archive.org/download/abjih/Kamal-elYounssi_Tarawi7/kamal_1427_laila11.mp3
+  kamalQuran07:
+    sfGuardUser: abjih
+    playList: kamalQuran
+    name: الليلة الثانية عشر 
+    url: http://www.archive.org/download/abjih/Kamal-elYounssi_Tarawi7/kamal_1427_laila12.mp3
+  kamalQuran08:
+    sfGuardUser: abjih
+    playList: kamalQuran
+    name: الليلة الثالثة عشر 
+    url: http://www.archive.org/download/abjih/Kamal-elYounssi_Tarawi7/kamal_1427_laila13.mp3
+  kamalQuran09:
+    sfGuardUser: abjih
+    playList: kamalQuran
+    name: الليلة الرابعة عشر 
+    url: http://www.archive.org/download/abjih/Kamal-elYounssi_Tarawi7/kamal_1427_laila14.mp3
+    
+#userPlaylist:
+#  userplay01:
+#    sfGuardUser: abjih
+#    playIt: afasyQuranPlay08
+#  userplay02:
+#    sfGuardUser: abjih
+#    playIt: afasyQuranPlay05
+#  userplay03:
+#    sfGuardUser: abjih
+#    playIt: afasyQuranPlay04
+#  userplay04:
+#    sfGuardUser: abjih
+#    playIt: afasyQuranPlay06
+#  userplay05:
+#    sfGuardUser: abjih
+#    playIt: afasyQuranPlay02

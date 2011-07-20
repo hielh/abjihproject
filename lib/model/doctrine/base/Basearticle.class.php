@@ -88,7 +88,9 @@ abstract class Basearticle extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('sfGuardUser', array(
              'local' => 'user_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasOne('category', array(
              'local' => 'category_id',

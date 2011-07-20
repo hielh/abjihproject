@@ -31,11 +31,15 @@ playList:
       local: user_id
       foreign: id
       foreignAlias: play_lists
+      onDelete: CASCADE
+      onUpdate: CASCADE
     playOwner:
       class: playOwner
       local: play_owner_id
       foreign: id
       foreignAlias: play_lists
+      onDelete: CASCADE
+      onUpdate: CASCADE
   indexes:
     fk_play_list_user1:
       fields: [user_id]
@@ -65,11 +69,15 @@ playIt:
       local: user_id
       foreign: id
       foreignAlias: play_its
+      onDelete: CASCADE
+      onUpdate: CASCADE
     playList:
       class: playList
       local: play_list_id
       foreign: id
       foreignAlias: play_its
+      onDelete: CASCADE
+      onUpdate: CASCADE
   indexes:
     fk_play_it_user1:
       fields: [user_id]
@@ -107,6 +115,8 @@ playOwner:
       local: user_id
       foreign: id
       foreignAlias: play_owners
+      onDelete: CASCADE
+      onUpdate: CASCADE
   indexes:
     fk_play_owner_user1:
       fields: [user_id]
@@ -150,46 +160,64 @@ report:
       local: user_id
       foreign: id
       foreignAlias: reports
+      onDelete: CASCADE
+      onUpdate: CASCADE
     comment:
       class: comment
       local: comment_id
       foreign: id
       foreignAlias: reports
+      onDelete: CASCADE
+      onUpdate: CASCADE
     playIt:
       class: playIt
       local: play_it_id
       foreign: id
       foreignAlias: reports
+      onDelete: CASCADE
+      onUpdate: CASCADE
     playList:
       class: playList
       local: play_list_id
       foreign: id
       foreignAlias: reports
+      onDelete: CASCADE
+      onUpdate: CASCADE
     playOwner:
       class: playOwner
       local: play_owner_id
       foreign: id
       foreignAlias: reports
+      onDelete: CASCADE
+      onUpdate: CASCADE
     article:
       class: article
       local: article_id
       foreign: id
       foreignAlias: reports
+      onDelete: CASCADE
+      onUpdate: CASCADE
     video:
       class: video
       local: video_id
       foreign: id
       foreignAlias: reports
+      onDelete: CASCADE
+      onUpdate: CASCADE
     reportUser:
       class: sfGuardUser
       local: report_user_id
       foreign: id
       foreignAlias: reports
+      onDelete: CASCADE
+      onUpdate: CASCADE
     category:
       class: category
       local: category_id
       foreign: id
       foreignAlias: reports
+      onDelete: CASCADE
+      onUpdate: CASCADE
   indexes:
     fk_report_user1:
       fields: [user_id]
@@ -229,6 +257,8 @@ category:
       local: user_id
       foreign: id
       foreignAlias: categories
+      onDelete: CASCADE
+      onUpdate: CASCADE
   indexes:
     fk_category_user1:
       fields: [user_id]
@@ -258,6 +288,8 @@ article:
       local: user_id
       foreign: id
       foreignAlias: articles
+      onDelete: CASCADE
+      onUpdate: CASCADE
     category:
       class: category
       local: category_id
@@ -289,6 +321,8 @@ comment:
       local: user_id
       foreign: id
       foreignAlias: comments
+      onDelete: CASCADE
+      onUpdate: CASCADE
   indexes:
     fk_comment_user:
       fields: [user_id]
@@ -318,6 +352,8 @@ video:
       local: user_id
       foreign: id
       foreignAlias: videos
+      onDelete: CASCADE
+      onUpdate: CASCADE
 
 sfGuardUser:
   relations:
@@ -342,10 +378,14 @@ userPlaylist:
       local: user_id
       foreign: id
       foreignAlias: userPlaylists
+      onDelete: CASCADE
+      onUpdate: CASCADE
     playIt:
       class: playIt
       local: playit_id
       foreign: id
       foreignAlias: userPlaylists
+      onDelete: CASCADE
+      onUpdate: CASCADE
     
     

@@ -91,11 +91,15 @@ abstract class BaseplayList extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('sfGuardUser', array(
              'local' => 'user_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasOne('playOwner', array(
              'local' => 'play_owner_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasMany('playIt as play_its', array(
              'local' => 'id',
