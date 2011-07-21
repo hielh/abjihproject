@@ -68,3 +68,21 @@ qu.common.tooltip = function()
     defaultPosition: 'top'
   });
 }
+
+/**
+ * affiche le player quand on scroll la page
+ */
+qu.common.fixedPlayer = function()
+{
+  var bar = $('#bottomPlayer');
+  var top = bar.css('bottom');
+  $(window).scroll(function() {
+    if($(this).scrollTop() > 120) {
+      bar.show().fadeIn('slow').stop().animate({
+        'bottom' : '0px'
+      }, 500);
+    } else {
+      bar.fadeOut('fast');
+    }
+  });
+}

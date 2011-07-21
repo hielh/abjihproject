@@ -124,6 +124,8 @@
 
 .qu-player .progress-bar{
   height: 100%;
+  float: left;
+  background: #686868;
 }
 .qu-player .progress-bar-elapsed{
   height: 100%;

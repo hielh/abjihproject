@@ -42,9 +42,13 @@
         </div>
       </header><!--! end of header -->
 
+      <div>
+        
+      </div>
       <footer>
         footer
       </footer>
+      <div id="bottomPlayer">bottom </div>
     </div> <!--! end of #container -->
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>

@@ -26,3 +26,11 @@ header .banner{
   height: 147px;
   padding-top: 23px;
 }
+#bottomPlayer {
+	position: fixed;
+	bottom:0px;
+	width: 100%;
+	background:#28170d;
+    display: none;
+    height: 100px;
+}
