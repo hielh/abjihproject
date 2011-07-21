@@ -1,7 +1,7 @@
 body{
   background: #F0F0F0;
   direction: rtl;
-  font-size: 12px;
+  font-size: 14px;
 }
 a{
   text-decoration: none;
@@ -9,132 +9,20 @@ a{
 h3{
   font-size: 14px;
 }
+
+.text-lime{
+  color: #a8d031;
+}
 header{
-  background: #BCED4F;
-  color: #000000;
-  height: 75px;
-  margin: 0 0 10px;
-  -moz-box-shadow: -0px 0px 10px 0px #888;
-  -webkit-box-shadow: -0px 0px 10px 0px #888;
-  box-shadow: -0px 0px 10px 0px #888;
-}
-
-#slider{
-  height: 250px;
-  margin-bottom: 5px;
-}
-#slider_cont{
-  height: 100%;
-  /* background-color: lime;*/
-}
-#slider_cont img{
-  height: 100%;
-  width: 630px;
-}
-
-#col .cols{
-  background: #fff;
-}
-.cols .sub_cols h3{
-  border-bottom: 1px solid;
-  font-size: 19px;
-  margin: 0 6px;
-  padding: 0 24px 3px 0;
-}
-.cols .sub_cols{
-  padding: 10px;
-}
-.sub_cols p{
-  margin: 5px;
-  padding: 0 0 2px 0;
-  border-bottom: 1px dashed #ccc;
-}
-.sub_cols p a{
-  display: block;
-}
-.sub_cols p a:hover{
-  background: #EBEBEB;
-}
-.sub_cols p a img {
-  background: none repeat scroll 0 0 #F1F1F1;
-  border: 1px solid #EBEBEB;
-  height: 50px;
-  padding: 2px;
-  width: 50px;
-}
-.last_article{
-  height: 200px;
-  margin-bottom: 5px;
-}
-
-.infoPlayer img{
-  float: right;
-  margin: 0px 10px;
-}
-.infoPlayer p.text{
-
-}
-footer{
-  margin-top: 10px;
-  background: none repeat scroll 0 0 #5B6150;
-  bottom: 0;
+  background: url(/images/header-bg.png) repeat-x;
   color: #FFFFFF;
-  margin-top: 10px;
-  min-height: 100px;
-  width: 100%;
-  -moz-box-shadow: 0px 0px 10px 0px #888;
-  -webkit-box-shadow: 0px 0px 10px 0px #888;
-  box-shadow: 0px 0px 10px 0px #888;
+  height: 170px;
+  -moz-box-shadow: 0px 0px 30px 0px #888;
+  -webkit-box-shadow: 0px 0px 30px 0px #888;
+  box-shadow: 0px 0px 30px 0px #888;
 }
-
-
-/*****************************/
-#player{
-  height: 0;
-  overflow: hidden;
-}
-.playlist dl{
-  display: block;
-  padding: 5px;
-  clear: both;
-}
-
-
-.playlist dl dd{
-  margin: 0;
-  float: right;
-  margin: 0;
-}
-.playlist .toPlayNumber{
-  width: 27px;
-}
-.playlist .toPlayName{
-  width: 200px;
-}
-.urlImage{
-  text-indent: -99999px;
-  display: block;
-  width: 16px;
-  height: 16px;
-  margin-left: 5px;
-}
-.download
-{
-  background: url(/images/download.png) no-repeat;
-}
-.share
-{
-  background: url(/images/share.png) no-repeat;
-}
-.send
-{
-  background: url(/images/send.png) no-repeat;
-}
-.play
-{
-  background: url(/images/play.png) no-repeat;
-}
-.add
-{
-  background: url(/images/add.png) no-repeat;
+header .banner{
+  background: transparent url(/images/banner.png) 430px 23px no-repeat;
+  height: 147px;
+  padding-top: 23px;
 }

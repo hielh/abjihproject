@@ -10,7 +10,7 @@ qu.player.init = function(){
     this.current = 0;
 
     this.cssId = {
-      jPlayer: "player",
+      jPlayer: "jp-player",
       interface: "player-controls",
       playlist: "jp_playlist"
     };
@@ -45,6 +45,10 @@ qu.player.init = function(){
     },
     getPlaylist: function(){
     //console.log(this.playlist)
+    },
+    getCurrentTrack: function(){
+      currentTrack = this.playlist[this.current];
+      return currentTrack;
     },
     displayPlaylist: function() {
       var self = this;
@@ -147,16 +151,19 @@ qu.player.initPlaylist = function(Playlist, privateListener){
     ready: function() {
       audioPlaylist.displayPlaylist(privateListener);
       audioPlaylist.playlistInit(false); // Parameter is a boolean for autoplay.
+      jQuery('.info-player-text').html(privateListener[0].name);
     },
     ended: function() {
       audioPlaylist.playlistNext();
     },
     play: function() {
       $(this).jPlayer("pauseOthers");
+      currTrack = audioPlaylist.getCurrentTrack();
+      jQuery('.info-player-text').html(currTrack.name);
     },
     swfPath: "/swf",
     solution: "flash",
-    supplied: "mp3, oga"
+    supplied: "mp3"
   });
   return audioPlaylist;
 }
@@ -188,6 +195,5 @@ qu.player.userActionsOnPlaylist = function(){
   
   Playlist = qu.player.init();
   audioPlaylist = qu.player.initPlaylist(Playlist, privateListener);
-  
   qu.player.addToPlaylist();
 }

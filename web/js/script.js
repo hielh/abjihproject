@@ -9,7 +9,7 @@ jQuery(document).ready(function(){
 
   $.ajaxSetup({
     start: function(){
-      console.log( "Request complete." );
+      //console.log( "Request start." );
     },
     complete: function(data){
       qu.common.displayNotice(data.responseText);

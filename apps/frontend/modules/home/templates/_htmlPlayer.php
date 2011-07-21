@@ -1,46 +1,55 @@
-<div id="player" class="player">
+<div id="jp-player" class="jp-player">
 </div>
 
-<div class="qu-player grid_5">
-
-  <div class="player-controls" id="player-controls">
-
-    <div class="qu-player-right">
-      <div class="jp-mute unmute playerIcone"></div>
-      <div class="jp-unmute mute playerIcone" style="display:none"></div>
-      <div class="progress-wrapper progress-wrapper-volume">
-        <div class="progress progress-volume jp-volume-bar">
-          <div class="jp-volume-bar-value elapsed" style="width: 50%;"></div>
-        </div>
-      </div>
-    </div>
-    <div class="main">
-
-      <div class="qu-time">
-        <span class="jp-current-time">00:00</span>/<span class="jp-duration">00:00</span>
-      </div>
-
-      <div class="previous jp-previous"></div>
-      <div class="play jp-play"></div>
-      <div class="pause jp-pause" style="display: none;"></div>
-      <div class="next jp-next"></div>
-      <div class="jp-stop stop playerIcone"></div>
-
-      <span class="">
-        <span class="jp-video-play" style="display: none;"></span>
-        <span class="jp-full-screen"></span>
-        <span class="jp-restore-screen"></span>
-      </span>
-    </div>
-    <div class="progress-wrapper">
-      <div class="progress jp-seek-bar" style="width: 100%;">
-        <div class="elapsed jp-play-bar" style="width: 0%;"></div>
-      </div>
-    </div>
+<!--
     <div class="jp-playlist" id="jp_playlist">
       <ul>
         <li></li>
       </ul>
     </div>
-  </div>
-</div>
+-->
+
+
+<div class="qu-player-parent grid_11" id="player-controls" >
+            <div class="qu-player player">
+              <div class="grid_3" style="width: 126px; margin-top: 4px;">
+                <div class="previous jp-previous"></div>
+                <div class="play jp-play"></div>
+                <div class="pause jp-pause" style="display: none"></div>
+                <div class="stop jp-stop"></div>
+                <div class="next jp-next"></div>
+                <div class="clear"></div>
+                <div style="margin-top: 7px;">
+                  <div class="mute jp-mute"></div>
+                  <div class="unmute jp-unmute" style="display: none"></div>
+                  <div class="volume-progress-bar jp-volume-bar">
+                    <div class="volume-progress-bar-elapsed jp-volume-bar-value"></div>
+                  </div>
+                </div>
+                <div class="clear"></div>
+                <div>
+                  <a href="#" class="show-playlist">show playlist</a>
+                </div>
+              </div>
+              <div class="grid_8 alpha omega" style="width:288px">
+                <div style="margin: 13px 0 8px">
+                  <div class="timer">
+                    <strong class="jp-duration">0:25</strong> / <span class="jp-current-time">04:59</span>
+                  </div>
+                  <div class="progress-wrapper" style="padding-top: 2px;">
+                    <div class="progress-bar jp-seek-bar" style="width: 100%;">
+                      <div class="progress-bar-elapsed jp-play-bar" style="width: 0%;"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="info-player">
+                  <div class="info-player-title"></div>
+                  <div class="info-player-text">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
