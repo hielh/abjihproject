@@ -39,31 +39,15 @@
         <div class="container_24 banner">
           <?php include_partial('home/htmlPlayer'); ?>
           <div class="clear"></div>
+        </div>
       </header><!--! end of header -->
 
-      <div id="main" role="main" class="container_12">
-        <div class="grid_8">
-          <?php echo $sf_content; ?>
-        </div>
-        <div class="grid_4">
-          <?php if (has_component_slot('right_menu')): ?>
-            <?php include_component_slot('right_menu') ?>
-          <?php endif; ?>
-        </div>
-        <div class="clear"></div>
-      </div>
-
-      <div class="clear"></div>
       <footer>
         footer
       </footer>
     </div> <!--! end of #container -->
 
-
-    <!-- JavaScript at the bottom for fast page loading -->
-
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/js/jquery.js"><\/script>')</script>
     <?php include_component('player', 'myPlayList', array('reloadPlaylist' => false)); ?>
     <?php include_javascripts() ?>
