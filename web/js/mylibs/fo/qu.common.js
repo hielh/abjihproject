@@ -9,11 +9,13 @@ qu.common.displayNotice = function(data, titleElement, typeNotice){
   if (data != null)
   {
     divObject = jQuery(data).closest('.show-notice');
+    titleElement = divObject.children('.notice-title');
   }
   else
   {
     divObject = jQuery('.show-notice');
   }
+  
   if (titleElement == null)
   {
     titleElement = '.notice-title';
@@ -52,7 +54,7 @@ qu.common.displayNotice = function(data, titleElement, typeNotice){
       'modal'           : false,
       'position'        : ['right - 20', 'top + 80'],
       'type'            : typeNotice, // "warning", "question", "information", "confirmation", "error"
-      'auto_close'      : false,
+      'auto_close'      : 2000,
       'keyboard'        : true
     });
   }
