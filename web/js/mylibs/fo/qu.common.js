@@ -86,3 +86,33 @@ qu.common.fixedPlayer = function()
     }
   });
 }
+
+/**
+ * submit form width ajax
+ */
+qu.common.submitForm = function()
+{
+  jQuery('.ajaxFormSubmit').submit(function(){
+    self = jQuery(this);
+    url = self.attr('action');
+    qu.common.sendRequest(url, self.serialize(), "", methode = "POST");
+  });
+}
+
+qu.common.sendRequest = function(url, data, responseElement, methode)
+{
+  methode = (methode == null)? 'GET':methode;
+  responseElement = (responseElement == null)? '.responseDiv': responseElement;
+  
+  jQuery.ajax({
+    type: methode,
+    url: url,
+    global: false,
+    data: data,
+    success: function(returnedData){
+      jQuery(responseElement).html(returnedData);
+    }
+  });
+    
+  return false;
+}

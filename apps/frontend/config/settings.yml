@@ -25,6 +25,7 @@ test:
 all:
   .settings:
     standard_helpers: [Partial, Cache, I18N]
+    enabled_modules:  [default, sfGuardAuth]
     # Form security secret (CSRF protection)
     csrf_secret:            3Jklmjdsqid8748JKMF84LM4JJT4lsq
 
@@ -40,3 +41,10 @@ all:
     i18n: true
     
     default_culture:        fr_FR
+    
+    
+    login_module:           sfGuardAuth
+    login_action:           signin
+
+    secure_module:          sfGuardAuth
+    secure_action:          secure

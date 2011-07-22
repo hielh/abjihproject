@@ -43,7 +43,7 @@
       </header><!--! end of header -->
 
       <div>
-        
+         <?php echo $sf_content; ?>
       </div>
       <footer>
         footer
