@@ -42,7 +42,7 @@ class playOwnerTable extends Doctrine_Table
 
   static public function getLuceneIndexFile()
   {
-    return sfConfig::get('sf_data_dir') . '/searchIndex/playOwnerTable.' . sfConfig::get('sf_environment') . '.index';
+    return sfConfig::get('sf_data_dir') . '/searchIndex/playOwnerTable.index';
   }
 
 }

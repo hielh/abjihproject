@@ -35,7 +35,7 @@ class playItTable extends Doctrine_Table
 
   static public function getLuceneIndexFile()
   {
-    return sfConfig::get('sf_data_dir') . '/searchIndex/playIt.' . sfConfig::get('sf_environment') . '.index';
+    return sfConfig::get('sf_data_dir') . '/searchIndex/playIt.index';
   }
 
 }

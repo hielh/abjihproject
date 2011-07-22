@@ -25,15 +25,16 @@ class playIt extends BaseplayIt
 
     $doc = new Zend_Search_Lucene_Document();
 
-    // store job primary key to identify it in the search results
     $doc->addField(Zend_Search_Lucene_Field::Keyword('pk', $this->getId()));
 
-    // index job fields
-    $doc->addField(Zend_Search_Lucene_Field::UnStored('name', $this->getName(), 'utf-8'));
-    $doc->addField(Zend_Search_Lucene_Field::text('playlist_name', $this->getPlayList()->getPlayOwner()->getName(), 'utf-8'));
-    $doc->addField(Zend_Search_Lucene_Field::keyword('play_owner_name', $this->getPlayList()->getPlayOwner()->getName(), 'utf-8'));
-    $doc->addField(Zend_Search_Lucene_Field::UnStored('play_owner_name_fr', $this->getPlayList()->getPlayOwner()->getNameFr(), 'utf-8'));
     $doc->addField(Zend_Search_Lucene_Field::UnStored('track_name', $this->getName(), 'utf-8'));
+    $doc->addField(Zend_Search_Lucene_Field::UnStored('play_it_user_id', $this->getSfGuardUser()->getId(), 'utf-8'));
+    $doc->addField(Zend_Search_Lucene_Field::UnStored('track_name', $this->getName(), 'utf-8'));
+    $doc->addField(Zend_Search_Lucene_Field::UnStored('track_type', $this->getPlayList()->getObjectType(), 'utf-8'));
+    $doc->addField(Zend_Search_Lucene_Field::UnStored('playlist_name', $this->getPlayList()->getTitle(), 'utf-8'));
+    $doc->addField(Zend_Search_Lucene_Field::UnStored('play_owner_id', $this->getPlayList()->getPlayOwner()->getId(), 'utf-8'));
+    $doc->addField(Zend_Search_Lucene_Field::UnStored('play_owner_name', $this->getPlayList()->getPlayOwner()->getName(), 'utf-8'));
+    $doc->addField(Zend_Search_Lucene_Field::UnStored('play_owner_name_fr', $this->getPlayList()->getPlayOwner()->getNameFr(), 'utf-8'));
 
     $index->addDocument($doc);
     $index->commit();
