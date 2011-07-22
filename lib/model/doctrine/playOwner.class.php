@@ -12,4 +12,38 @@
  */
 class playOwner extends BaseplayOwner
 {
+
+  public function updateLuceneIndex()
+  {
+    $index = playOwnerTable::getLuceneIndex();
+
+    // remove existing entries
+    foreach ($index->find('pk:' . $this->getId()) as $hit)
+    {
+      $index->delete($hit->id);
+    }
+
+    $doc = new Zend_Search_Lucene_Document();
+
+    // store job primary key to identify it in the search results
+    $doc->addField(Zend_Search_Lucene_Field::Keyword('pk', $this->getId()));
+
+    // index job fields
+    $doc->addField(Zend_Search_Lucene_Field::UnStored('name', $this->getName(), 'utf-8'));
+    $doc->addField(Zend_Search_Lucene_Field::UnStored('nameFr', $this->getNameFr(), 'utf-8'));
+
+    // add job to the index
+    $index->addDocument($doc);
+    $index->commit();
+  }
+
+  public function save(Doctrine_Connection $conn = null)
+  {
+    $ret = parent::save($conn);
+
+    $this->updateLuceneIndex();
+
+    return $ret;
+  }
+
 }

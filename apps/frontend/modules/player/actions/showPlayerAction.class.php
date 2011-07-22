@@ -11,17 +11,26 @@
 class showPlayerAction extends sfAction
 {
 
-    /**
-     *
-     * @param sfWebRequest $request 
-     */
-    public function execute($request)
+  /**
+   *
+   * @param sfWebRequest $request 
+   */
+  public function execute($request)
+  {
+    $playerId = $request->getParameter('id');
+
+    $query = 'كمال';
+    $hits = playItTable::getLuceneIndex()->find($query);
+    
+
+    foreach ($hits as $hit)
     {
-	$playerId = $request->getParameter('id');
-	
-	$this->player = Doctrine_Core::gettable('playOwner')->getPlayer($playerId);
-	
-	
+      var_dump($hit->getDocument());
     }
+    var_dump('endddddddd');
+    die;
+    die;
+    //$this->player = Doctrine_Core::gettable('playOwner')->getPlayer($playerId);
+  }
 
 }

@@ -7,14 +7,35 @@
  */
 class playItTable extends Doctrine_Table
 {
-    /**
-     * Returns an instance of this class.
-     *
-     * @return object playItTable
-     */
-    public static function getInstance()
+
+  /**
+   * Returns an instance of this class.
+   *
+   * @return object playItTable
+   */
+  public static function getInstance()
+  {
+    return Doctrine_Core::getTable('playIt');
+  }
+
+  static public function getLuceneIndex()
+  {
+    ProjectConfiguration::registerZend();
+
+    Zend_Search_Lucene_Analysis_Analyzer::setDefault(new Zend_Search_Lucene_Analysis_Analyzer_Common_Utf8());
+
+    if (file_exists($index = self::getLuceneIndexFile()))
     {
-        return Doctrine_Core::getTable('playIt');
+      return Zend_Search_Lucene::open($index);
+    } else
+    {
+      return Zend_Search_Lucene::create($index);
     }
-    
+  }
+
+  static public function getLuceneIndexFile()
+  {
+    return sfConfig::get('sf_data_dir') . '/searchIndex/playIt.' . sfConfig::get('sf_environment') . '.index';
+  }
+
 }

@@ -12,4 +12,40 @@
  */
 class playIt extends BaseplayIt
 {
+
+  public function updateLuceneIndex()
+  {
+    $index = playItTable::getLuceneIndex();
+
+    // remove existing entries
+    foreach ($index->find('pk:' . $this->getId()) as $hit)
+    {
+      $index->delete($hit->id);
+    }
+
+    $doc = new Zend_Search_Lucene_Document();
+
+    // store job primary key to identify it in the search results
+    $doc->addField(Zend_Search_Lucene_Field::Keyword('pk', $this->getId()));
+
+    // index job fields
+    $doc->addField(Zend_Search_Lucene_Field::UnStored('name', $this->getName(), 'utf-8'));
+    $doc->addField(Zend_Search_Lucene_Field::text('playlist_name', $this->getPlayList()->getPlayOwner()->getName(), 'utf-8'));
+    $doc->addField(Zend_Search_Lucene_Field::keyword('play_owner_name', $this->getPlayList()->getPlayOwner()->getName(), 'utf-8'));
+    $doc->addField(Zend_Search_Lucene_Field::UnStored('play_owner_name_fr', $this->getPlayList()->getPlayOwner()->getNameFr(), 'utf-8'));
+    $doc->addField(Zend_Search_Lucene_Field::UnStored('track_name', $this->getName(), 'utf-8'));
+
+    $index->addDocument($doc);
+    $index->commit();
+  }
+
+  public function save(Doctrine_Connection $conn = null)
+  {
+    $ret = parent::save($conn);
+
+    $this->updateLuceneIndex();
+
+    return $ret;
+  }
+
 }
