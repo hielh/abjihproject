@@ -6,8 +6,8 @@
   <?php
   $jsPlaylist .= '
     {
-      name:"<span class=\'text-lime\'>' . $myPlayList->getPlayIt()->getName() . '</span> - '.$myPlayList->getPlayIt()->getPlayList()->getPlayOwner()->getName().' ",
-      mp3:"' . $myPlayList->getPlayIt()->getUrl() . '",
+      name:"<span class=\'text-lime\'>' . $myPlayList->getTrack()->getName() . '</span> - '.$myPlayList->getTrack()->getPlayList()->getPlayOwner()->getName().' ",
+      mp3:"' . $myPlayList->getTrack()->getUrl() . '",
     },';
   ?>
 <?php endforeach; ?>

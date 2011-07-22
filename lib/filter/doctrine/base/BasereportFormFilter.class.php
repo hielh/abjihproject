@@ -15,7 +15,7 @@ abstract class BasereportFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'user_id'        => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => true)),
       'comment_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('comment'), 'add_empty' => true)),
-      'play_it_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('playIt'), 'add_empty' => true)),
+      'Track_id'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('track'), 'add_empty' => true)),
       'play_list_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('playList'), 'add_empty' => true)),
       'play_owner_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('playOwner'), 'add_empty' => true)),
       'article_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('article'), 'add_empty' => true)),
@@ -31,7 +31,7 @@ abstract class BasereportFormFilter extends BaseFormFilterDoctrine
     $this->setValidators(array(
       'user_id'        => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('sfGuardUser'), 'column' => 'id')),
       'comment_id'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('comment'), 'column' => 'id')),
-      'play_it_id'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('playIt'), 'column' => 'id')),
+      'Track_id'       => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('track'), 'column' => 'id')),
       'play_list_id'   => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('playList'), 'column' => 'id')),
       'play_owner_id'  => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('playOwner'), 'column' => 'id')),
       'article_id'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('article'), 'column' => 'id')),
@@ -64,7 +64,7 @@ abstract class BasereportFormFilter extends BaseFormFilterDoctrine
       'id'             => 'Number',
       'user_id'        => 'ForeignKey',
       'comment_id'     => 'ForeignKey',
-      'play_it_id'     => 'ForeignKey',
+      'Track_id'       => 'ForeignKey',
       'play_list_id'   => 'ForeignKey',
       'play_owner_id'  => 'ForeignKey',
       'article_id'     => 'ForeignKey',

@@ -27,22 +27,4 @@ class playOwnerTable extends Doctrine_Table
     return $q;
   }
 
-  static public function getLuceneIndex()
-  {
-    ProjectConfiguration::registerZend();
-
-    if (file_exists($index = self::getLuceneIndexFile()))
-    {
-      return Zend_Search_Lucene::open($index);
-    } else
-    {
-      return Zend_Search_Lucene::create($index);
-    }
-  }
-
-  static public function getLuceneIndexFile()
-  {
-    return sfConfig::get('sf_data_dir') . '/searchIndex/playOwnerTable.index';
-  }
-
 }

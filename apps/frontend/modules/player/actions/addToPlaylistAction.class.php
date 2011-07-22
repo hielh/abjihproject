@@ -16,23 +16,23 @@ class addToPlaylistAction extends sfAction {
    */
   public function execute($request) {
 
-    $playItId = $request->getParameter('id');
+    $trackId = $request->getParameter('id');
     $userId = 1; // a modifier
     $sf_user = $this->getUser();
     
     $this->forward404If(!$request->isXmlHttpRequest());
     
-    $oPlayIt = Doctrine_Core::getTable('playIt')->findOneById($playItId);
+    $oTrack = Doctrine_Core::getTable('track')->findOneById($trackId);
 
-    $this->forward404If(!$oPlayIt);
+    $this->forward404If(!$oTrack);
 
-    $oUserPlaylist = Doctrine_Core::getTable('userPlaylist')->findOneByUserIdAndPlayitId($userId, $playItId);
+    $oUserPlaylist = Doctrine_Core::getTable('userPlaylist')->findOneByUserIdAndTrackId($userId, $trackId);
 
     if (!$oUserPlaylist) 
     {
       $oUserPlaylist = new userPlaylist();
       $oUserPlaylist->setUserId($userId);
-      $oUserPlaylist->setPlayitId($playItId);
+      $oUserPlaylist->setTrackId($trackId);
       $oUserPlaylist->save();
       
       $sf_user->setFlash('qu_notice_success', 'qu_add_item_to_playlist_success');

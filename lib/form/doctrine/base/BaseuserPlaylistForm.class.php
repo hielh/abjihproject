@@ -17,7 +17,7 @@ abstract class BaseuserPlaylistForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'         => new sfWidgetFormInputHidden(),
       'user_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => true)),
-      'playit_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('playIt'), 'add_empty' => true)),
+      'track_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('track'), 'add_empty' => true)),
       'created_at' => new sfWidgetFormDateTime(),
       'updated_at' => new sfWidgetFormDateTime(),
     ));
@@ -25,7 +25,7 @@ abstract class BaseuserPlaylistForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'user_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'required' => false)),
-      'playit_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('playIt'), 'required' => false)),
+      'track_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('track'), 'required' => false)),
       'created_at' => new sfValidatorDateTime(),
       'updated_at' => new sfValidatorDateTime(),
     ));

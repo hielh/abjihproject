@@ -21,7 +21,6 @@ class myPlayListComponent extends sfComponent
         
         $this->myPlayLists = Doctrine_Core::getTable('userPlaylist')->loadUserPlaylist($userId);
 
-	
     }
 
 }

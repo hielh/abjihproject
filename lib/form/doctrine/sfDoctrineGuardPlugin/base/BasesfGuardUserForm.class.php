@@ -30,7 +30,7 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
       'updated_at'       => new sfWidgetFormDateTime(),
       'groups_list'      => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardGroup')),
       'permissions_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardPermission')),
-      'play_it_list'     => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'playIt')),
+      'track_list'       => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'track')),
     ));
 
     $this->setValidators(array(
@@ -49,7 +49,7 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
       'updated_at'       => new sfValidatorDateTime(),
       'groups_list'      => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardGroup', 'required' => false)),
       'permissions_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardPermission', 'required' => false)),
-      'play_it_list'     => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'playIt', 'required' => false)),
+      'track_list'       => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'track', 'required' => false)),
     ));
 
     $this->validatorSchema->setPostValidator(
@@ -87,9 +87,9 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
       $this->setDefault('permissions_list', $this->object->Permissions->getPrimaryKeys());
     }
 
-    if (isset($this->widgetSchema['play_it_list']))
+    if (isset($this->widgetSchema['track_list']))
     {
-      $this->setDefault('play_it_list', $this->object->playIt->getPrimaryKeys());
+      $this->setDefault('track_list', $this->object->track->getPrimaryKeys());
     }
 
   }
@@ -98,7 +98,7 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
   {
     $this->saveGroupsList($con);
     $this->savePermissionsList($con);
-    $this->saveplayItList($con);
+    $this->savetrackList($con);
 
     parent::doSave($con);
   }
@@ -179,14 +179,14 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
     }
   }
 
-  public function saveplayItList($con = null)
+  public function savetrackList($con = null)
   {
     if (!$this->isValid())
     {
       throw $this->getErrorSchema();
     }
 
-    if (!isset($this->widgetSchema['play_it_list']))
+    if (!isset($this->widgetSchema['track_list']))
     {
       // somebody has unset this widget
       return;
@@ -197,8 +197,8 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
       $con = $this->getConnection();
     }
 
-    $existing = $this->object->playIt->getPrimaryKeys();
-    $values = $this->getValue('play_it_list');
+    $existing = $this->object->track->getPrimaryKeys();
+    $values = $this->getValue('track_list');
     if (!is_array($values))
     {
       $values = array();
@@ -207,13 +207,13 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
     $unlink = array_diff($existing, $values);
     if (count($unlink))
     {
-      $this->object->unlink('playIt', array_values($unlink));
+      $this->object->unlink('track', array_values($unlink));
     }
 
     $link = array_diff($values, $existing);
     if (count($link))
     {
-      $this->object->link('playIt', array_values($link));
+      $this->object->link('track', array_values($link));
     }
   }
 

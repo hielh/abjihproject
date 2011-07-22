@@ -44,10 +44,9 @@ playList:
     fk_play_list_user1:
       fields: [user_id]
 
-playIt:
+track:
   actAs:
     Timestampable:
-  tableName: play_it
   columns:
     id:
       type: integer(4)
@@ -68,18 +67,18 @@ playIt:
       class: sfGuardUser
       local: user_id
       foreign: id
-      foreignAlias: play_its
+      foreignAlias: tracks
       onDelete: CASCADE
       onUpdate: CASCADE
     playList:
       class: playList
       local: play_list_id
       foreign: id
-      foreignAlias: play_its
+      foreignAlias: Tracks
       onDelete: CASCADE
       onUpdate: CASCADE
   indexes:
-    fk_play_it_user1:
+    fk_Track_user1:
       fields: [user_id]
 
 playOwner:
@@ -136,7 +135,7 @@ report:
       notnull: true
     comment_id:
       type: integer(4)
-    play_it_id:
+    Track_id:
       type: integer(4)
     play_list_id:
       type: integer(4)
@@ -169,9 +168,9 @@ report:
       foreignAlias: reports
       onDelete: CASCADE
       onUpdate: CASCADE
-    playIt:
-      class: playIt
-      local: play_it_id
+    track:
+      class: track
+      local: Track_id
       foreign: id
       foreignAlias: reports
       onDelete: CASCADE
@@ -223,8 +222,8 @@ report:
       fields: [user_id]
     fk_report_comment1:
       fields: [comment_id]
-    fk_report_play_it1:
-      fields: [play_it_id]
+    fk_report_Track1:
+      fields: [Track_id]
     fk_report_play_list1:
       fields: [play_list_id]
     fk_report_play_owner1:
@@ -357,12 +356,12 @@ video:
 
 sfGuardUser:
   relations:
-    playIt:
-      class: playIt
-      foreignAlias: playIts
+    track:
+      class: track
+      foreignAlias: tracks
       refClass: userPlaylist
       local: id
-      foreign: playit_id
+      foreign: track_id
       
 userPlaylist:
   actAs: 
@@ -370,7 +369,7 @@ userPlaylist:
   columns:
     user_id:
       type: integer
-    playit_id:
+    track_id:
       type: integer(4)
   relations:
     sfGuardUser:
@@ -380,9 +379,9 @@ userPlaylist:
       foreignAlias: userPlaylists
       onDelete: CASCADE
       onUpdate: CASCADE
-    playIt:
-      class: playIt
-      local: playit_id
+    track:
+      class: track
+      local: track_id
       foreign: id
       foreignAlias: userPlaylists
       onDelete: CASCADE

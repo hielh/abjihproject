@@ -17,13 +17,13 @@
  * @property timestamp $last_login
  * @property Doctrine_Collection $Groups
  * @property Doctrine_Collection $Permissions
- * @property Doctrine_Collection $playIt
+ * @property Doctrine_Collection $track
  * @property Doctrine_Collection $sfGuardUserPermission
  * @property Doctrine_Collection $sfGuardUserGroup
  * @property sfGuardRememberKey $RememberKeys
  * @property sfGuardForgotPassword $ForgotPassword
  * @property Doctrine_Collection $play_lists
- * @property Doctrine_Collection $play_its
+ * @property Doctrine_Collection $tracks
  * @property Doctrine_Collection $play_owners
  * @property Doctrine_Collection $reports
  * @property Doctrine_Collection $categories
@@ -44,13 +44,13 @@
  * @method timestamp             getLastLogin()             Returns the current record's "last_login" value
  * @method Doctrine_Collection   getGroups()                Returns the current record's "Groups" collection
  * @method Doctrine_Collection   getPermissions()           Returns the current record's "Permissions" collection
- * @method Doctrine_Collection   getPlayIt()                Returns the current record's "playIt" collection
+ * @method Doctrine_Collection   getTrack()                 Returns the current record's "track" collection
  * @method Doctrine_Collection   getSfGuardUserPermission() Returns the current record's "sfGuardUserPermission" collection
  * @method Doctrine_Collection   getSfGuardUserGroup()      Returns the current record's "sfGuardUserGroup" collection
  * @method sfGuardRememberKey    getRememberKeys()          Returns the current record's "RememberKeys" value
  * @method sfGuardForgotPassword getForgotPassword()        Returns the current record's "ForgotPassword" value
  * @method Doctrine_Collection   getPlayLists()             Returns the current record's "play_lists" collection
- * @method Doctrine_Collection   getPlayIts()               Returns the current record's "play_its" collection
+ * @method Doctrine_Collection   getTracks()                Returns the current record's "tracks" collection
  * @method Doctrine_Collection   getPlayOwners()            Returns the current record's "play_owners" collection
  * @method Doctrine_Collection   getReports()               Returns the current record's "reports" collection
  * @method Doctrine_Collection   getCategories()            Returns the current record's "categories" collection
@@ -70,13 +70,13 @@
  * @method sfGuardUser           setLastLogin()             Sets the current record's "last_login" value
  * @method sfGuardUser           setGroups()                Sets the current record's "Groups" collection
  * @method sfGuardUser           setPermissions()           Sets the current record's "Permissions" collection
- * @method sfGuardUser           setPlayIt()                Sets the current record's "playIt" collection
+ * @method sfGuardUser           setTrack()                 Sets the current record's "track" collection
  * @method sfGuardUser           setSfGuardUserPermission() Sets the current record's "sfGuardUserPermission" collection
  * @method sfGuardUser           setSfGuardUserGroup()      Sets the current record's "sfGuardUserGroup" collection
  * @method sfGuardUser           setRememberKeys()          Sets the current record's "RememberKeys" value
  * @method sfGuardUser           setForgotPassword()        Sets the current record's "ForgotPassword" value
  * @method sfGuardUser           setPlayLists()             Sets the current record's "play_lists" collection
- * @method sfGuardUser           setPlayIts()               Sets the current record's "play_its" collection
+ * @method sfGuardUser           setTracks()                Sets the current record's "tracks" collection
  * @method sfGuardUser           setPlayOwners()            Sets the current record's "play_owners" collection
  * @method sfGuardUser           setReports()               Sets the current record's "reports" collection
  * @method sfGuardUser           setCategories()            Sets the current record's "categories" collection
@@ -166,10 +166,10 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'local' => 'user_id',
              'foreign' => 'permission_id'));
 
-        $this->hasMany('playIt', array(
+        $this->hasMany('track', array(
              'refClass' => 'userPlaylist',
              'local' => 'id',
-             'foreign' => 'playit_id'));
+             'foreign' => 'track_id'));
 
         $this->hasMany('sfGuardUserPermission', array(
              'local' => 'id',
@@ -191,7 +191,7 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'user_id'));
 
-        $this->hasMany('playIt as play_its', array(
+        $this->hasMany('track as tracks', array(
              'local' => 'id',
              'foreign' => 'user_id'));
 

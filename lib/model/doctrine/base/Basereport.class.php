@@ -8,7 +8,7 @@
  * @property integer $id
  * @property integer $user_id
  * @property integer $comment_id
- * @property integer $play_it_id
+ * @property integer $Track_id
  * @property integer $play_list_id
  * @property integer $play_owner_id
  * @property integer $article_id
@@ -19,7 +19,7 @@
  * @property clob $message
  * @property sfGuardUser $sfGuardUser
  * @property comment $comment
- * @property playIt $playIt
+ * @property track $track
  * @property playList $playList
  * @property playOwner $playOwner
  * @property article $article
@@ -30,7 +30,7 @@
  * @method integer     getId()             Returns the current record's "id" value
  * @method integer     getUserId()         Returns the current record's "user_id" value
  * @method integer     getCommentId()      Returns the current record's "comment_id" value
- * @method integer     getPlayItId()       Returns the current record's "play_it_id" value
+ * @method integer     getTrackId()        Returns the current record's "Track_id" value
  * @method integer     getPlayListId()     Returns the current record's "play_list_id" value
  * @method integer     getPlayOwnerId()    Returns the current record's "play_owner_id" value
  * @method integer     getArticleId()      Returns the current record's "article_id" value
@@ -41,7 +41,7 @@
  * @method clob        getMessage()        Returns the current record's "message" value
  * @method sfGuardUser getSfGuardUser()    Returns the current record's "sfGuardUser" value
  * @method comment     getComment()        Returns the current record's "comment" value
- * @method playIt      getPlayIt()         Returns the current record's "playIt" value
+ * @method track       getTrack()          Returns the current record's "track" value
  * @method playList    getPlayList()       Returns the current record's "playList" value
  * @method playOwner   getPlayOwner()      Returns the current record's "playOwner" value
  * @method article     getArticle()        Returns the current record's "article" value
@@ -51,7 +51,7 @@
  * @method report      setId()             Sets the current record's "id" value
  * @method report      setUserId()         Sets the current record's "user_id" value
  * @method report      setCommentId()      Sets the current record's "comment_id" value
- * @method report      setPlayItId()       Sets the current record's "play_it_id" value
+ * @method report      setTrackId()        Sets the current record's "Track_id" value
  * @method report      setPlayListId()     Sets the current record's "play_list_id" value
  * @method report      setPlayOwnerId()    Sets the current record's "play_owner_id" value
  * @method report      setArticleId()      Sets the current record's "article_id" value
@@ -62,7 +62,7 @@
  * @method report      setMessage()        Sets the current record's "message" value
  * @method report      setSfGuardUser()    Sets the current record's "sfGuardUser" value
  * @method report      setComment()        Sets the current record's "comment" value
- * @method report      setPlayIt()         Sets the current record's "playIt" value
+ * @method report      setTrack()          Sets the current record's "track" value
  * @method report      setPlayList()       Sets the current record's "playList" value
  * @method report      setPlayOwner()      Sets the current record's "playOwner" value
  * @method report      setArticle()        Sets the current record's "article" value
@@ -94,7 +94,7 @@ abstract class Basereport extends sfDoctrineRecord
              'type' => 'integer',
              'length' => 4,
              ));
-        $this->hasColumn('play_it_id', 'integer', 4, array(
+        $this->hasColumn('Track_id', 'integer', 4, array(
              'type' => 'integer',
              'length' => 4,
              ));
@@ -143,10 +143,10 @@ abstract class Basereport extends sfDoctrineRecord
               0 => 'comment_id',
              ),
              ));
-        $this->index('fk_report_play_it1', array(
+        $this->index('fk_report_Track1', array(
              'fields' => 
              array(
-              0 => 'play_it_id',
+              0 => 'Track_id',
              ),
              ));
         $this->index('fk_report_play_list1', array(
@@ -205,8 +205,8 @@ abstract class Basereport extends sfDoctrineRecord
              'onDelete' => 'CASCADE',
              'onUpdate' => 'CASCADE'));
 
-        $this->hasOne('playIt', array(
-             'local' => 'play_it_id',
+        $this->hasOne('track', array(
+             'local' => 'Track_id',
              'foreign' => 'id',
              'onDelete' => 'CASCADE',
              'onUpdate' => 'CASCADE'));

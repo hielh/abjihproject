@@ -13,7 +13,7 @@
  * @property clob $description
  * @property sfGuardUser $sfGuardUser
  * @property playOwner $playOwner
- * @property Doctrine_Collection $play_its
+ * @property Doctrine_Collection $Tracks
  * @property Doctrine_Collection $reports
  * 
  * @method integer             getId()            Returns the current record's "id" value
@@ -24,7 +24,7 @@
  * @method clob                getDescription()   Returns the current record's "description" value
  * @method sfGuardUser         getSfGuardUser()   Returns the current record's "sfGuardUser" value
  * @method playOwner           getPlayOwner()     Returns the current record's "playOwner" value
- * @method Doctrine_Collection getPlayIts()       Returns the current record's "play_its" collection
+ * @method Doctrine_Collection getTracks()        Returns the current record's "Tracks" collection
  * @method Doctrine_Collection getReports()       Returns the current record's "reports" collection
  * @method playList            setId()            Sets the current record's "id" value
  * @method playList            setUserId()        Sets the current record's "user_id" value
@@ -34,7 +34,7 @@
  * @method playList            setDescription()   Sets the current record's "description" value
  * @method playList            setSfGuardUser()   Sets the current record's "sfGuardUser" value
  * @method playList            setPlayOwner()     Sets the current record's "playOwner" value
- * @method playList            setPlayIts()       Sets the current record's "play_its" collection
+ * @method playList            setTracks()        Sets the current record's "Tracks" collection
  * @method playList            setReports()       Sets the current record's "reports" collection
  * 
  * @package    islam
@@ -101,7 +101,7 @@ abstract class BaseplayList extends sfDoctrineRecord
              'onDelete' => 'CASCADE',
              'onUpdate' => 'CASCADE'));
 
-        $this->hasMany('playIt as play_its', array(
+        $this->hasMany('track as Tracks', array(
              'local' => 'id',
              'foreign' => 'play_list_id'));
 

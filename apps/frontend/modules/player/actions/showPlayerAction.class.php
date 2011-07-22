@@ -19,18 +19,20 @@ class showPlayerAction extends sfAction
   {
     $playerId = $request->getParameter('id');
 
-    $query = 'كمال';
-    $hits = playItTable::getLuceneIndex()->find($query);
-    
+//    $query = 'كمال';
+//    $hits = trackTable::getLuceneIndex()->find($query);
+//    
+//
+//    foreach ($hits as $hit)
+//    {
+//      var_dump($hit->getDocument());
+//      //var_dump($hit->track_name);
+//    }
+//    var_dump('endddddddd');
+//    die;
+//    die;
+    $this->forward404Unless($this->player = Doctrine_Core::gettable('playOwner')->getPlayer($playerId), 'User not found');
 
-    foreach ($hits as $hit)
-    {
-      var_dump($hit->getDocument());
-    }
-    var_dump('endddddddd');
-    die;
-    die;
-    //$this->player = Doctrine_Core::gettable('playOwner')->getPlayer($playerId);
   }
 
 }

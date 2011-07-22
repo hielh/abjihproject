@@ -32,8 +32,9 @@ PlayList:
     title: 	رمضان 1427
     description: anashid description
     
-PlayIt:
+Track:
   afasyQuranPlay01:
+    id: 1
     sfGuardUser: abjih
     playList: afasyQuran
     name: الـفـاتـحـة
@@ -120,19 +121,19 @@ PlayIt:
     name: الليلة الرابعة عشر 
     url: http://www.archive.org/download/abjih/Kamal-elYounssi_Tarawi7/kamal_1427_laila14.mp3
     
-#userPlaylist:
-#  userplay01:
-#    sfGuardUser: abjih
-#    playIt: afasyQuranPlay08
-#  userplay02:
-#    sfGuardUser: abjih
-#    playIt: afasyQuranPlay05
-#  userplay03:
-#    sfGuardUser: abjih
-#    playIt: afasyQuranPlay04
-#  userplay04:
-#    sfGuardUser: abjih
-#    playIt: afasyQuranPlay06
-#  userplay05:
-#    sfGuardUser: abjih
-#    playIt: afasyQuranPlay02
+userPlaylist:
+  userplay01:
+    sfGuardUser: abjih
+    Track: afasyQuranPlay08
+  userplay02:
+    sfGuardUser: abjih
+    Track: afasyQuranPlay05
+  userplay03:
+    sfGuardUser: abjih
+    Track: afasyQuranPlay04
+  userplay04:
+    sfGuardUser: abjih
+    Track: afasyQuranPlay06
+  userplay05:
+    sfGuardUser: abjih
+    Track: afasyQuranPlay02
