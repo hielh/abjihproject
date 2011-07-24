@@ -196,4 +196,19 @@ qu.player.userActionsOnPlaylist = function(){
   Playlist = qu.player.init();
   audioPlaylist = qu.player.initPlaylist(Playlist, privateListener);
   qu.player.addToPlaylist();
+  qu.player.showPlaylist();
+}
+
+/**
+ * afficher la list des track 
+ */
+qu.player.showPlaylist = function(){
+    jQuery('.show-playlist').live('hover', function(){
+	jQuery('.jp-playlist-parent').show('slow');
+	return false;
+    });
+    jQuery('.jp-playlist-parent').hover(function(){}, function(){
+	jQuery(this).hide('slow');
+    });
+    return false;
 }

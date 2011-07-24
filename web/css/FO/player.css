@@ -1,157 +1,182 @@
 .qu-player-parent {
-  height: 92px;
-  background: url(/images/bg-player.png) repeat;
-  font-family: 'Lato', arial, sans-serif;
-  padding: 5px;
-  margin-top: 20px;
-  border-radius: 7px; 
-  -moz-border-radius: 7px; 
-  -webkit-border-radius: 7px; 
+    height: 92px;
+    background: url(/images/bg-player.png) repeat;
+    font-family: 'Lato', arial, sans-serif;
+    padding: 5px;
+    margin-top: 20px;
+    border-radius: 7px; 
+    -moz-border-radius: 7px; 
+    -webkit-border-radius: 7px; 
+    position: relative;
 }
 
 .jp-player {
-  height: 0;
+    height: 0;
 }
 .qu-player {
-  background: #000000;
-  width: 370px;
-  font-family: 'Lato', arial, sans-serif;
+    background: #000000;
+    width: 370px;
+    font-family: 'Lato', arial, sans-serif;
 }
 
 .player {
-  height: 100%;
-  width: 100%;
-  background: #000000;
+    height: 100%;
+    width: 100%;
+    background: #000000;
 }
 .qu-player .play, .qu-player .pause, .qu-player .stop, .qu-player .previous, 
 .qu-player .next, .qu-player .progress-wrapper, .qu-player .unmute, 
 .qu-player .mute, .qu-player .volume-progress-bar{
-  cursor: pointer;
+    cursor: pointer;
 }
 .qu-player .play, .qu-player .pause, .qu-player .stop, .qu-player .previous, .qu-player .next{
-  width: 27px;
-  height: 27px;
-  margin: 0 2px;
-  float: left;
+    width: 27px;
+    height: 27px;
+    margin: 0 2px;
+    float: left;
 }
 
 .qu-player .previous {
-  background: transparent url(/images/player-actions.png) no-repeat -39px -69px scroll;
+    background: transparent url(/images/player-actions.png) no-repeat -39px -69px scroll;
 }
 
 .qu-player .next {
-  background: transparent url(/images/player-actions.png) no-repeat -7px -69px scroll;
+    background: transparent url(/images/player-actions.png) no-repeat -7px -69px scroll;
 }
 
 .qu-player .play {
-  background: transparent url(/images/player-actions.png) no-repeat -7px -6px scroll;
+    background: transparent url(/images/player-actions.png) no-repeat -7px -6px scroll;
 }
 
 .qu-player .stop {
-  background: transparent url(/images/player-actions.png) no-repeat -39px -6px scroll;
+    background: transparent url(/images/player-actions.png) no-repeat -39px -6px scroll;
 }
 
 .qu-player .pause {
-  background: transparent url(/images/player-actions.png) no-repeat -71px -6px scroll;
+    background: transparent url(/images/player-actions.png) no-repeat -71px -6px scroll;
 }
 
 
 .qu-player .mute {
-  background: transparent url(/images/volume.png) no-repeat center center scroll;
+    background: transparent url(/images/volume.png) no-repeat center center scroll;
 }
 
 .qu-player .unmute {
-  background: transparent url(/images/volume.png) no-repeat center center scroll;
+    background: transparent url(/images/volume.png) no-repeat center center scroll;
 }
 .qu-player .unmute, .qu-player .mute{
     width: 16px;
-  height: 12px;
-  float: left;
-  margin-left: 4px;
+    height: 12px;
+    float: left;
+    margin-left: 4px;
 }
 
 .qu-player .player-controls .main .qu-time{
-  left: 103px;
-  position: absolute;
-  top: -21px;
-  width: 172px;
-  font-size: 17px;
-  font-family: Purisa;
+    left: 103px;
+    position: absolute;
+    top: -21px;
+    width: 172px;
+    font-size: 17px;
+    font-family: Purisa;
 }
 
 .qu-player .player-controls .main .qu-time span{
-  display: inline;
+    display: inline;
 }
 
 .qu-player .playerIcone{
-  width: 16px;
-  height: 16px;
-  margin: 1px 0;
+    width: 16px;
+    height: 16px;
+    margin: 1px 0;
 }
 
 .qu-player .volume-progress-bar{
-  width: 94px;
-  height: 7px;
-  background: #272727;
-  padding: 1px;
-  margin-right: 5px;
+    width: 94px;
+    height: 7px;
+    background: #272727;
+    padding: 1px;
+    margin-right: 5px;
 }
 .qu-player .volume-progress-bar-elapsed{
-  width: 50px;
-  height: 100%;
-  background: #0b969f;
-  float: left;
+    width: 50px;
+    height: 100%;
+    background: #0b969f;
+    float: left;
 }
 
 .qu-player .show-playlist{
-  text-indent: -999999px;
-  display: block;
-  width: 103px;
-  height: 19px;
-  background: url(/images/playlist.png);
-  margin:11px auto;
+    text-indent: -999999px;
+    display: block;
+    width: 103px;
+    height: 19px;
+    background: url(/images/playlist.png);
+    margin:11px auto;
 }
 .qu-player .timer{
-  float: left;
-  font-size: 12px;
+    float: left;
+    font-size: 12px;
 }
 .qu-player .progress-wrapper{
-  width: 208px;
-  height: 7px;
-  background: #272727;
-  padding: 2px;
+    width: 208px;
+    height: 7px;
+    background: #272727;
+    padding: 2px;
 }
 
 .qu-player .progress-bar{
-  height: 100%;
-  float: left;
-  background: #686868;
+    height: 100%;
+    float: left;
+    background: #686868;
 }
 .qu-player .progress-bar-elapsed{
-  height: 100%;
-  background: #a8d031;
-  float: left;
+    height: 100%;
+    background: #a8d031;
+    float: left;
 }
 
 .qu-player .info-player {
-  background: none repeat scroll 0 0 #292929;
-  height: 40px;
-  margin: 3px 0 0;
-  padding: 5px;
+    background: none repeat scroll 0 0 #292929;
+    height: 40px;
+    margin: 3px 0 0;
+    padding: 5px;
 }
 .qu-player .info-player-title{
-  height: 19px;
-  width: 194px;
-  background: url(/images/you-listen-to.png);
+    height: 19px;
+    width: 194px;
+    background: url(/images/you-listen-to.png);
 }
 
 .qu-player .info-player-text{
-  margin: 5px 19px 0 0;
+    margin: 5px 19px 0 0;
 }
 
-
-
-
+.jp-playlist-parent{
+    background: url("/images/bg-player.png") repeat scroll 0 0 transparent;
+    border-radius: 7px 7px 7px 7px;
+    height: 94px;
+    left: 297px;
+    padding: 4px;
+    position: absolute;
+    top: -5px;
+    width: 325px;
+    display: none;
+}
+.jp-playlist{
+    background: none repeat scroll 0 0 #000000;
+    height: 93px;
+    overflow: scroll;
+}
+.jp-playlist a{
+    color: #ffffff;
+    display: block;
+}
+.jp-playlist ul{
+    margin: 4px !important;
+    padding: 0;
+}
+.jp-playlist li{
+    list-style: none;
+}
 
 
 

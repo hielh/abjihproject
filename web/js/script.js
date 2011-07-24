@@ -1,6 +1,5 @@
 jQuery(document).ready(function(){
 
-
   // afficher les infobulles
   qu.common.tooltip();
 

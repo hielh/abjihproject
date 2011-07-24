@@ -13,39 +13,39 @@
 class track extends Basetrack
 {
 
-  public function updateLuceneIndex()
-  {
-    $index = trackTable::getLuceneIndex();
-
-    // remove existing entries
-    foreach ($index->find('pk:' . $this->getId()) as $hit)
-    {
-      $index->delete($hit->id);
-    }
-
-    $doc = new Zend_Search_Lucene_Document();
-
-    $doc->addField(Zend_Search_Lucene_Field::Keyword('pk', $this->getId()));
-
-    $doc->addField(Zend_Search_Lucene_Field::text('track_name', $this->getName(), 'utf-8'));
-    $doc->addField(Zend_Search_Lucene_Field::UnIndexed('track_url', $this->getUrl(), 'utf-8'));
-    $doc->addField(Zend_Search_Lucene_Field::text('play_it_user_id', $this->getSfGuardUser()->getId(), 'utf-8'));
-    $doc->addField(Zend_Search_Lucene_Field::text('track_name', $this->getName(), 'utf-8'));
-    $doc->addField(Zend_Search_Lucene_Field::text('track_type', $this->getPlayList()->getObjectType(), 'utf-8'));
-    $doc->addField(Zend_Search_Lucene_Field::text('playlist_name', $this->getPlayList()->getTitle(), 'utf-8'));
-    $doc->addField(Zend_Search_Lucene_Field::text('play_owner_id', $this->getPlayList()->getPlayOwner()->getId(), 'utf-8'));
-    $doc->addField(Zend_Search_Lucene_Field::text('play_owner_name', $this->getPlayList()->getPlayOwner()->getName(), 'utf-8'));
-    $doc->addField(Zend_Search_Lucene_Field::UnStored('play_owner_name_fr', $this->getPlayList()->getPlayOwner()->getNameFr(), 'utf-8'));
-
-    $index->addDocument($doc);
-    $index->commit();
-  }
-
-  public function save(Doctrine_Connection $conn = null)
-  {
-    $ret = parent::save($conn);
-    $this->updateLuceneIndex();
-    return $ret;
-  }
+//  public function updateLuceneIndex()
+//  {
+//    $index = trackTable::getLuceneIndex();
+//
+//    // remove existing entries
+//    foreach ($index->find('pk:' . $this->getId()) as $hit)
+//    {
+//      $index->delete($hit->id);
+//    }
+//
+//    $doc = new Zend_Search_Lucene_Document();
+//
+//    $doc->addField(Zend_Search_Lucene_Field::Keyword('pk', $this->getId()));
+//
+//    $doc->addField(Zend_Search_Lucene_Field::text('track_name', $this->getName(), 'utf-8'));
+//    $doc->addField(Zend_Search_Lucene_Field::UnIndexed('track_url', $this->getUrl(), 'utf-8'));
+//    $doc->addField(Zend_Search_Lucene_Field::text('play_it_user_id', $this->getSfGuardUser()->getId(), 'utf-8'));
+//    $doc->addField(Zend_Search_Lucene_Field::text('track_name', $this->getName(), 'utf-8'));
+//    $doc->addField(Zend_Search_Lucene_Field::text('track_type', $this->getPlayList()->getObjectType(), 'utf-8'));
+//    $doc->addField(Zend_Search_Lucene_Field::text('playlist_name', $this->getPlayList()->getTitle(), 'utf-8'));
+//    $doc->addField(Zend_Search_Lucene_Field::text('play_owner_id', $this->getPlayList()->getPlayOwner()->getId(), 'utf-8'));
+//    $doc->addField(Zend_Search_Lucene_Field::text('play_owner_name', $this->getPlayList()->getPlayOwner()->getName(), 'utf-8'));
+//    $doc->addField(Zend_Search_Lucene_Field::UnStored('play_owner_name_fr', $this->getPlayList()->getPlayOwner()->getNameFr(), 'utf-8'));
+//
+//    $index->addDocument($doc);
+//    $index->commit();
+//  }
+//
+//  public function save(Doctrine_Connection $conn = null)
+//  {
+//    $ret = parent::save($conn);
+//    $this->updateLuceneIndex();
+//    return $ret;
+//  }
 
 }

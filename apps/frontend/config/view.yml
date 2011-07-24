@@ -26,6 +26,7 @@ default:
    - libs/niceforms.js
    - libs/jquery.tipTip.minified.js
    - libs/zebra_dialog.js
+   - libs/jquery.tinyscrollbar.min.js
    - mylibs/fo/qu.common.js
    - mylibs/fo/qu.playlist.js
    - plugins.js
