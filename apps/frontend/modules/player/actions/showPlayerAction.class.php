@@ -20,19 +20,23 @@ class showPlayerAction extends sfAction
     $playerId = $request->getParameter('id');
 
 //    $query = 'كمال';
-//    $hits = trackTable::getLuceneIndex()->find($query);
 //    
+//    $hits = trackTable::getLuceneIndex()->find('play_owner_id:12');
 //
-//    foreach ($hits as $hit)
+//    $paginators = Zend_Paginator::factory($hits);
+//    $paginators->setCurrentPageNumber($request->getParameter('page'));
+//    $paginators->setItemCountPerPage(10);
+//
+//    foreach ($paginators as $paginator)
 //    {
-//      var_dump($hit->getDocument());
-//      //var_dump($hit->track_name);
+//
+//      //var_dump($paginator->id, $paginator->score);
+//      var_dump($paginator->getDocument());
 //    }
-//    var_dump('endddddddd');
+//    var_dump('end');
 //    die;
-//    die;
+    
     $this->forward404Unless($this->player = Doctrine_Core::gettable('playOwner')->getPlayer($playerId), 'User not found');
-
   }
 
 }

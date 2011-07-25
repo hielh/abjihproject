@@ -37,8 +37,8 @@ all:
     use_database:           true
     
     charset: utf-8
-    default_culture: ar_SA
     i18n: true
+    default_culture: ar
     
     default_culture:        fr_FR
     

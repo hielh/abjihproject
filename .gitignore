@@ -39,4 +39,5 @@ cache/*
 /nbproject/private/
 /plugins/.channels/
 /plugins/.registry/
+/data/searchIndex/*
 

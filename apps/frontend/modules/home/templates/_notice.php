@@ -29,6 +29,6 @@ elseif ($sf_user->hasFlash('qu_notice_information'))
 
 <?php if (isset($noticeType) && isset($noticeTitle)): ?>
   <div class="show-notice <?php echo $noticeType; ?>" style="display:none">
-    <div class="notice-title"><?php echo $noticeTitle; ?></div>
+    <div class="notice-title"><?php echo __($noticeTitle); ?></div>
   </div>
 <?php endif; ?>

@@ -6,3 +6,19 @@ all:
   imagesUpload:
     rightMenuPub: /uploads/pub/
     
+
+#sfForkedDoctrinePlugin
+  sfApplyPlugin:
+    from:
+      email: "contact@addakirine.com"
+      fullname: "Addakirine Staff"
+  sfForkedApply:  
+    mail_editable: true
+    routes:
+      apply: /user/new
+      reset: /user/password-reset
+      resetRequest: /user/reset-request
+      resetCancel: /user/reset-cancel
+      validate: /user/confirm/:validate
+      settings: /user/settings
+    
