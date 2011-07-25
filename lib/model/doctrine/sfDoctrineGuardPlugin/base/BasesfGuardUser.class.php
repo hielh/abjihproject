@@ -22,6 +22,7 @@
  * @property Doctrine_Collection $sfGuardUserGroup
  * @property sfGuardRememberKey $RememberKeys
  * @property sfGuardForgotPassword $ForgotPassword
+ * @property sfGuardUserProfile $Profile
  * @property Doctrine_Collection $play_lists
  * @property Doctrine_Collection $tracks
  * @property Doctrine_Collection $play_owners
@@ -49,6 +50,7 @@
  * @method Doctrine_Collection   getSfGuardUserGroup()      Returns the current record's "sfGuardUserGroup" collection
  * @method sfGuardRememberKey    getRememberKeys()          Returns the current record's "RememberKeys" value
  * @method sfGuardForgotPassword getForgotPassword()        Returns the current record's "ForgotPassword" value
+ * @method sfGuardUserProfile    getProfile()               Returns the current record's "Profile" value
  * @method Doctrine_Collection   getPlayLists()             Returns the current record's "play_lists" collection
  * @method Doctrine_Collection   getTracks()                Returns the current record's "tracks" collection
  * @method Doctrine_Collection   getPlayOwners()            Returns the current record's "play_owners" collection
@@ -75,6 +77,7 @@
  * @method sfGuardUser           setSfGuardUserGroup()      Sets the current record's "sfGuardUserGroup" collection
  * @method sfGuardUser           setRememberKeys()          Sets the current record's "RememberKeys" value
  * @method sfGuardUser           setForgotPassword()        Sets the current record's "ForgotPassword" value
+ * @method sfGuardUser           setProfile()               Sets the current record's "Profile" value
  * @method sfGuardUser           setPlayLists()             Sets the current record's "play_lists" collection
  * @method sfGuardUser           setTracks()                Sets the current record's "tracks" collection
  * @method sfGuardUser           setPlayOwners()            Sets the current record's "play_owners" collection
@@ -184,6 +187,10 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'foreign' => 'user_id'));
 
         $this->hasOne('sfGuardForgotPassword as ForgotPassword', array(
+             'local' => 'id',
+             'foreign' => 'user_id'));
+
+        $this->hasOne('sfGuardUserProfile as Profile', array(
              'local' => 'id',
              'foreign' => 'user_id'));
 

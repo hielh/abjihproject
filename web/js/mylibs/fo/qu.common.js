@@ -1,6 +1,16 @@
 var qu = qu || {};
 qu.common = qu.common || {};
 
+/*
+ *  fonction a executé on ready
+ *  KEEP IT ON TOP !!!
+ */
+qu.common.execute = function(){
+  // afficher les infobulles
+  qu.common.tooltip();
+}
+
+
 /**
  * affiche une notification
  */

@@ -18,4 +18,3 @@ configuration virtualhost
     Allow from All
   </Directory>
 </VirtualHost>
-

@@ -26,9 +26,20 @@ test:
 dev:
   mailer:
     param:
-      delivery_strategy: none
+      delivery_strategy: realtime
 
 all:
+  mailer:
+    param:
+      transport:
+        class: Swift_SmtpTransport
+        param:
+          host:       smtp.gmail.com
+          port:       465
+          encryption: ssl
+          username: addakirine@gmail.com
+          password: addakirinetest
+          
   routing:
     class: sfPatternRouting
     param:

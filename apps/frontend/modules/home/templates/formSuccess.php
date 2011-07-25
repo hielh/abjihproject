@@ -1,6 +1,6 @@
 <form action="" class="form">
 
-  <div class="grid-5-12">
+  <div class="grid-5-12 form-right">
 
 
     <label class="form-lbl" for="">Field Label <em class="form-req">*</em></label>

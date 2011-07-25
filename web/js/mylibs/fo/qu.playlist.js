@@ -1,5 +1,18 @@
 qu.player = qu.player || {};
 
+/*
+ *  fonction a executé on ready
+ *  KEEP IT ON TOP !!!
+ */
+qu.player.execute = function(){
+  
+  Playlist = qu.player.init();
+  audioPlaylist = qu.player.initPlaylist(Playlist, privateListener);
+  qu.player.addToPlaylist();
+  qu.player.showPlaylist();
+}
+
+
 qu.player.init = function(){
   var Playlist = function(playlist, options) {
     var self = this;
@@ -168,6 +181,9 @@ qu.player.initPlaylist = function(Playlist, privateListener){
   return audioPlaylist;
 }
 
+/**
+ * ajouter track a la playlist
+ */
 qu.player.addToPlaylist = function(){
   jQuery('.addToPlaylist').bind('click', function(){
     
@@ -191,13 +207,6 @@ qu.player.addToPlaylist = function(){
   });
 }
 
-qu.player.userActionsOnPlaylist = function(){
-  
-  Playlist = qu.player.init();
-  audioPlaylist = qu.player.initPlaylist(Playlist, privateListener);
-  qu.player.addToPlaylist();
-  qu.player.showPlaylist();
-}
 
 /**
  * afficher la list des track 
