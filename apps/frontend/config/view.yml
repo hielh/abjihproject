@@ -15,18 +15,19 @@ default:
   stylesheets:
     - FO/style.css
     - FO/960.css
-    - FO/niceforms-default.css
+#    - FO/niceforms-default.css
+    - FO/form-structure.css
+    - FO/form-style.css
     - FO/zebra_dialog.css
     - FO/player.css
     - FO/init_style.css
-    - FO/tipTip.css
+#    - FO/tipTip.css
 
   javascripts:    
    - libs/jquery.jplayer.min.js
-   - libs/niceforms.js
-   - libs/jquery.tipTip.minified.js
+#   - libs/niceforms.js
+#   - libs/jquery.tipTip.minified.js
    - libs/zebra_dialog.js
-   - libs/jquery.tinyscrollbar.min.js
    - mylibs/fo/qu.common.js
    - mylibs/fo/qu.playlist.js
    - plugins.js

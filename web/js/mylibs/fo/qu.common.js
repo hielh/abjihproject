@@ -95,9 +95,10 @@ qu.common.fixedPlayer = function()
 qu.common.submitForm = function()
 {
   jQuery('.ajaxFormSubmit').submit(function(){
-    self = jQuery(this);
-    url = self.attr('action');
-    qu.common.sendRequest(url, self.serialize(), "", methode = "POST");
+    var self = jQuery(this);
+    var url = self.attr('action');
+    var method = self.attr('method');
+    qu.common.sendRequest(url, self.serialize(), "", method);
   });
 }
 
