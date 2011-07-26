@@ -15,7 +15,7 @@ all:
   sfForkedApply:  
     mail_editable: true
     routes:
-      apply: /user/new
+      apply: /user/register
       reset: /user/password-reset
       resetRequest: /user/reset-request
       resetCancel: /user/reset-cancel

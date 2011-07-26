@@ -15,7 +15,7 @@ class BasesfApplyActions extends sfActions
     $this->forwardIf($this->getUser()->isAuthenticated(), 'sfApply', 'settings');
 
     // we're getting default or customized applyForm for the task
-    if( !( ($this->form = $this->newForm( 'applyForm' ) ) instanceof sfGuardUserProfileForm) )
+    if( !( ($this->form = new sfGuardUserProfileForm() ) instanceof sfGuardUserProfileForm) )
     {
       // if the form isn't instance of sfApplyApplyForm, we don't accept it
       throw new InvalidArgumentException(

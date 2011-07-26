@@ -7,7 +7,9 @@ qu.common = qu.common || {};
  */
 qu.common.execute = function(){
   // afficher les infobulles
-  qu.common.tooltip();
+  //  qu.common.tooltip();
+  
+  qu.common.submitForm();
 }
 
 
@@ -104,11 +106,12 @@ qu.common.fixedPlayer = function()
  */
 qu.common.submitForm = function()
 {
-  jQuery('.ajaxFormSubmit').submit(function(){
+  jQuery('.ajaxFormSubmit').live('submit', function(){
     var self = jQuery(this);
     var url = self.attr('action');
     var method = self.attr('method');
-    qu.common.sendRequest(url, self.serialize(), "", method);
+    qu.common.sendRequest(url, self.serialize(),self.parent('.parentAjaxFormSubmit'), method);
+    return false;
   });
 }
 
