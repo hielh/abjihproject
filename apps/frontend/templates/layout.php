@@ -43,9 +43,29 @@
         </div>
       </header><!--! end of header -->
 
-      <div class="container_24">
-        <div><?php echo $sf_user->isAuthenticated() ? 'hello ' . $sf_user->getGuardUser()->getUsername() : ''; ?></div>
-        <?php echo $sf_content; ?>
+      <div id="content" class="container_24">
+      	<div class="grid_6">
+      		<div class="left_container_parent">
+      			<div class="left_container">
+	      			<h3>login</h3>
+	      			<div class="left_subcontainer">
+	      				test
+	      			</div>
+	      		</div>
+      		</div>
+      		<div class="left_container_parent">
+      			<div class="left_container">
+	      			<h3 class="friend_site">friend site</h3>
+	      			<div class="left_subcontainer">
+	      				test
+	      			</div>
+	      		</div>
+      		</div>
+      	</div>
+      	<div class="grid_18">
+      		<?php echo $sf_content; ?>
+      	</div>
+      	<div class="clear"></div>
       </div>
       <footer>
         <div class="container_24">

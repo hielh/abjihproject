@@ -1,14 +1,21 @@
 <?php /* @var $player playOwner */ ?>
-<div class="infoPlayer">
-    <div id="optionsPlayer">
-	option for player
+
+<div class="play_owner_info">
+    <h2 class="text-lime"><?php echo $player->getName(); ?></h2>
+    <div class="play_owner_info_text">
+	<img src="/uploads/<?php echo $player->getPicture(); ?> " />
+	<p>
+	    <?php echo $player->getDescription(); ?>
+	</p>
+	
+
+	<div class="clear"></div>
     </div>
-    <img src="/uploads/<?php echo $player->getPicture(); ?> " />
-    <p>
-	<?php echo $player->getDescription(); ?>
-    </p>
-    <div class="clear"></div>
-    <div>
-	<?php include_partial('player/playLists', array('playLists'=> $player->getPlayLists())); ?>
+
+    <div class="play_owner_info_links">
+	<a href="#">شاري بن راشد العفاسي</a>
+	<a href="#">شاري بن راشد العفاسي</a>
     </div>
 </div>
+
+<?php include_partial('player/playLists', array('playLists' => $player->getPlayLists())); ?>

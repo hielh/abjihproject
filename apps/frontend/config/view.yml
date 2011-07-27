@@ -13,7 +13,7 @@ default:
     #robots:       index, follow
 
   stylesheets:
-    - FO/style.css
+    - FO/reset_rtl.css
     - FO/960.css
 #    - FO/niceforms-default.css
     - FO/form-structure.css

@@ -8,6 +8,7 @@
     -moz-border-radius: 7px; 
     -webkit-border-radius: 7px; 
     position: relative;
+    z-index: 9;
 }
 
 .jp-player {
