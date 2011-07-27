@@ -33,9 +33,13 @@ class sfApplySettingsForm extends sfGuardUserProfileForm
   protected function removeFields()
   {
     unset(
+        $this['password'],
+        $this['password2'],
+        $this['username'],
         $this['user_id'],
         $this['validate'],
         $this['email'],
+        $this['email2'],
         $this['email_new'],
         $this['validate_at'],
         $this['id'],

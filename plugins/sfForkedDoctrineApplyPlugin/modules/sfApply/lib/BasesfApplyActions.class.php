@@ -272,7 +272,7 @@ class BasesfApplyActions extends sfActions
       if ($this->form->isValid())
       {
         $this->form->save();
-        return $this->redirect('@homepage');
+        //return $this->redirect('@homepage');
       }
     }
   }

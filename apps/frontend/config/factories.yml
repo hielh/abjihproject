@@ -29,8 +29,8 @@ dev:
       delivery_strategy: none
 
 all:
-#  mailer:
-#    param:
+  mailer:
+    param:
 #      transport:
 #        class: Swift_SmtpTransport
 #        param:

@@ -23,4 +23,9 @@ class sfApplysActions extends sfApplyActions //BasesfApplyActions
     parent::executeResetRequest($request);
   }
 
+  public function executeSettings(sfRequest $request)
+  {
+    parent::executeSettings($request);
+  }
+
 }

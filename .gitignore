@@ -40,4 +40,7 @@ cache/*
 /plugins/.channels/
 /plugins/.registry/
 /data/searchIndex/*
+/nbproject/*
+*.log
+/web/*Plugin
 

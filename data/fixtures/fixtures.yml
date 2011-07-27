@@ -6,14 +6,45 @@ sfGuardUser:
     username: abjih
     is_active: 1
     is_super_admin: 1
-   
+
+sfGuardUserProfile:
+  abajih:
+    User: abjih
+    firstname: jihal
+    lastname: abderrahman
+
+sfGuardPermission:
+  login:
+    name: login
+    
+sfGuardGroup:
+  simpleUser:
+    name: simple_user
+  Moderator:
+    name: moderator
+  Admin:
+    name: admin
+    
+sfGuardGroupPermission:
+  gp1:
+    Group:      Moderator
+    Permission: login
+  gp2:
+    Group:      simpleUser
+    Permission: login
+  gp3:
+    Group:      Admin
+    Permission: login
+  
 PlayOwner:
   afasy:
+    id: 1
     sfGuardUser: abjih
     name: مشاري بن راشد العفاسي
     name_fr: afasy
     picture: al-kouchi.55066865.2223240899.2.jpg
   kamal:
+    id: 2
     sfGuardUser: abjih
     name:  كمال اليونسي
     picture: al-kouchi.55066865.2223240899.2.jpg
@@ -124,7 +155,7 @@ Track:
 userPlaylist:
   userplay01:
     sfGuardUser: abjih
-    Track: afasyQuranPlay08
+    Track: kamalQuran09
   userplay02:
     sfGuardUser: abjih
     Track: afasyQuranPlay05
@@ -133,7 +164,7 @@ userPlaylist:
     Track: afasyQuranPlay04
   userplay04:
     sfGuardUser: abjih
-    Track: afasyQuranPlay06
+    Track: kamalQuran07
   userplay05:
     sfGuardUser: abjih
     Track: afasyQuranPlay02

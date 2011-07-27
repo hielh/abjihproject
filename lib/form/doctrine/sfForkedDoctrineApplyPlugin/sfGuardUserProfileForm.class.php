@@ -107,15 +107,18 @@ class sfGuardUserProfileForm extends PluginsfGuardUserProfileForm
 
   public function doSave($con = null)
   {
-    $user = new sfGuardUser();
-    $user->setUsername($this->getValue('username'));
-    $user->setPassword($this->getValue('password'));
-    $user->setEmailAddress($this->getValue('email'));
-    // They must confirm their account first
-    $user->setIsActive(false);
-    $user->save();
-    $this->getObject()->setUserId($user->getId());
-
+    if ($this->isNew)
+    {
+      $user = new sfGuardUser();
+      $user->setUsername($this->getValue('username'));
+      $user->setPassword($this->getValue('password'));
+      $user->setEmailAddress($this->getValue('email'));
+      $user->addGroupByName(sfConfig::get('app_user_default_group'));
+      // They must confirm their account first
+      $user->setIsActive(false);
+      $user->save();
+      $this->getObject()->setUserId($user->getId());
+    }
     return parent::doSave($con);
   }
 
