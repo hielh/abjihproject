@@ -17,7 +17,7 @@ class showPlayerAction extends sfAction
    */
   public function execute($request)
   {
-    $playerId = $request->getParameter('id');
+    $playerId = $request->getParameter('owner_id');
 
 //    $query = 'كمال';
 //    

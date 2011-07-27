@@ -11,16 +11,15 @@
 class myPlayListComponent extends sfComponent
 {
 
-    /**
-     *
-     * @param sfWebRequest $request 
-     */
-    public function execute($request)
-    {
-        $userId = 1;
-        
-        $this->myPlayLists = Doctrine_Core::getTable('userPlaylist')->loadUserPlaylist($userId);
-
-    }
+  /**
+   *
+   * @param sfWebRequest $request 
+   */
+  public function execute($request)
+  {
+    $userId = $this->getUser()->getId();
+    $playOwnerId = ($userId === null && $request->hasParameter('owner_id'))? $request->getParameter('owner_id'): null;
+    $this->myPlayLists = Doctrine_Core::getTable('userPlaylist')->loadUserPlaylist($userId, $playOwnerId);
+  }
 
 }

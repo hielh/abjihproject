@@ -4,7 +4,7 @@
 <?php end_slot() ?>
 
 <div class="sf_apply sf_apply_apply parentAjaxFormSubmit">
-  <form class="form " method="post" action="<?php echo url_for("sfApply/settings") ?>" name="sf_apply_settings_form" id="sf_apply_settings_form">
+  <form class="form ajaxFormSubmit" method="post" action="<?php echo url_for("sfApply/settings") ?>" name="sf_apply_settings_form" id="sf_apply_settings_form">
     <div class="grid-5-12 form-right">
       <?php foreach ($form as $widget): ?>
         <div class="grid-9-12 form-right">

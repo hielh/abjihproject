@@ -6,7 +6,7 @@ addToPlaylist:
   param: {module: player, action: addToPlaylist }
 
 showPlayer:
-  url: /p/:id
+  url: /p/:owner_id
   param: { module: player, action: showPlayer }
 
 sf_guard_signin:
