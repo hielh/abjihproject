@@ -18,6 +18,7 @@ class addToPlaylistAction extends sfAction
   public function execute($request)
   {
 
+    //sleep(100);
     $trackId = $request->getParameter('id');
     $sf_user = $this->getUser();
     $userId = $sf_user->getId();

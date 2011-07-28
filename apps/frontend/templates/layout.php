@@ -60,9 +60,7 @@
       </footer>
       <div id="bottomPlayer">bottom </div>
     </div> <!--! end of #container -->
-    <div style="display: none">
-      <a href="<?php echo $sf_request->getUri() ?>" rel="no-follow" class="local-page">#</a>
-    </div>
+    <?php include_partial('home/hiddenDiv'); ?>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/js/jquery.js"><\/script>')</script>
     <?php include_component('player', 'myPlayList', array('reloadPlaylist' => false)); ?>

@@ -115,6 +115,9 @@ qu.common.submitForm = function()
   });
 }
 
+/**
+ * send ajax request
+ */
 qu.common.sendRequest = function(url, data, responseElement, methode)
 {
   methode = (methode == null)? 'GET':methode;
@@ -135,4 +138,17 @@ qu.common.sendRequest = function(url, data, responseElement, methode)
 
 qu.common.refreshContainer = function(url){
   qu.common.sendRequest(url, null, '#main-content');
+}
+
+/**
+ * afficher image de chargement
+ */
+qu.common.showLoader = function(){
+  jQuery('#loading').show();
+}
+/**
+ * hide image de chargement
+ */
+qu.common.hideLoader = function(){
+  jQuery('#loading').hide();
 }
