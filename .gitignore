@@ -42,5 +42,5 @@ cache/*
 /data/searchIndex/*
 /nbproject/*
 *.log
-/web/*Plugin
+
 

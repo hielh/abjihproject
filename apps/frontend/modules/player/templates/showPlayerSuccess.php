@@ -18,4 +18,4 @@
     </div>
 </div>
 
-<?php include_partial('player/playLists', array('playLists' => $player->getPlayLists())); ?>
+<?php include_partial('player/playLists', array('playLists' => $player->getPlayLists(), 'playerName'=> $player->getName())); ?>

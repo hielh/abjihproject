@@ -10,6 +10,7 @@ qu.player.execute = function(){
   audioPlaylist = qu.player.initPlaylist(Playlist, privateListener);
   qu.player.addToPlaylist();
   qu.player.showPlaylist();
+  qu.player.listenToTrack();
 }
 
 
@@ -58,6 +59,7 @@ qu.player.init = function(){
     },
     getPlaylist: function(){
     //console.log(this.playlist)
+    //console.log(this.current)
     },
     getCurrentTrack: function(){
       currentTrack = this.playlist[this.current];
@@ -212,12 +214,35 @@ qu.player.addToPlaylist = function(){
  * afficher la list des track 
  */
 qu.player.showPlaylist = function(){
-    jQuery('.show-playlist').live('hover', function(){
-	jQuery('.jp-playlist-parent').show('slow');
-	return false;
-    });
-    jQuery('.jp-playlist-parent').hover(function(){}, function(){
-	jQuery(this).hide('slow');
-    });
+  jQuery('.show-playlist').live('hover', function(){
+    jQuery('.jp-playlist-parent').show('slow');
     return false;
+  });
+  jQuery('.jp-playlist-parent').hover(function(){}, function(){
+    jQuery(this).hide('slow');
+  });
+  return false;
+}
+
+/**
+ * lire un track sans l ajouter a la playlist
+ */
+
+qu.player.listenToTrack = function(){
+  jQuery('.listenToTrack').live('click', function(){
+    var self = jQuery(this);
+    var track = self.parent('li').next('li').children('a.download').attr('href');
+    var title = self.parent('li').next('li').children('a.download').attr('title');
+    privateListener = [];
+    privateListener = [
+    {
+      name:title,
+      mp3:track
+    }];
+  
+    audioPlaylist.setPlaylist(privateListener);
+    audioPlaylist.displayPlaylist();
+    audioPlaylist.playlistNext();
+    return false;
+  });
 }

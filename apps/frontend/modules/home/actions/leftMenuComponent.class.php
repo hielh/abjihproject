@@ -1,6 +1,6 @@
 <?php
 
-class rightMenuComponent extends sfComponent
+class leftMenuComponent extends sfComponent
 {
   function execute($request)
   {

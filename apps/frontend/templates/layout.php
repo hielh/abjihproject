@@ -44,25 +44,11 @@
       </header><!--! end of header -->
 
       <div id="content" class="container_24">
-      	<div class="grid_6">
-      		<div class="left_container_parent">
-      			<div class="left_container">
-	      			<h3>login</h3>
-	      			<div class="left_subcontainer">
-	      				test
-	      			</div>
-	      		</div>
-      		</div>
-      		<div class="left_container_parent">
-      			<div class="left_container">
-	      			<h3 class="friend_site">friend site</h3>
-	      			<div class="left_subcontainer">
-	      				test
-	      			</div>
-	      		</div>
-      		</div>
-      	</div>
-      	<div class="grid_18">
+      	
+      		<?php if(has_component_slot('left_menu')): ?>
+              <?php include_component_slot('left_menu'); ?>
+            <?php endif; ?>
+      	<div class="grid_18" id="main-content">
       		<?php echo $sf_content; ?>
       	</div>
       	<div class="clear"></div>
@@ -74,7 +60,9 @@
       </footer>
       <div id="bottomPlayer">bottom </div>
     </div> <!--! end of #container -->
-
+    <div style="display: none">
+      <a href="<?php echo $sf_request->getUri() ?>" rel="no-follow" class="local-page">#</a>
+    </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/js/jquery.js"><\/script>')</script>
     <?php include_component('player', 'myPlayList', array('reloadPlaylist' => false)); ?>

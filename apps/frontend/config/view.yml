@@ -38,4 +38,5 @@ default:
   
 all:
   components:
-    right_menu: [home, rightMenu]
+    left_menu   : [home, leftMenu]
+    user_col    : [user, userCol]

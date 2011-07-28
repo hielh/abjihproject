@@ -132,3 +132,7 @@ qu.common.sendRequest = function(url, data, responseElement, methode)
     
   return false;
 }
+
+qu.common.refreshContainer = function(url){
+  qu.common.sendRequest(url, null, '#main-content');
+}

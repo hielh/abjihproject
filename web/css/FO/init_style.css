@@ -1,252 +1,252 @@
 body{
-    background: #F0F0F0;
-    direction: rtl;
-    font-size: 14px;
+  /*    background: #F0F0F0;*/
+  direction: rtl;
+  font-size: 14px;
 }
 a{
-    text-decoration: none;
-    border: none;
+  text-decoration: none;
+  outline: medium none !important;
+  color: #030303;
+  font-size: 12px;
 }
 h3{
-    font-size: 14px;
+  font-size: 14px;
 }
 .right{
-    float: right;
+  float: right;
 }
 .text-lime{
-    color: #a8d031;
+  color: #a8d031;
 }
 header{
-    background: url(/images/header-bg.png) repeat-x;
-    color: #FFFFFF;
-    height: 170px;
-    -moz-box-shadow: 0px 0px 30px 0px #888;
-    -webkit-box-shadow: 0px 0px 30px 0px #888;
-    box-shadow: 0px 0px 30px 0px #888;
-    margin-bottom: 10px;
+  background: url(/images/header-bg.png) repeat-x;
+  color: #FFFFFF;
+  height: 170px;
+  -moz-box-shadow: 0 -26px 114px 0 #888888;
+  -webkit-box-shadow: 0 -26px 114px 0 #888888;
+  box-shadow: 0 -26px 114px 0 #888888;
+  margin-bottom: 10px;
 }
 
 header #header_menu nav li{
-    float: right;
-    color: #ffffff;
+  float: right;
+  color: #ffffff;
 }
 header #header_menu nav li a{
-    color: #ffffff;
-    font-size: 12px;
+  color: #ffffff;
+  font-size: 12px;
 }
 header .banner{
-    background: transparent url(/images/banner.png) 536px 23px no-repeat;
-    height: 170px;
+  background: transparent url(/images/banner.png) 536px 23px no-repeat;
+  height: 170px;
 }
 #bottomPlayer {
-    position: fixed;
-    bottom:0px;
-    width: 100%;
-    background:#28170d;
-    display: none;
-    height: 100px;
-}
-footer{
-    height: 170px;
-    background: #1f1f1f;
+  position: fixed;
+  bottom:0px;
+  width: 100%;
+  background:#28170d;
+  display: none;
+  height: 100px;
 }
 
 footer{
-    background: none repeat scroll 0 0 #1f1f1f;
-    color: #b2b3b4;
-    margin-top: 10px;
-    min-height: 100px;
-    width: 100%;
-    -moz-box-shadow: 0px 0px 30px 0px #888;
-    -webkit-box-shadow: 0px 0px 30px 0px #888;
-    box-shadow: 0px 0px 30px 0px #888;
+  background: none repeat scroll 0 0 #1f1f1f;
+  color: #b2b3b4;
+  margin-top: 10px;
+  width: 100%;
+  height: 170px;
+  -moz-box-shadow: 0px 0px 30px 0px #888;
+  -webkit-box-shadow: 0px 0px 30px 0px #888;
+  box-shadow: 0px 0px 30px 0px #888;
+  padding: 15px 0 0;
 }
 
 footer nav h3{
-    width: 177px;
-    height: 28px;
-    text-indent: -99999px;
+  width: 177px;
+  height: 28px;
+  text-indent: -99999px;
 }
 
 footer nav a, footer nav a:visited{
-    color: #b2b3b4;
+  color: #b2b3b4;
 }
 
 footer nav.shareNav a{
-    display: inline-block;
-    height: 66px;
-    width: 60px;
-    text-indent: -99999px;
+  display: inline-block;
+  height: 66px;
+  width: 60px;
+  text-indent: -99999px;
 }
 
 footer nav.shareNav h3{
-    background: transparent url(/images/footer-sprite.png) 0px -189px;
+  background: transparent url(/images/footer-sprite.png) 0px -189px;
 }
 
 footer nav ul{
-    font-size: 12px;
+  font-size: 12px;
 }
 
 footer nav ul li{
-    background: url(/images/btn-li.png) no-repeat right 7px;
-    padding: 0 13px 0 0;
-    margin-right: 10px;
+  background: url(/images/btn-li.png) no-repeat right 7px;
+  padding: 0 13px 0 0;
+  margin-right: 10px;
 }
 footer nav.copyrightNav h3{
-    background: transparent url(/images/footer-sprite.png) 0px 2px;
-    height: 22px;
+  background: transparent url(/images/footer-sprite.png) 0px 2px;
+  height: 22px;
 }
 
 footer nav.friendLinkNav h3{
-    background: transparent url(/images/footer-sprite.png) 0px -22px;
+  background: transparent url(/images/footer-sprite.png) 0px -22px;
 }
 
 footer nav.siteNav h3{
-    background: transparent url(/images/footer-sprite.png) 0px -91px;
+  background: transparent url(/images/footer-sprite.png) 0px -91px;
 }
 
 footer nav a.facebook{
-    background: transparent url(/images/footer-sprite.png) 117px -123px;
+  background: transparent url(/images/footer-sprite.png) 117px -123px;
 }
 
 footer nav a.twitter{
-    background: transparent url(/images/footer-sprite.png) 0px -123px;
+  background: transparent url(/images/footer-sprite.png) 0px -123px;
 }
 
 footer nav a.rss{
-    background: transparent url(/images/footer-sprite.png) 61px -123px;
+  background: transparent url(/images/footer-sprite.png) 61px -123px;
 }
 
 
 /********************************************************************************/
 
 .left_container_parent{
-    border-right: 2px solid #3a3a3a;
-    padding: 0 3px 0 0;
+  border-right: 2px solid #3a3a3a;
+  padding: 0 3px 0 0;
+  margin-bottom: 10px;
 }
 .left_container{
-    background:   #ececec;
-    min-height: 200px;
-    border: 1px solid #d7d7d7;
-    padding: 5px;
-    margin: 0px 0 10px 0;
-    -moz-box-shadow: 0 15px 27px -3px #D7D7D7;
-    -webkit-box-shadow: 0 15px 27px -3px #D7D7D7;
-    box-shadow: 0 15px 27px -3px #D7D7D7;
+  background:   #ececec;
+  min-height: 200px;
+  border: 1px solid #d7d7d7;
+  padding: 5px;
+  margin: 0px 0 10px 0;
+  -moz-box-shadow: 0 15px 27px -3px #D7D7D7;
+  -webkit-box-shadow: 0 15px 27px -3px #D7D7D7;
+  box-shadow: 0 15px 27px -3px #D7D7D7;
 }
 
 
 .left_container h3{
-    background: url(/images/fiche-sprites.png) no-repeat 105px -171px #dedede;
-    height: 22px;
-    margin: 0;
-    text-indent: -99999px;
+  background: url(/images/fiche-sprites.png) no-repeat 105px -171px #dedede;
+  height: 22px;
+  margin: 0;
+  text-indent: -99999px;
 
 }
 .left_container h3.friend_site{
-    background: url(/images/fiche-sprites.png) no-repeat 105px -102px #dedede;
+  background: url(/images/fiche-sprites.png) no-repeat 105px -102px #dedede;
 }
 .play_owner_info{
-    background: #ececec;
-    -moz-box-shadow: 2px 6px 2px -2px #D7D7D7;
-    -webkit-box-shadow: 2px 6px 2px -2px #D7D7D7;
-    box-shadow: 2px 6px 2px -2px #D7D7D7;
-    position: relative;
+  background: #ececec;
+  -moz-box-shadow: 2px 6px 2px -2px #D7D7D7;
+  -webkit-box-shadow: 2px 6px 2px -2px #D7D7D7;
+  box-shadow: 2px 6px 2px -2px #D7D7D7;
+  position: relative;
 }
 
 .play_owner_info_text{
-    padding: 10px;
+  padding: 10px;
 }
 .play_owner_info_links{
-    position: absolute;
-    bottom: 10px;
-    left: 30px;
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
 }
 .play_owner_info_links a{
-    color: #030303;
-    font-size: 12px;
-    margin-right: 15px;
+  color: #030303;
+  font-size: 12px;
+  margin-right: 15px;
 }
 .play_owner_info_links a:hover{
-    text-decoration: underline;
+  text-decoration: underline;
 }
 .play_owner_info h2{
-    background: url("/images/fiche-sprites.png") no-repeat 611px 4px #030303;
-    font-size: 12px;
-    font-weight: normal;
-    height: 21px;
-    margin: 0;
-    padding: 4px 109px 0;
-
+  background: url("/images/fiche-sprites.png") no-repeat 611px 4px #030303;
+  font-size: 12px;
+  font-weight: normal;
+  height: 21px;
+  margin: 0;
+  padding: 4px 109px 0;
+  font-weight: bold;
 }
 .play_owner_info img{
-    width: 104px;
-    height: 120px;
-    float: right;
-    margin: 0 0 0 10px;
+  width: 104px;
+  height: 120px;
+  float: right;
+  margin: 0 0 0 10px;
 
 }
 .play_sublisting{
-    margin-top: 8px;
+  margin-top: 8px;
 }
 .play_sublisting h2{
-    background: url("/images/sublisting-h2.png") repeat scroll 0 0 transparent;
-    border-bottom: 2px solid #E0E0E0;
-    color: #5E7F02;
-    font-size: 12px;
-    height: 24px;
-    padding: 11px 29px 0;
+  background: url("/images/sublisting-h2.png") repeat scroll 0 0 transparent;
+  border-bottom: 2px solid #E0E0E0;
+  color: #5E7F02;
+  font-size: 12px;
+  height: 24px;
+  padding: 11px 29px 0;
 }
 .play_listing h3{
-    background: url("/images/fiche-sprites.png") no-repeat scroll 521px -60px transparent;
-    height: 43px;
-    margin: 8px 0;
-    text-indent: -99999px;
+  background: url("/images/fiche-sprites.png") no-repeat scroll 521px -60px transparent;
+  height: 43px;
+  margin: 8px 0;
+  text-indent: -99999px;
 }
 .play_sublisting_item{
-    background: #d0dbf3;
-    margin-top: 3px;
-
+  background: #d0dbf3;
+  margin-top: 3px;
+  float: right;
 }
 .play_sublisting_item a.track{
-    background: url("/images/fiche-sprites.png") no-repeat scroll 86px -15px transparent;
-    color: #01777E;
-    padding: 3px 14px 3px 3px;
-    font-family: sans-serif;
+  background: url("/images/fiche-sprites.png") no-repeat scroll 86px -15px transparent;
+  color: #01777E;
+  padding: 3px 14px 3px 3px;
+  font-family: sans-serif;
 }
 .play_sublisting_item div{
-    padding: 1px 10px 0 0;
+  padding: 1px 10px 0 0;
 }
 .play_sublisting_item ul{
-    float: left;
-    margin: 3px 0 0 9px;
+  float: left;
+  margin: 3px 0 0 9px;
 }
 .play_sublisting_item li{
-    float: right;
-    list-style: none;
+  float: right;
+  list-style: none;
 }
 
 .play_sublisting_item li a{
-    display: block;
-    height: 15px;
-    margin-left: 5px;
-    text-indent: -999999px;
-    width: 10px;
-    padding: 3px;
+  display: block;
+  height: 15px;
+  margin-left: 5px;
+  text-indent: -999999px;
+  width: 10px;
+  padding: 3px;
 }
 
 .play_sublisting_item a.min-share{
-    background: url("/images/fiche-sprites.png") no-repeat scroll  0 -41px transparent;
+  background: url("/images/fiche-sprites.png") no-repeat scroll  0 -41px transparent;
 }
 .play_sublisting_item a.min-download{
-    background: url("/images/fiche-sprites.png") no-repeat scroll  -34px -41px transparent;
+  background: url("/images/fiche-sprites.png") no-repeat scroll  -34px -41px transparent;
 }
 .play_sublisting_item a.min-addtoplaylist{
-    background: url("/images/fiche-sprites.png") no-repeat scroll  -17px -41px transparent;
+  background: url("/images/fiche-sprites.png") no-repeat scroll  -17px -41px transparent;
 }
 .play_sublisting_item a.min-listen{
-    background: url("/images/fiche-sprites.png") no-repeat scroll  -51px -41px transparent;
+  background: url("/images/fiche-sprites.png") no-repeat scroll  -51px -41px transparent;
 }
 .play_sublisting_item a.min-report{
-    background: url("/images/fiche-sprites.png") no-repeat scroll  -68px -41px transparent;
+  background: url("/images/fiche-sprites.png") no-repeat scroll  -68px -41px transparent;
 }
