@@ -12,6 +12,9 @@ a{
 h3{
   font-size: 14px;
 }
+button{
+  border: 0;
+}
 .right{
   float: right;
 }

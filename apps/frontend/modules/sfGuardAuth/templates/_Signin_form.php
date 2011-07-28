@@ -36,7 +36,7 @@
           
           <?php echo $form->renderHiddenFields() ?>
         <div class="grid-12-12 form-right">
-          <input class="form-button" type="submit" value="<?php echo __("login") ?>" />
+          <button class="form-button" type="submit"><?php echo __("login") ?></button>
         </div>
         <div class="grid-12-12 form-right form-list-chk">
           <ul>
