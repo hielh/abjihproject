@@ -24,8 +24,8 @@ test:
 
 all:
   .settings:
-    standard_helpers: [Partial, Cache, I18N]
-    enabled_modules:  [default, sfGuardAuth, sfApply]
+    standard_helpers: [Partial, Cache, I18N, sfCombine]
+    enabled_modules:  [default, sfGuardAuth, sfApply, sfCombine]
     # Form security secret (CSRF protection)
     csrf_secret:            3Jklmjdsqid8748JKMF84LM4JJT4lsq
 

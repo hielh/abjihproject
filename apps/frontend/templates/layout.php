@@ -22,7 +22,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
     <!-- CSS: implied media="all" -->
-    <?php include_stylesheets() ?>
+    <?php include_combined_stylesheets() ?>
     <!-- More ideas for your <head> here: h5bp.com/docs/#head-Tips -->
 
     <!-- All JavaScript at the bottom, except for Modernizr and Respond.
@@ -66,7 +66,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/js/jquery.js"><\/script>')</script>
     <?php include_component('player', 'myPlayList', array('reloadPlaylist' => false)); ?>
-    <?php include_javascripts() ?>
+    <?php echo include_combined_javascripts() ?>
 
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
 	     chromium.org/developers/how-tos/chrome-frame-getting-started -->

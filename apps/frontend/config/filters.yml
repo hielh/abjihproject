@@ -11,4 +11,6 @@ security:  ~
 # insert your own filters here
 
 cache:     ~
+common:
+  class: sfCombineFilter
 execution: ~
