@@ -8,7 +8,7 @@
         <?php $class = ($i%2)? 'alpha':'omega'; ?>
 		<div class="grid_9  <?php echo $class; ?> play_sublisting_item">
 		    <div>
-              <a href="#" class="track"><?php echo $Track->getName(); ?></a>
+              <a href="#" class="track grid_5"><?php echo $Track->getName(); ?></a>
               <ul class="play_sublisting_actions">
                   <li><a href="#" class="min-share">a</a></li>
                   <li><a href="#" class="min-report">a</a></li>

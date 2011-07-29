@@ -42,5 +42,8 @@ cache/*
 /data/searchIndex/*
 /nbproject/*
 *.log
+databases.yml
 
-
+/lib/form/doctrine/base/
+/lib/model/doctrine/base/
+/lib/filter/doctrine/base/
