@@ -18,10 +18,11 @@ qu.common.execute = function(){
  */
 qu.common.displayNotice = function(data, titleElement, typeNotice){
   
+  
   if (data != null)
   {
-    divObject = jQuery(data).closest('.show-notice');
-    titleElement = divObject.children('.notice-title');
+    var divObject = jQuery(data).closest('.show-notice');
+    var titleElement = divObject.children('.notice-title');
   }
   else
   {
