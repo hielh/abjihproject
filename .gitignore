@@ -33,14 +33,14 @@ ehthumbs.db
 Icon?
 Thumbs.db
 
-log/*
-cache/*
-/web/uploads/*
+log/
+cache/
+/web/uploads/
 /nbproject/private/
 /plugins/.channels/
 /plugins/.registry/
 /data/searchIndex/*
-/nbproject/*
+/nbproject/
 *.log
 databases.yml
 
