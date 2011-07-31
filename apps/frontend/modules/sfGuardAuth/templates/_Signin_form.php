@@ -41,10 +41,10 @@
         <div class="grid-12-12 form-right form-list-chk">
           <ul>
             <li>
-              <a href="#"><?php echo __('forget_password'); ?></a>
+              <a href="<?php echo url_for('resetRequest'); ?>" class="ajaxUrl"><?php echo __('forget_password'); ?></a>
             </li>
             <li>
-              <a href="#"><?php echo __('register'); ?></a>
+              <a href="<?php echo url_for('apply'); ?>" class="ajaxUrl"><?php echo __('register'); ?></a>
             </li>
           </ul>
         </div>
