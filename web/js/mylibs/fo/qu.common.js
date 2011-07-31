@@ -17,7 +17,7 @@ qu.common.execute = function(){
 /**
  * configure la  notification
  */
-qu.common.configureNotice = function(data, titleElement, typeNotice){
+qu.common.configureAndDisplayNotice = function(data, titleElement, typeNotice){
   
     if (data != null)
     {

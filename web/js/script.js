@@ -4,8 +4,9 @@ jQuery(document).ready(function(){
 	beforeSend: function(){
 	    qu.common.showLoader();
 	},
-	complete: function(){
+	complete: function(data){
 	    qu.common.hideLoader();
+	    qu.common.configureAndDisplayNotice(data.responseText);
 	}
     });
 
