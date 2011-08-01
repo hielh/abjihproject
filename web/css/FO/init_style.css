@@ -1,14 +1,14 @@
 body{
   /*    background: #F0F0F0;*/
   direction: rtl;
-  font-size: 14px;
+  font-size: 12px;
   font-family: tahoma;
 }
 a{
   text-decoration: none;
   outline: medium none !important;
   color: #030303;
-  font-size: 14px;
+  font-size: 12px;
 }
 h3{
   font-size: 14px;
