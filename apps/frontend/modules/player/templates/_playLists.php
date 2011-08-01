@@ -14,7 +14,7 @@
                   <li><a href="#" class="min-report">a</a></li>
                   <li><a href="<?php echo url_for('addToPlaylist'); ?>" id="addToPlaylist_<?php echo $Track->getId(); ?>" class="min-addtoplaylist addToPlaylist">a</a></li>
                   <li><a href="#" class="min-listen listenToTrack">a</a></li>
-                  <li><a href="<?php echo $Track->getUrl(); ?>" title="<span class='text-lime'><?php echo $Track->getName(); ?></span> <?php echo $playerName; ?>" target="_blank" class="min-download download">a</a></li>
+                  <li><a href="<?php echo $Track->getUrl(); ?>" title="<span class='text-blue'><?php echo $Track->getName(); ?></span> <?php echo $playerName; ?>" target="_blank" class="min-download download">a</a></li>
               </ul>
 		    </div>
 		</div>
