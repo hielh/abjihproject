@@ -172,6 +172,21 @@
 .jp-playlist a{
     color: #ffffff;
     display: block;
+    background: none repeat scroll 0 0 #292929;
+    color: #FFFFFF;
+    display: block;
+    margin: 5px;
+    padding: 5px 8px;
+}
+.jp-playlist a:hover{
+    background: none;
+}
+.jp-playlist span.removeFromPlaylist{
+    color: #8C8A8C;
+    float: left;
+    font-family: Helvetica;
+    font-size: 10px;
+    font-weight: bolder;
 }
 .jp-playlist ul{
     margin: 4px !important;

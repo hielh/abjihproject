@@ -2,12 +2,13 @@ body{
   /*    background: #F0F0F0;*/
   direction: rtl;
   font-size: 14px;
+  font-family: tahoma;
 }
 a{
   text-decoration: none;
   outline: medium none !important;
   color: #030303;
-  font-size: 12px;
+  font-size: 14px;
 }
 h3{
   font-size: 14px;
@@ -23,6 +24,9 @@ li{
 }
 .text-lime{
   color: #a8d031;
+}
+.text-blue{
+  color: #4c84b5;
 }
 header{
   background: url(/images/header-bg.png) repeat-x;
@@ -242,7 +246,7 @@ footer nav a.rss{
   background: url("/images/fiche-sprites.png") no-repeat scroll 199px -18px transparent;
   color: #01777E;
   padding: 3px 14px 3px 3px;
-  font-family: sans-serif;
+/*  font-family: sans-serif;*/
   float: right;
 }
 .play_sublisting_item div{

@@ -81,7 +81,7 @@ qu.player.init = function(){
           href= "#";
         }
         var listItem = (i === this.playlist.length-1) ? "<li class='jp-playlist-last'>" : "<li>";
-        listItem += "<a href='"+href+"' id='" + this.cssId.playlist + "_item_" + i +"' tabindex='1'>"+ this.playlist[i].name +"</a>";
+        listItem += "<a href='"+href+"' id='" + this.cssId.playlist + "_item_" + i +"' tabindex='1'>"+ this.playlist[i].name +"<span class='removeFromPlaylist'>X</span></a>";
 
         // Create links to free media
         if(this.playlist[i].free) {
@@ -166,7 +166,8 @@ qu.player.initPlaylist = function(Playlist, privateListener){
     ready: function() {
       audioPlaylist.displayPlaylist(privateListener);
       audioPlaylist.playlistInit(false); // Parameter is a boolean for autoplay.
-      jQuery('.info-player-text').html(privateListener[0].name);
+      var string = privateListener[0].name
+      jQuery('.info-player-text').html(string.replace('text-blue', 'text-lime'));
     },
     ended: function() {
       audioPlaylist.playlistNext();

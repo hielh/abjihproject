@@ -6,7 +6,7 @@
     <?php
     $jsPlaylist .= '
     {
-      name:"<span class=\'text-lime\'>' . $myPlayList->getTrack()->getName() . '</span> - ' . $myPlayList->getTrack()->getPlayList()->getPlayOwner()->getName() . ' ",
+      name:"<span class=\'text-blue\'>' . $myPlayList->getTrack()->getName() . '</span> - ' . $myPlayList->getTrack()->getPlayList()->getPlayOwner()->getName() . ' ",
       mp3:"' . $myPlayList->getTrack()->getUrl() . '",
     },';
     ?>
