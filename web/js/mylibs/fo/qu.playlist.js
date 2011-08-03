@@ -175,7 +175,8 @@ qu.player.initPlaylist = function(Playlist, privateListener){
     play: function() {
       $(this).jPlayer("pauseOthers");
       currTrack = audioPlaylist.getCurrentTrack();
-      jQuery('.info-player-text').html(currTrack.name);
+      var string = currTrack.name;
+      jQuery('.info-player-text').html(string.replace('text-blue', 'text-lime'));
     },
     swfPath: "/swf",
     solution: "flash",

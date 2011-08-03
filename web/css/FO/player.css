@@ -114,6 +114,7 @@
 .qu-player .timer{
     float: left;
     font-size: 12px;
+    font-family: arial;
 }
 .qu-player .progress-wrapper{
     width: 208px;
