@@ -14,7 +14,7 @@ Style
 
 
 /* Form Style */
-.form {font: normal 12px/1em tahoma, arial, Verdana, "Trebuchet MS", Helvetica, sans-serif;}
+.form {font: normal 12px/1em Tahoma, arial, Verdana, "Trebuchet MS", Helvetica, sans-serif;}
 
 .form fieldset {
 	border: 1px solid #999;
@@ -50,7 +50,7 @@ Style
 	border-color:#235485;
 	background: #fff;
 	color:#333;
-	font: normal 12px/1em arial, Verdana, "Trebuchet MS", Helvetica, sans-serif;
+	font: normal 12px/1em Tahoma, arial, Verdana, "Trebuchet MS", Helvetica, sans-serif;
 }
 .form .form-txt:hover, .form textarea:hover, .form select:hover {
 	border-color:#235485;
