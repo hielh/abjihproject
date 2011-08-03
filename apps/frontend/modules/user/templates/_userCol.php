@@ -5,4 +5,5 @@
 </div>
 <?php else: ?>
   hello user
+  <a href="<?php echo url_for('sf_guard_signout'); ?>" class="selfAjaxUrl"><?php echo __('logout'); ?></a>
 <?php endif; ?>

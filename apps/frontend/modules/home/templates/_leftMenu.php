@@ -1,6 +1,6 @@
 <div class="grid_6">
   <div class="left_container_parent">
-    <div class="left_container">
+    <div class="left_container user_space">
       <?php if (has_component_slot('user_col')): ?>
         <?php include_component_slot('user_col'); ?>
       <?php endif; ?>
