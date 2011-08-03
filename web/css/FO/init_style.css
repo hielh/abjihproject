@@ -150,11 +150,6 @@ footer nav a.rss{
 }
 /********************************************************************************/
 
-.left_container_parent{
-  border-right: 2px solid #3a3a3a;
-  padding: 0 3px 0 0;
-  margin-bottom: 10px;
-}
 .left_container{
   background:   #ececec;
   min-height: 200px;
@@ -168,82 +163,125 @@ footer nav a.rss{
 
 
 .left_container h3{
-  background: url(/images/fiche-sprites.png) no-repeat 105px -171px #dedede;
+  background: url("/images/finsprite.png") no-repeat scroll -3px -25px #DEDEDE;
   height: 22px;
   margin: 0;
   text-indent: -99999px;
 
 }
 .left_container h3.friend_site{
-  background: url(/images/fiche-sprites.png) no-repeat 105px -102px #dedede;
+  background: url("/images/finsprite.png") no-repeat scroll -3px -53px #DEDEDE;
+}
+.left_container h3.ahadith{
+  background: url("/images/finsprite.png") no-repeat scroll -3px -78px #DEDEDE;
 }
 .play_owner_info{
-  background: #ececec;
-  -moz-box-shadow: 2px 6px 2px -2px #D7D7D7;
-  -webkit-box-shadow: 2px 6px 2px -2px #D7D7D7;
-  box-shadow: 2px 6px 2px -2px #D7D7D7;
+  background: #0a848b;
+  color: #FFFFFF;
   position: relative;
 }
 
 .play_owner_info_text{
-  padding: 10px;
+  padding: 0 10px;
 }
 .play_owner_info_links{
   position: absolute;
-  bottom: 10px;
-  left: 30px;
+bottom: 15px;
+    left: 140px;
+}
+.play_owner_info_links span{
+	display: block;
+	float: right;
+	height: 22px;
+	padding: 0px 6px 0px 6px;
 }
 .play_owner_info_links a{
+	background: url("/images/bg-player.png") repeat scroll 0 0 transparent;
+	border-radius: 7px 7px 7px 7px;
+	padding: 5px;
   color: #030303;
   font-size: 12px;
   margin-right: 15px;
+  text-shadow: 1px 1px 1px #000;
+}
+.play_owner_info_links span.share{
+	background: url("/images/finsprite.png") no-repeat scroll 174px -138px transparent;
+}
+.play_owner_info_links span.favorite{
+	background: url("/images/finsprite.png") no-repeat scroll 142px -164px transparent;
+}
+.play_owner_info_links span.share a{
+	color: #befe00;
+}
+.play_owner_info_links span.favorite a{
+	color: #92f8ff;
 }
 .play_owner_info_links a:hover{
   text-decoration: underline;
 }
-.play_owner_info h2{
-  background: url("/images/fiche-sprites.png") no-repeat 611px 4px #030303;
-  font-size: 12px;
-  font-weight: normal;
-  height: 21px;
-  margin: 0;
-  padding: 4px 109px 0;
-  font-weight: bold;
+.play_owner_info h2 {
+    background: url("/images/finsprite.png") no-repeat scroll 394px 2px transparent;
+    color: #DDFF77;
+    display: block;
+    float: right;
+    font-size: 12px;
+    font-weight: bold;
+    height: 21px;
+    margin: 0;
+    padding: 7px 105px 0 0;
+    width: 393px;
+}
+
+.play_owner_info .image{
+	background: url("/images/bg-player.png") repeat scroll 0 0 transparent;
+    border-radius: 7px 7px 7px 7px;
+    padding: 5px;
+    float: left;
+    margin: 10px 16px;
 }
 .play_owner_info img{
   width: 104px;
   height: 120px;
   float: right;
-  margin: 0 0 0 10px;
-
+}
+.play_owner_info .info{
+	float: right;
+	 margin: 15px 58px;
 }
 .play_sublisting{
   margin-top: 8px;
 }
-.play_sublisting h2{
-  background: url("/images/sublisting-h2.png") repeat scroll 0 0 transparent;
-  border-bottom: 2px solid #E0E0E0;
-  color: #5E7F02;
-  font-size: 12px;
-  height: 24px;
-  padding: 11px 29px 0;
+.play_sublisting h2 {
+    background-color: #009285; 
+    color: #FFFFFF;
+    font-size: 11px;
+    height: 18px;
+    margin: 5px;
+    padding: 5px 29px 0;
+}
+.play_sublisting h2.colapsed{
+	background-image: 
+}
+.play_listing{
+	background: #bbddde;
+	margin: 10px 0;
+	padding: 0 0 25px;
 }
 .play_listing h3{
-  background: url("/images/fiche-sprites.png") no-repeat scroll 521px -60px transparent;
-  height: 43px;
-  margin: 8px 0;
-  text-indent: -99999px;
+ background: url("/images/finsprite.png") no-repeat scroll 608px -102px transparent;
+    height: 31px;
+    margin: 8px 0;
+    text-indent: -99999px;
 }
 .play_sublisting_item{
-  background: #d0dbf3;
+  background: #cbe5e6;
   margin-top: 3px;
   float: right;
 }
 .play_sublisting_item a.track{
   background: url("/images/fiche-sprites.png") no-repeat scroll 199px -18px transparent;
-  color: #01777E;
+  color: #000000;
   padding: 3px 14px 3px 3px;
-/*  font-family: sans-serif;*/
   float: right;
 }
 .play_sublisting_item div{
@@ -260,7 +298,7 @@ footer nav a.rss{
 
 .play_sublisting_item li a{
   display: block;
-  height: 15px;
+  height: 13px;
   margin-left: 5px;
   text-indent: -999999px;
   width: 10px;
@@ -268,17 +306,17 @@ footer nav a.rss{
 }
 
 .play_sublisting_item a.min-share{
-  background: url("/images/fiche-sprites.png") no-repeat scroll  0 -41px transparent;
+  background: url("/images/finsprite.png") no-repeat scroll -4px -188px transparent;
 }
 .play_sublisting_item a.min-download{
-  background: url("/images/fiche-sprites.png") no-repeat scroll  -34px -41px transparent;
+  background: url("/images/finsprite.png") no-repeat scroll -4px -226px transparent;
 }
 .play_sublisting_item a.min-addtoplaylist{
-  background: url("/images/fiche-sprites.png") no-repeat scroll  -17px -41px transparent;
+  background: url("/images/finsprite.png") no-repeat scroll -4px -208px transparent;
 }
 .play_sublisting_item a.min-listen{
-  background: url("/images/fiche-sprites.png") no-repeat scroll  -51px -41px transparent;
+  background: url("/images/finsprite.png") no-repeat scroll -4px -245px transparent;
 }
 .play_sublisting_item a.min-report{
-  background: url("/images/fiche-sprites.png") no-repeat scroll  -68px -41px transparent;
+  background: url("/images/finsprite.png") no-repeat scroll -4px -264px transparent;
 }

@@ -14,4 +14,12 @@
       </div>
     </div>
   </div>
+  <div class="left_container_parent">
+    <div class="left_container">
+      <h3 class="ahadith">friend site</h3>
+      <div class="left_subcontainer">
+                          test
+      </div>
+    </div>
+  </div>
 </div>
