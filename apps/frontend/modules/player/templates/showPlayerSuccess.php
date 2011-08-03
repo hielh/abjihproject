@@ -24,8 +24,11 @@
     </div>
 
     <div class="play_owner_info_links">
-	<span class="share"><a href="#">شــارك الصفحـــة مع أصدقــــاءك</a></span>
-	<span class="favorite"><a href="#">أضف هذا المقرئ إلى المفضلة</a></span>
+	<ul>
+	    <li class="share"><a href="#">شــارك الصفحـــة مع أصدقــــاءك</a></li>
+	    <li class="favorite"><a href="#">أضف هذا المقرئ إلى المفضلة</a></li>
+	</ul>
+	
     </div>
 </div>
 

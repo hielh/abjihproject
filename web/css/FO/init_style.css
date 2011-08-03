@@ -189,7 +189,7 @@ footer nav a.rss{
 bottom: 15px;
     left: 140px;
 }
-.play_owner_info_links span{
+.play_owner_info_links li{
 	display: block;
 	float: right;
 	height: 22px;
@@ -204,16 +204,16 @@ bottom: 15px;
   margin-right: 15px;
   text-shadow: 1px 1px 1px #000;
 }
-.play_owner_info_links span.share{
+.play_owner_info_links li.share{
 	background: url("/images/finsprite.png") no-repeat scroll 174px -138px transparent;
 }
-.play_owner_info_links span.favorite{
+.play_owner_info_links li.favorite{
 	background: url("/images/finsprite.png") no-repeat scroll 142px -164px transparent;
 }
-.play_owner_info_links span.share a{
+.play_owner_info_links li.share a{
 	color: #befe00;
 }
-.play_owner_info_links span.favorite a{
+.play_owner_info_links li.favorite a{
 	color: #92f8ff;
 }
 .play_owner_info_links a:hover{
