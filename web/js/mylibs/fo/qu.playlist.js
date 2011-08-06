@@ -11,6 +11,7 @@ qu.player.execute = function(){
   qu.player.addToPlaylist();
   qu.player.showPlaylist();
   qu.player.listenToTrack();
+  qu.player.removeFromPlaylist();
 }
 
 
@@ -81,7 +82,7 @@ qu.player.init = function(){
           href= "#";
         }
         var listItem = (i === this.playlist.length-1) ? "<li class='jp-playlist-last'>" : "<li>";
-        listItem += "<a href='"+href+"' id='" + this.cssId.playlist + "_item_" + i +"' tabindex='1'>"+ this.playlist[i].name +"<span class='removeFromPlaylist'>X</span></a>";
+        listItem += "<a href='"+href+"' id='" + this.cssId.playlist + "_item_" + i +"' tabindex='1'>"+ this.playlist[i].name +"</a><span class='removeFromPlaylist'>X</span><div class='clear'></div>";
 
         // Create links to free media
         if(this.playlist[i].free) {
@@ -246,5 +247,17 @@ qu.player.listenToTrack = function(){
     audioPlaylist.displayPlaylist();
     audioPlaylist.playlistNext();
     return false;
+  });
+}
+
+
+/**
+* remove track from playlist
+ */
+
+qu.player.removeFromPlaylist = function(){
+  jQuery('.removeFromPlaylist').live('click', function(){
+      alert('test');
+      return false;
   });
 }

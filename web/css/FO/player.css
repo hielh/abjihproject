@@ -169,23 +169,30 @@
     overflow-x: hidden;
 }
 .jp-playlist a{
-    color: #ffffff;
-    display: block;
-    background: none repeat scroll 0 0 #292929;
     color: #FFFFFF;
     display: block;
-    margin: 5px;
+    float: right;
     padding: 5px 8px;
+    width: 364px;
 }
 .jp-playlist a:hover{
     background: none;
 }
-.jp-playlist span.removeFromPlaylist{
+.jp-playlist span.removeFromPlaylist {
     color: #8C8A8C;
+    display: block;
     float: left;
     font-family: Helvetica;
     font-size: 10px;
     font-weight: bolder;
+    height: 20px;
+    padding-top: 6px;
+    text-align: center;
+    width: 18px;
+    cursor: pointer;
+}
+.jp-playlist span.removeFromPlaylist:hover {
+    color: red;
 }
 .jp-playlist ul{
     margin: 4px !important;
@@ -193,6 +200,12 @@
 }
 .jp-playlist li{
     list-style: none;
+    background: none repeat scroll 0 0 #292929;
+    margin: 5px;
+    
+}
+.jp-playlist li:hover{
+    background: none repeat scroll 0 0 #000000;
 }
 
 

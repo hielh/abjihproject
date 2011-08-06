@@ -171,6 +171,7 @@ footer nav a.rss{
 }
 .left_container h3.friend_site{
     background: url("/images/finsprite.png") no-repeat scroll -3px -53px #DEDEDE;
+    margin-bottom: 15px;
 }
 .left_container h3.ahadith{
     background: url("/images/finsprite.png") no-repeat scroll -3px -78px #DEDEDE;
@@ -197,7 +198,7 @@ footer nav a.rss{
 }
 .play_owner_info_links a{
     background: url("/images/bg-player.png") repeat scroll 0 0 transparent;
-    border-radius: 7px 7px 7px 7px;
+    border-radius: 4px;
     padding: 5px;
     color: #030303;
     font-size: 12px;
