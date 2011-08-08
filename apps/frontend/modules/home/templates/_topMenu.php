@@ -2,7 +2,7 @@
     <span class="th">الجمعة</span> 5 رمضان 1432 هـ الموافق لـ 5 غشت 2011 م					</div>
 <div class="grid_6" id="header_search">
     <form>
-	<input type="search" placeholder="search" />
+	<input type="text" placeholder="search" />
 	<button type="submit"></button>
     </form>
 </div>

@@ -59,6 +59,7 @@ header #header_search input {
 	background: transparent;
 	border: none;
 	color: #fff;
+	outline: none;
 }
 header #header_search button {
     background: url("/images/headersprite.png") no-repeat scroll 4px -237px transparent;
@@ -147,8 +148,9 @@ header #nav ul li a, header #nav ul li span.hover{
 	width: 137px;
 	height: 36px;
 	text-indent: -99999px;
-	background: url(/images/menu.png);
+	background-image:  url(/images/menu.png);
 	position: relative;
+	background-position: -24px -11px;
 }
 
 header #nav ul li a.home{
@@ -187,10 +189,10 @@ header #nav ul li a.blog{
 header #nav ul .high a.blog:hover, header #nav ul li a.blog .hover{
     background-position: -443px -174px;
 }
-header #nav ul .high a.contact{
+header #nav ul .high a.contactus{
     background-position: -24px -11px;
 }
-header #nav ul .high a.contact:hover, header #nav ul li a.contact .hover{
+header #nav ul .high a.contactus:hover, header #nav ul li a.contactus .hover{
     background-position: -24px -174px;
 }
 
