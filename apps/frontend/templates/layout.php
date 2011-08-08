@@ -35,13 +35,8 @@
   <body>
 
     <div id="container">
-      <header>
-        <div class="container_24 banner">
-          <?php include_partial('home/topMenu'); ?>
-          <?php include_partial('home/htmlPlayer'); ?>
-          <div class="clear"></div>
-        </div>
-      </header><!--! end of header -->
+	
+     <?php include_partial('home/header'); ?>
 
       <div id="content" class="container_24">
       	

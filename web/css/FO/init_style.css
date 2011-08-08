@@ -31,7 +31,7 @@ li{
 header{
     background: url(/images/header-bg.png) repeat-x;
     color: #FFFFFF;
-    height: 170px;
+    height: 224px;
     -moz-box-shadow: 0 -26px 114px 0 #888888;
     -webkit-box-shadow: 0 -26px 114px 0 #888888;
     box-shadow: 0 -26px 114px 0 #888888;
@@ -46,10 +46,135 @@ header #header_menu nav li a{
     color: #ffffff;
     font-size: 12px;
 }
-header .banner{
-    background: transparent url(/images/banner.png) 536px 23px no-repeat;
-    height: 170px;
+header .banner {
+    background: url("/images/headersprite.png") no-repeat scroll 472px 36px transparent;
+    height: 184px;
 }
+header #header_search{
+	background: #2e6c70;
+	border-radius: 4px;
+	margin: 7px 0 0 0;
+}
+header #header_search input {
+	background: transparent;
+	border: none;
+	color: #fff;
+}
+header #header_search button {
+    background: url("/images/headersprite.png") no-repeat scroll 0 -237px transparent;
+    height: 19px;
+    width: 38px;
+    float: right;
+}
+header #header_link li, header #header_share li, header #nav ul li{
+	float: right;
+}
+header #header_link li a {
+    background: url("/images/headersprite.png") no-repeat scroll 0 -212px transparent;
+    display: block;
+    float: left;
+    height: 21px;
+    margin: 6px 0;
+    text-indent: 99999px;
+    width: 87px;
+}
+header #header_link li a.signup{
+	background: url("/images/headersprite.png") no-repeat scroll 0 -185px transparent;
+}
+
+header #header_share ul {
+    border-left: 2px solid #A8D031;
+    margin-top: 6px;
+    padding-bottom: 3px;
+}
+header #header_share li a {
+    display: block;
+    float: left;
+    height: 19px;
+    text-indent: -99999px;
+    width: 20px;
+    margin: 1px;
+}
+header #header_share li a.facebook{
+	background: url("/images/headersprite.png") no-repeat scroll 0 -279px transparent;
+}
+header #header_share li a.twitter{
+	background: url("/images/headersprite.png") no-repeat scroll 0 -257px transparent;
+}
+header #header_share li a.rss{
+	background: url("/images/headersprite.png") no-repeat scroll 0 -301px transparent;
+}
+header #header_date {
+    color: #2E6C70;
+    padding: 10px 0 0;
+}
+header #header_date span {
+    display: block;
+    float: right;
+    height: 15px;
+    margin-left: 4px;
+    text-indent: -99999px;
+    width: 53px;
+}
+header #header_date span.mon{
+	background: url("/images/headersprite.png") no-repeat scroll -17px -371px  transparent
+}
+header #header_date span.th{
+	background: url("/images/headersprite.png") no-repeat scroll -11px -393px transparent
+}
+header #header_date span.wed{
+	background: url("/images/headersprite.png") no-repeat scroll -13px -416px transparent
+}
+header #header_date span.thr{
+	background: url("/images/headersprite.png") no-repeat scroll -7px -439px transparent
+}
+header #header_date span.fri{
+	background: url("/images/headersprite.png") no-repeat scroll -13px -462px transparent
+}
+header #header_date span.sat{
+	background: url("/images/headersprite.png") no-repeat scroll -16px -485px transparent
+}
+header #header_date span.san{
+	background: url("/images/headersprite.png") no-repeat scroll -17px -507px transparent
+}
+
+header #nav nav{
+    margin-top: 30px;
+}
+
+header #nav ul li a{
+	display: block;
+	width: 137px;
+	height: 36px;
+	text-indent: -99999px;
+}
+header #nav ul li a.home{
+    background: url(/images/menu.png) no-repeat -868px -11px;
+}
+header #nav ul li a.about{
+    background: url(/images/menu.png) no-repeat -726px -11px;
+}
+header #nav ul li a.done{
+    background: url(/images/menu.png) no-repeat -585px -11px;
+}
+header #nav ul li a.ads{
+    background: url(/images/menu.png) no-repeat -305px -11px;
+}
+header #nav ul li a.pub{
+    background: url(/images/menu.png) no-repeat -166px -11px;
+}
+header #nav ul li a.blog{
+    background: url(/images/menu.png) no-repeat -443px -11px;
+}
+header #nav ul li a.contact{
+    background: url(/images/menu.png) no-repeat -24px -11px;
+}
+
+
+
+
+
+
 #bottomPlayer {
     position: fixed;
     bottom:0px;
