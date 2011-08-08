@@ -61,7 +61,7 @@ header #header_search input {
 	color: #fff;
 }
 header #header_search button {
-    background: url("/images/headersprite.png") no-repeat scroll 0 -237px transparent;
+    background: url("/images/headersprite.png") no-repeat scroll 4px -237px transparent;
     height: 19px;
     width: 38px;
     float: right;
