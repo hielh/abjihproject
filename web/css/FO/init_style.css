@@ -142,32 +142,56 @@ header #nav nav{
     margin-top: 30px;
 }
 
-header #nav ul li a{
+header #nav ul li a, header #nav ul li span.hover{
 	display: block;
 	width: 137px;
 	height: 36px;
 	text-indent: -99999px;
+	background: url(/images/menu.png);
+	position: relative;
 }
+
 header #nav ul li a.home{
-    background: url(/images/menu.png) no-repeat -868px -11px;
+      background-position: -868px -11px;
+}
+header #nav ul .high a.home:hover, header #nav ul li a.home .hover{
+      background-position: -868px -174px;
 }
 header #nav ul li a.about{
-    background: url(/images/menu.png) no-repeat -726px -11px;
+    background-position: -726px -11px;
+}
+header #nav ul .high a.about:hover, header #nav ul li a.about .hover{
+    background-position: -726px -174px;
 }
 header #nav ul li a.done{
-    background: url(/images/menu.png) no-repeat -585px -11px;
+    background-position: -585px -11px;
+}
+header #nav ul .high a.done:hover, header #nav ul li a.done .hover{
+    background-position: -585px -174px;
 }
 header #nav ul li a.ads{
-    background: url(/images/menu.png) no-repeat -305px -11px;
+    background-position: -305px -11px;
+}
+header #nav ul .high a.ads:hover, header #nav ul li a.ads .hover{
+    background-position: -305px -174px;
 }
 header #nav ul li a.pub{
-    background: url(/images/menu.png) no-repeat -166px -11px;
+    background-position: -166px -11px;
+}
+header #nav ul .high a.pub:hover, header #nav ul li a.pub .hover{
+    background-position: -166px -174px;
 }
 header #nav ul li a.blog{
-    background: url(/images/menu.png) no-repeat -443px -11px;
+    background-position: -443px -11px;
 }
-header #nav ul li a.contact{
-    background: url(/images/menu.png) no-repeat -24px -11px;
+header #nav ul .high a.blog:hover, header #nav ul li a.blog .hover{
+    background-position: -443px -174px;
+}
+header #nav ul .high a.contact{
+    background-position: -24px -11px;
+}
+header #nav ul .high a.contact:hover, header #nav ul li a.contact .hover{
+    background-position: -24px -174px;
 }
 
 
