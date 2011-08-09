@@ -39,13 +39,8 @@
      <?php include_partial('home/header'); ?>
 
       <div id="content" class="container_24">
-      	
-	    <?php if(has_component_slot('left_menu')): ?>
-              <?php include_component_slot('left_menu'); ?>
-            <?php endif; ?>
-      	<div class="grid_18" id="main-content">
       		<?php echo $sf_content; ?>
-      	</div>
+
       	<div class="clear"></div>
       </div>
       <footer>

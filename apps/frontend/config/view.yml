@@ -38,6 +38,6 @@ default:
   
 all:
   components:
-    left_menu                 : [home, leftMenu]
+#    left_menu                 : [home, leftMenu]
     left_friend_site          : [home, leftFriendSite]
     user_col                  : [user, userCol]

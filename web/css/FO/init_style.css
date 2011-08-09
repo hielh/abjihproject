@@ -472,3 +472,97 @@ footer nav a.rss{
 .play_sublisting_item a.min-report{
     background: url("/images/finsprite.png") no-repeat scroll -4px -264px transparent;
 }
+
+#home .home_cat{
+	border: 1px solid #d7d7d7;
+	min-height: 200px;
+	margin-bottom: 5px;
+	background: #ececec;
+	color: #07565b;
+}
+#home .home_cat h2 {
+    background-image: url("/images/homesprite.png");
+    height: 24px;
+    margin: 2px;
+    text-indent: -99999px;
+}
+#home .home_cat h2.most_visited{
+	background-position: 0px 0px;
+}
+#home .home_cat h2.last_add{
+	background-position: 0px -24px;
+}
+#home .home_cat h2.last_track{
+	background-position: 0px -48px;
+}
+#home .home_cat h2.random_track{
+	background-position: 0px -72px;
+}
+#home .home_cat .odd{
+	background: url("/images/homesprite.png") no-repeat 0px -178px;
+}
+#home .home_cat .home_item{
+	float: right;
+	margin: 5px;
+	width: 219px;
+}
+#home .home_cat .home_item p{
+	float: right;
+    width: 100%;
+}
+#home .home_cat .home_item p img, #home .home_cat .home_item2 p img{
+	float: right;
+	margin: 0 0 0 6px;
+}
+#home .home_cat .home_item p span, #home .home_cat .home_item2 p span{
+	display: block;
+	
+}
+
+#home .home_cat .home_item p a, #home .home_cat .home_item2 p a{
+    display: block;
+    padding: 12px 0 0;
+    color: #009287;
+    font-weight: bold;
+}
+#home .redlink .home_item p a {
+    color: #960b74;
+}
+#home .greenlink .home_item2 p a {
+    color: #68960b;
+}
+#home .bluelink .home_item2 p a {
+    color: #0b6a96;
+}
+#home .home_cat .home_item2 {
+    background: url("/images/homesprite.png") no-repeat scroll 0 -96px transparent;
+    height: 67px;
+    margin: 4px 2px;
+    padding: 4px 3px;
+}
+#home .home_cat .home_item2 p{
+	float: right;
+    width: 366px;
+     margin: 8px 2px 0 0;
+}
+#home .home_cat .home_item2 p{
+	float: right;
+    width: 345px;
+}
+#home .home_cat .home_item2 ul{
+	float: left;
+}
+#home .home_cat .home_item2 ul li a {
+    background: url("/images/homesprite.png") no-repeat scroll 0 -229px transparent;
+    display: block;
+    height: 21px;
+    text-indent: -99999px;
+    width: 103px;
+    margin: 0 0 3px; 
+}
+#home .home_cat .home_item2 ul li a.download{
+	background-position: 0 -250px ;
+} 
+#home .home_cat .home_item2 ul li a.addtoplaylist{
+	background-position: 0 -268px ;
+} 
