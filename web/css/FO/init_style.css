@@ -53,7 +53,7 @@ header .banner {
 header #header_search{
 	background: #2e6c70;
 	border-radius: 4px;
-	margin: 7px 0 0 0;
+	margin: 9px 0 0 0;
 }
 header #header_search input {
 	background: transparent;
@@ -75,7 +75,7 @@ header #header_link li a {
     display: block;
     float: left;
     height: 21px;
-    margin: 6px 0;
+    margin: 8px 0 0px 0;
     text-indent: 99999px;
     width: 87px;
 }
@@ -85,25 +85,25 @@ header #header_link li a.signup{
 
 header #header_share ul {
     border-left: 2px solid #A8D031;
-    margin-top: 6px;
+    margin-top: 8px;
     padding-bottom: 3px;
 }
 header #header_share li a {
     display: block;
     float: left;
-    height: 19px;
+    height: 17px;
     text-indent: -99999px;
     width: 20px;
     margin: 1px;
 }
 header #header_share li a.facebook{
-	background: url("/images/headersprite.png") no-repeat scroll 0 -279px transparent;
+	background: url("/images/headersprite.png") no-repeat scroll 0 -281px transparent;
 }
 header #header_share li a.twitter{
-	background: url("/images/headersprite.png") no-repeat scroll 0 -257px transparent;
+	background: url("/images/headersprite.png") no-repeat scroll 0 -259px transparent;
 }
 header #header_share li a.rss{
-	background: url("/images/headersprite.png") no-repeat scroll 0 -301px transparent;
+	background: url("/images/headersprite.png") no-repeat scroll 0 -303px transparent;
 }
 header #header_date {
     color: #2E6C70;
@@ -140,7 +140,7 @@ header #header_date span.san{
 }
 
 header #nav nav{
-    margin-top: 30px;
+    margin-top: 33px;
 }
 
 header #nav ul li a, header #nav ul li span.hover{
