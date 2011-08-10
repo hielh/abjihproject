@@ -201,6 +201,7 @@ header #nav ul .high a.contactus:hover, header #nav ul li a.contactus .hover{
 
 
 
+
 #bottomPlayer {
     position: fixed;
     bottom:0px;
@@ -327,40 +328,44 @@ footer nav a.rss{
 .left_container h3.ahadith{
     background: url("/images/finsprite.png") no-repeat scroll -3px -78px #DEDEDE;
 }
-.play_owner_info{
-    background: #0a848b;
+.play_owner_info {
+    background: url("/images/gard-1.png") repeat scroll 0 -0px transparent;
     color: #FFFFFF;
+    height: 190px;
     position: relative;
 }
 
 .play_owner_info_text{
     padding: 0 10px;
+    height: 159px;
+    width: 528px;
 }
-.play_owner_info_links{
+.play_owner_info_links {
+    bottom: 5px;
+    left: 42px;
     position: absolute;
-    bottom: 15px;
-    left: 140px;
 }
 .play_owner_info_links li{
     display: block;
     float: right;
     height: 22px;
-    padding: 0px 6px 0px 6px;
+    
 }
-.play_owner_info_links a{
-    background: url("/images/bg-player.png") repeat scroll 0 0 transparent;
-    border-radius: 4px;
-    padding: 5px;
+.play_owner_info_links a {
+    background: url("/images/affichesprite.png") no-repeat scroll 0 -227px transparent;
     color: #030303;
+    display: block;
     font-size: 12px;
-    margin-right: 15px;
-    text-shadow: 1px 1px 1px #000;
+    height: 12px;
+    padding: 5px;
+    text-indent: -99999px;
+    width: 18px;
 }
-.play_owner_info_links li.share{
-    background: url("/images/finsprite.png") no-repeat scroll 174px -138px transparent;
+.play_owner_info_links li a.share{
+    background-position: 0px -251px;
 }
-.play_owner_info_links li.favorite{
-    background: url("/images/finsprite.png") no-repeat scroll 162px -164px transparent;
+.play_owner_info_links li a.favorite{
+    background-position: 0px -273px;
 }
 .play_owner_info_links li.share a{
     color: #befe00;
@@ -368,9 +373,20 @@ footer nav a.rss{
 .play_owner_info_links li.favorite a{
     color: #92f8ff;
 }
-.play_owner_info_links a:hover{
-    text-decoration: underline;
+#breadcrumbs ul {
+    background: url("/images/gard-1.png") repeat scroll 0 -228px transparent;
+    height: 19px;
+    padding: 2px 3px 0 0px;
 }
+#breadcrumbs li{
+	float: right;
+}
+#breadcrumbs li a {
+    background: url("/images/affichesprite.png") no-repeat scroll 79px -293px transparent;
+    color: #1D8F96;
+    padding: 0 9px;
+}
+
 .play_owner_info h2 {
     background: url("/images/finsprite.png") no-repeat scroll 394px 2px transparent;
     color: #DDFF77;
@@ -389,33 +405,119 @@ footer nav a.rss{
     border-radius: 7px 7px 7px 7px;
     padding: 5px;
     float: left;
-    margin: 10px 16px 16px 6px;
+    margin: 10px 16px 0px 6px;
 }
 .play_owner_info img{
-    width: 104px;
-    height: 120px;
+    width: 135px;
+    height: 108px;
     float: right;
 }
-.play_owner_info .info{
+.play_owner_info .info {
+    /*background: url("/images/affichesprite.png") no-repeat scroll 40px -122px transparent;*/
     float: right;
-    margin: 15px 58px;
+    height: 112px;
+    margin: 0 58px 0 0;
+    padding: 18px 0 0;
+    width: 100%;
+    position: relative;
 }
+.play_owner_info_onglet ul{
+	
+}
+.play_owner_info_onglet ul li {
+    float: right;
+    margin: 0 1px 0 0;
+}
+.play_owner_info_onglet ul li a{
+	display: block;
+	background-image: url('/images/affichesprite.png');
+	text-indent: -99999px;
+	    width: 115px;
+	    height: 26px;
+}
+.play_owner_info_onglet ul li a.quran_active{
+	background-position: -612px 0;
+}
+.play_owner_info_onglet ul li a.about_active{
+	background-position: -494px 0;
+}
+.play_owner_info_onglet ul li a.anashid_active{
+	background-position: -374px 0;
+}
+.play_owner_info_onglet ul li a.pic_active{
+	background-position: -255px 0;
+}
+.play_owner_info_onglet ul li a.video_active{
+	background-position: -130px 0;
+}
+.play_owner_info_onglet ul li a.doc_active{
+	background-position: -4px 0;
+}
+
+.play_owner_info_onglet ul li a.quran_hover, .play_owner_info_onglet ul li a.quran_active:hover{
+	background-position: -612px -22px;
+}
+.play_owner_info_onglet ul li a.about_hover, .play_owner_info_onglet ul li a.about_active:hover{
+	background-position: -494px -22px;
+}
+.play_owner_info_onglet ul li a.anashid_hover, .play_owner_info_onglet ul li a.anashid_active:hover{
+	background-position: -374px -22px;
+}
+.play_owner_info_onglet ul li a.pic_hover, .play_owner_info_onglet ul li a.pic_active:hover{
+	background-position: -255px -22px;
+}
+.play_owner_info_onglet ul li a.video_hover, .play_owner_info_onglet ul li a.video_active:hover{
+	background-position: -130px -22px;
+}
+.play_owner_info_onglet ul li a.doc_hover, .play_owner_info_onglet ul li a.doc_active:hover{
+	background-position: -4px -22px;
+}
+
+.play_owner_info_onglet ul li a.quran_disabled{
+	background-position: -612px -44px;
+}
+.play_owner_info_onglet ul li a.about_disabled{
+	background-position: -494px -44px;
+}
+.play_owner_info_onglet ul li a.anashid_disabled{
+	background-position: -374px -44px;
+}
+.play_owner_info_onglet ul li a.pic_disabled{
+	background-position: -255px -44px;
+}
+.play_owner_info_onglet ul li a.video_disabled{
+	background-position: -130px -44px;
+}
+.play_owner_info_onglet ul li a.doc_disabled{
+	background-position: -4px -44px;
+}
+
+
 .play_sublisting{
     margin-top: 8px;
 }
 .play_sublisting h2 {
-    background-color: #009285; 
-    color: #FFFFFF;
+    color: #5b5c5c;
     font-size: 11px;
     height: 18px;
-    margin: 5px;
+    margin: 5px 0;
     padding: 5px 29px 0;
+    border: 1px solid #acacac;
+   border-radius: 5px;
+   background: url("/images/gard-1.png") repeat scroll 0 -203px transparent;
 }
-.play_sublisting h2.colapsed{
-    background-image: 
+.play_sublisting h2 span{
+    background: url("/images/affichesprite.png") repeat scroll 0 -307px transparent;
+    display: block;
+    float: right;
+    height: 13px;
+    margin-top: 1px;
+    width: 17px;
+}
+.play_sublisting h2 span.colapsed {
+	background: url("/images/affichesprite.png") repeat scroll 0 -320px transparent;
 }
 .play_listing{
-    background: #bbddde;
     margin: 10px 0;
     padding: 0 0 25px;
 }
@@ -430,11 +532,15 @@ footer nav a.rss{
     margin-top: 3px;
     float: right;
 }
+.play_sublisting .odd{
+	background: transparent;	
+}
 .play_sublisting_item a.track{
     background: url("/images/fiche-sprites.png") no-repeat scroll 199px -18px transparent;
-    color: #000000;
+    color: #0095d5;
     padding: 3px 14px 3px 3px;
     float: right;
+    font-weight: bold;
 }
 .play_sublisting_item div{
     padding: 1px 10px 0 0;
@@ -458,19 +564,19 @@ footer nav a.rss{
 }
 
 .play_sublisting_item a.min-share{
-    background: url("/images/finsprite.png") no-repeat scroll -4px -188px transparent;
+    background: url("/images/affichesprite.png") no-repeat scroll -96px -339px transparent;
 }
 .play_sublisting_item a.min-download{
-    background: url("/images/finsprite.png") no-repeat scroll -4px -226px transparent;
+    background: url("/images/affichesprite.png") no-repeat scroll -7px -339px transparent;
 }
 .play_sublisting_item a.min-addtoplaylist{
-    background: url("/images/finsprite.png") no-repeat scroll -4px -208px transparent;
+    background: url("/images/affichesprite.png") no-repeat scroll -48px -339px transparent;
 }
 .play_sublisting_item a.min-listen{
-    background: url("/images/finsprite.png") no-repeat scroll -4px -245px transparent;
+    background: url("/images/affichesprite.png") no-repeat scroll -27px -339px transparent;
 }
 .play_sublisting_item a.min-report{
-    background: url("/images/finsprite.png") no-repeat scroll -4px -264px transparent;
+    background: url("/images/affichesprite.png") no-repeat scroll -71px -339px transparent;
 }
 
 #home .home_cat{
