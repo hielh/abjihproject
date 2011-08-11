@@ -61,7 +61,13 @@ PlayList:
     playOwner: kamal 
     object_type: quran
     title: 	رمضان 1427
-    description: anashid description
+    description: quran description
+  kamalQuran2:
+    sfGuardUser: abjih
+    playOwner: kamal 
+    object_type: quran
+    title: رمضان 1432
+    description: quran description
     
 Track:
   afasyQuranPlay01:
@@ -151,6 +157,33 @@ Track:
     playList: kamalQuran
     name: الليلة الرابعة عشر 
     url: http://www.archive.org/download/abjih/Kamal-elYounssi_Tarawi7/kamal_1427_laila14.mp3
+    
+  kamalQuran051:
+    sfGuardUser: abjih
+    playList: kamalQuran2
+    name: الليلة 04 
+    url: http://www.archive.org/download/abjih/Kamal-elYounssi_ramadan_1432/20110804213551.mp3
+  kamalQuran061:
+    sfGuardUser: abjih
+    playList: kamalQuran2
+    name: الليلة  05 
+    url: http://www.archive.org/download/abjih/Kamal-elYounssi_ramadan_1432/20110805213233.mp3
+  kamalQuran071:
+    sfGuardUser: abjih
+    playList: kamalQuran2
+    name: الليلة  06 
+    url: http://www.archive.org/download/abjih/Kamal-elYounssi_ramadan_1432/20110806213501.mp3
+  kamalQuran081:
+    sfGuardUser: abjih
+    playList: kamalQuran2
+    name: الليلة  08 
+    url: http://www.archive.org/download/abjih/Kamal-elYounssi_ramadan_1432/20110808212742.mp3
+  kamalQuran091:
+    sfGuardUser: abjih
+    playList: kamalQuran2
+    name: الليلة 10 
+    url: http://www.archive.org/download/abjih/Kamal-elYounssi_ramadan_1432/20110810213116.mp3
+    
     
 userPlaylist:
   userplay01:

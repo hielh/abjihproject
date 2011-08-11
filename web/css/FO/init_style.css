@@ -535,15 +535,15 @@ footer nav a.rss{
 .play_sublisting .odd{
 	background: transparent;	
 }
-.play_sublisting_item a.track{
-    background: url("/images/fiche-sprites.png") no-repeat scroll 199px -18px transparent;
-    color: #0095d5;
-    padding: 3px 14px 3px 3px;
+.play_sublisting_item a.track {
+    background: url("/images/affichesprite.png") no-repeat scroll 193px -376px transparent;
+    color: #0095D5;
     float: right;
     font-weight: bold;
+    padding: 3px 22px 3px 3px;
 }
 .play_sublisting_item div{
-    padding: 1px 10px 0 0;
+    padding: 1px 0px 0 0;
 }
 .play_sublisting_item ul{
     float: left;
