@@ -70,9 +70,9 @@
  * @method report      setReportUser()     Sets the current record's "reportUser" value
  * @method report      setCategory()       Sets the current record's "category" value
  * 
- * @package    islam
+ * @package    addakirine
  * @subpackage model
- * @author     Your name here
+ * @author     Abderrahman JIHAL
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class Basereport extends sfDoctrineRecord

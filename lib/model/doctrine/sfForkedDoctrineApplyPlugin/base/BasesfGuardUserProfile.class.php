@@ -28,9 +28,9 @@
  * @method sfGuardUserProfile setValidate()    Sets the current record's "validate" value
  * @method sfGuardUserProfile setUser()        Sets the current record's "User" value
  * 
- * @package    islam
+ * @package    addakirine
  * @subpackage model
- * @author     Your name here
+ * @author     Abderrahman JIHAL
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BasesfGuardUserProfile extends sfDoctrineRecord

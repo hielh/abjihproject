@@ -37,9 +37,9 @@
  * @method track               setReports()       Sets the current record's "reports" collection
  * @method track               setUserPlaylists() Sets the current record's "userPlaylists" collection
  * 
- * @package    islam
+ * @package    addakirine
  * @subpackage model
- * @author     Your name here
+ * @author     Abderrahman JIHAL
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class Basetrack extends sfDoctrineRecord

@@ -31,9 +31,9 @@
  * @method article             setCategory()     Sets the current record's "category" value
  * @method article             setReports()      Sets the current record's "reports" collection
  * 
- * @package    islam
+ * @package    addakirine
  * @subpackage model
- * @author     Your name here
+ * @author     Abderrahman JIHAL
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class Basearticle extends sfDoctrineRecord

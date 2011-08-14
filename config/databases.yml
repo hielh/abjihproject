@@ -7,7 +7,7 @@ all:
     param:
       dsn:      mysql:host=localhost;dbname=islam
       username: root
-      password: toor
+      password: root
       attributes:
         default_table_collate: utf8_general_ci
         default_table_charset: utf8

@@ -47,5 +47,14 @@ class track extends Basetrack
     $this->updateLuceneIndex();
     return $ret;
   }
+  
+  public function getLogin()
+  {
+    return $this->getSfGuardUser()->getUsername();
+  }
+  public function getPlayListTitle()
+  {
+    return $this->getPlayList()->getTitle();
+  }
 
 }

@@ -19,9 +19,9 @@
  * @method userPlaylist setSfGuardUser() Sets the current record's "sfGuardUser" value
  * @method userPlaylist setTrack()       Sets the current record's "track" value
  * 
- * @package    islam
+ * @package    addakirine
  * @subpackage model
- * @author     Your name here
+ * @author     Abderrahman JIHAL
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BaseuserPlaylist extends sfDoctrineRecord

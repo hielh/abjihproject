@@ -14,8 +14,10 @@ generator:
     config:
       actions: ~
       fields:  ~
-      list:    ~
-      filter:  ~
+      list:   
+        display: [login, playListTitle, name, url]
+      filter:  
+        class: false
       form:    
         class: boTrackForm
       edit:    ~

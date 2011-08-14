@@ -5,9 +5,9 @@
  *
  * @method article getObject() Returns the current form's model object
  *
- * @package    islam
+ * @package    addakirine
  * @subpackage form
- * @author     Your name here
+ * @author     Abderrahman JIHAL
  * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
  */
 abstract class BasearticleForm extends BaseFormDoctrine
